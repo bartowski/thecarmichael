@@ -1062,6 +1062,19 @@
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 				<scroll>false</scroll>
+				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+			</control>
+			<control type="textbox">
+				<posx>760</posx>
+				<posy>100</posy>
+				<width>510</width>
+				<height>76</height>
+				<align>center</align>
+				<font>Liberation28</font>
+				<textcolor>Main_Green</textcolor>
+				<label>[B]$LOCALIZE[31010][/B]</label>
+				<scroll>false</scroll>
+				<visible>SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
 				<posx>760</posx>
@@ -1073,6 +1086,28 @@
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			</control>
+			<control type="textbox">
+				<posx>760</posx>
+				<posy>180</posy>
+				<width>500</width>
+				<height>190</height>
+				<align>justify</align>
+				<info>ListItem.Plot</info>
+				<font>Liberation18</font>
+				<textcolor>White</textcolor>
+				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			</control>
+			<control type="label">
+				<posx>760</posx>
+				<posy>382</posy>
+				<width>500</width>
+				<height>20</height>
+				<align>center</align>
+				<font>DejaVuSans_Bold_Caps_20</font>
+				<textcolor>Light_Grey</textcolor>
+				<label>$LOCALIZE[515]: $INFO[ListItem.Genre]</label>
+				<visible>Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.launcher) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !IsEmpty(ListItem.Genre)</visible>
 			</control>
 			<control type="grouplist">
 				<posx>760</posx>

@@ -25,10 +25,10 @@
 		</control>
 		<control type ="image" id="7657"> 
 			<description>tv show image</description>
-			<posx>1030</posx>     
-			<posy>580</posy>    
-			<width>250</width>     
-			<height>140</height> 
+			<posx>1000</posx>     
+			<posy>562</posy>    
+			<width>280</width>     
+			<height>157</height> 
 			<texture background="true">$INFO[Player.FolderPath]../clearart.png</texture>
 			<aspectratio>keep</aspectratio>
 			<animation effect="slide" start="500,0" end="0,0" time="400" delay="400">WindowOpen</animation>
@@ -37,10 +37,10 @@
 		</control>
 		<control type ="image" id="7658"> 
 			<description>tv show image</description>
-			<posx>1030</posx>     
-			<posy>580</posy>    
-			<width>250</width>     
-			<height>140</height> 
+			<posx>1000</posx>     
+			<posy>562</posy>    
+			<width>280</width>     
+			<height>157</height>
 			<texture background="true">$INFO[Player.FolderPath]clearart.png</texture>
 			<aspectratio>keep</aspectratio>
 			<animation effect="slide" start="500,0" end="0,0" time="400" delay="400">WindowOpen</animation>
@@ -54,16 +54,16 @@
 			<animation effect="slide" start="0,0" end="0,200" time="200" delay="200">WindowClose</animation>
 			<animation effect="slide" start="0,0" end="100,0" time="0" condition="IsEmpty(Control.GetLabel(7657)) + IsEmpty(Control.GetLabel(7658)) + IsEmpty(Control.GetLabel(7659))">Conditional</animation>
 				<control type="image">
-					<posx>0</posx>
-					<posy>598</posy>
-					<width>1070</width>
-					<height>148</height>
-					<texture>osd/pause/pause_back3.png</texture>
-					<aspectratio>stretch</aspectratio>
+					<description>media info background image</description>
+					<posx>-260</posx>
+					<posy>600</posy>
+					<width>1280</width>
+					<height>120</height>
+					<texture>osd/musicOSD_back.png</texture>
 				</control>
 				<control type="label">
 					<posx>140</posx>
-					<posy>678</posy>
+					<posy>662</posy>
 					<width>300</width>
 					<height>25</height>
 					<align>right</align> 
@@ -73,19 +73,19 @@
 				</control>
 				<control type="progress" id="23">
 					<posx>146</posx>
-					<posy>680</posy>
+					<posy>664</posy>
 					<texturebg>osd/pause/pause_slider_back.png</texturebg>
 					<lefttexture>osd/pause/pause_left.png</lefttexture>
 					<midtexture>osd/pause/pause_mid.png</midtexture>
 					<righttexture>osd/pause/slider.png</righttexture>
 					<info>player.Progress</info>
-					<width>780</width>
+					<width>736</width>
 					<height>30</height>
 					<visible>true</visible>
 				</control>
 				<control type="label">
-					<posx>934</posx>
-					<posy>678</posy>
+					<posx>886</posx>
+					<posy>662</posy>
 					<width>300</width>
 					<height>25</height>
 					<align>left</align> 
@@ -95,8 +95,8 @@
 				</control>
 				<control type="label">
 					<posx>30</posx>
-					<posy>624</posy>
-					<width>1000</width>
+					<posy>610</posy>
+					<width>966</width>
 					<height>25</height>
 					<label>[B]"$INFO[VideoPlayer.Title]"[/B]</label>
 					<textcolor>Main_Green</textcolor>
@@ -105,8 +105,8 @@
 				</control>
 				<control type="label">
 					<posx>30</posx>
-					<posy>662</posy>
-					<width>1000</width>
+					<posy>644</posy>
+					<width>966</width>
 					<height>25</height>
 					<label>$LOCALIZE[20373] $INFO[VideoPlayer.season]/$LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
 					<textcolor>Light_Grey</textcolor>
@@ -116,8 +116,8 @@
 				</control>
 				<control type="label">
 					<posx>30</posx>
-					<posy>662</posy>
-					<width>1000</width>
+					<posy>640</posy>
+					<width>966</width>
 					<height>25</height>
 					<label>$INFO[VideoPlayer.Year]/$INFO[VideoPlayer.Studio]</label>
 					<textcolor>Light_Grey</textcolor>

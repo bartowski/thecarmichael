@@ -14,10 +14,10 @@
     defaultresolutionwide="720p"
     defaultthemename="textures.xbt" 
     effectslowdown="0.75"
-    debugging="true"/>
+    debugging="false"/>
   <extension point="xbmc.addon.metadata">
     <summary>The Carmichael by mcborzu</summary>
-    <description>The Carmichael is designed to be user friendly, presesenting your media through a unified interface.</description>
+    <description>The Carmichael is designed to presesent your media through a unified interface. Easy of use and a common design thoughtout all views is the goal.</description>
     <disclaimer>If any issues are present a solution would be found at forum.xbmc.org/</disclaimer>
     <platform>all</platform>
   </extension>
