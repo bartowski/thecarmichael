@@ -1,0 +1,236 @@
+<window id="126">
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>yes</allowoverlay>
+	<coordinates>
+		<system>1</system>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+			<animation effect="slide" start="700,0" end="0,0" time="400" tween="quadratic" easing="out" condition="![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowOpen</animation>
+			<animation effect="slide" start="-400,0" end="0,0" time="400" tween="quadratic" easing="out" condition="[Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="700,0" time="400" tween="quadratic" easing="out" condition="![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowClose</animation>
+			<animation effect="slide" start="0,0" end="-400,0" time="400" tween="quadratic" easing="out" condition="[Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowClose</animation>
+			<visible>!Window.IsActive(networksetup)</visible>
+			<control type="group">
+				<animation effect="fade" delay="400" start="0" end="100" time="200">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
+				<control type="label">
+					<description>header label</description>
+					<posx>0</posx>
+					<posy>406</posy>
+					<width>1280</width>
+					<height>30</height>
+					<font>Large</font>
+					<label>[B]$INFO[Container(450).ListItem.Label][/B]</label>
+					<align>center</align>
+					<textcolor>Black</textcolor>
+				</control>
+				<!--<control type="label" id="412">
+					<description>Path label</description>
+					<posx>0</posx>
+					<posy>700</posy>
+					<width>1</width>
+					<height>1</height>
+					<font>Liberation18</font>
+					<textcolor>White</textcolor>
+					<haspath>true</haspath>
+					<align>center</align>
+				</control>
+				<control type="label">
+					<description>Play/browse to Show</description>
+					<posx>0</posx>
+					<posy>696</posy>
+					<width>1280</width>
+					<height>30</height>
+					<align>center</align>
+					<font>Liberation18</font>
+					<textcolor>White</textcolor>
+					<label>[B]$INFO[Container(450).ListItem.Label][/B]</label>
+				</control>-->
+				<control type="grouplist" id="9000">
+					<posx>0</posx>
+					<posy>690</posy>
+					<width>1280</width>
+					<height>225</height>
+					<itemgap>-</itemgap>
+					<orientation>horizontal</orientation>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>450</onup>
+					<ondown>450</ondown>
+					<control type="button" id="413">
+						<description>OK button</description>
+						<label>186</label>
+					</control>
+					<control type="button" id="414">
+						<description>Cancel button</description>
+						<label>222</label>
+					</control>
+					<control type="button" id="415">
+						<description>Create folder button</description>
+						<label>119</label>
+					</control>
+				</control>
+				
+				<control type="grouplist">
+					<posx>0</posx>
+					<posy>686</posy>
+					<width>1280</width>
+					<height>40</height>
+					<itemgap>20</itemgap>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<description>Cast/Review</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>$INFO[Control.GetLabel(413)]</label>
+						<visible>!Control.HasFocus(413)</visible>
+					</control>
+					<control type="label">
+						<description>Cast/Review</description>
+						<include>ButtonInfoDialogsCommonValues_Focus</include>
+						<label>$INFO[Control.GetLabel(413)]</label>
+						<visible>Control.HasFocus(413)</visible>
+					</control>
+					<control type="label">
+						<description>Play/browse to Show</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>$INFO[Control.GetLabel(414)]</label>
+						<visible>!Control.HasFocus(414)</visible>
+					</control>
+					<control type="label">
+						<description>Play/browse to Show</description>
+						<include>ButtonInfoDialogsCommonValues_Focus</include>
+						<label>$INFO[Control.GetLabel(414)]</label>
+						<visible>Control.HasFocus(414)</visible>
+					</control>
+					<control type="label">
+						<description>Play/browse to Show</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>$INFO[Control.GetLabel(415)]</label>
+						<visible>!Control.HasFocus(415)</visible>
+					</control>
+					<control type="label">
+						<description>Play/browse to Show</description>
+						<include>ButtonInfoDialogsCommonValues_Focus</include>
+						<label>$INFO[Control.GetLabel(415)]</label>
+						<visible>Control.HasFocus(415)</visible>
+					</control>
+					<control type="label">
+						<description>Play/browse to Show</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>$INFO[Control.GetLabel(416)]</label>
+						<visible>!Control.HasFocus(416)</visible>
+					</control>
+					<control type="label">
+						<description>Play/browse to Show</description>
+						<include>ButtonInfoDialogsCommonValues_Focus</include>
+						<label>$INFO[Control.GetLabel(416)]</label>
+						<visible>Control.HasFocus(416)</visible>
+					</control>
+				</control>
+				
+				<control type="wraplist" id="450">
+					<posx>0</posx>
+					<posy>420</posy>
+					<width>1280</width>
+					<height>400</height>
+					<onleft>450</onleft>
+					<onright>450</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<focusposition>1</focusposition>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout width="390" height="230">
+						<control type="group">
+							<posx>20</posx>
+							<posy>70</posy>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>355</width>
+								<height>200</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<fadetime>300</fadetime>
+								<aspectratio scalediffuse="false">keep</aspectratio>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="490" height="280">
+						<control type="group">
+						<posx>20</posx>
+						<posy>34</posy>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="60" end="100" time="500" tween="back" easing="out" />
+						</animation>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>451</width>
+								<height>240</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<aspectratio scalediffuse="false">keep</aspectratio>
+								<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+				<control type="wraplist" id="451">
+					<posx>0</posx>
+					<posy>420</posy>
+					<width>1280</width>
+					<height>400</height>
+					<onleft>450</onleft>
+					<onright>450</onright>
+					<onup>9000</onup>
+					<ondown>60</ondown>
+					<focusposition>1</focusposition>
+					<orientation>horizontal</orientation>
+					<preloaditems>2</preloaditems>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<itemlayout width="390" height="230">
+						<control type="group">
+							<posx>20</posx>
+							<posy>70</posy>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>355</width>
+								<height>180</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<fadetime>300</fadetime>
+								<aspectratio scalediffuse="false">keep</aspectratio>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout width="490" height="280">
+						<control type="group">
+						<posx>20</posx>
+						<posy>20</posy>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="60" end="100" time="500" tween="back" easing="out" />
+						</animation>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>451</width>
+								<height>220</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<aspectratio scalediffuse="false">keep</aspectratio>
+								<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+
+				
+			</control>
+		</control>
+	</controls>
+</window>
