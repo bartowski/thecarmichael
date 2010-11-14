@@ -1423,7 +1423,7 @@
                             <label>$LOCALIZE[31009]</label> 
 							<onclick>Skin.ToggleSetting(landscape_thumbs)</onclick> 
 							<onclick>Skin.Reset(TVBanners)</onclick> 
-							<onclick>Skin.ToggleSetting(landscape_jpg)</onclick> 
+							<onclick>Skin.Reset(landscape_jpg)</onclick> 
                             <selected>Skin.HasSetting(landscape_thumbs)</selected> 
                         </control> 
 						<control type="radiobutton" id="502">
@@ -1448,7 +1448,7 @@
                             <label>$LOCALIZE[31045]</label> 
                             <onclick>Skin.ToggleSetting(TVBanners)</onclick> 
                             <onclick>Skin.Reset(landscape_thumbs)</onclick> 
-							<onclick>Skin.ToggleSetting(landscape_jpg)</onclick> 
+							<onclick>Skin.Reset(landscape_jpg)</onclick> 
                             <selected>Skin.HasSetting(TVBanners)</selected> 
                         </control> 
 						<control type="radiobutton" id="505">
