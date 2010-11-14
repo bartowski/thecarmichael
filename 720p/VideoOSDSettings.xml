@@ -75,18 +75,18 @@
 			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
 			<font>Liberation22</font>
 			<textcolor>White</textcolor>
-			<focusedcolor>White</focusedcolor>
+			<focusedcolor>Black</focusedcolor>
 		</control>
 		<control type="button" id="7">
 			<description>Default Button</description>
 			<posx>0</posx>
 			<posy>0</posy>
 			<textoffsetx>7</textoffsetx>
-			<textoffsety>4</textoffsety>
+			<textoffsety>6</textoffsety>
 			<height>40</height>
 			<font>Liberation22</font>
 			<textcolor>White</textcolor>
-			<focusedcolor>White</focusedcolor>
+			<focusedcolor>Black</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
 			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
 		</control>
@@ -94,11 +94,11 @@
 			<description>Default RadioButton</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<textoffsety>4</textoffsety>
+			<textoffsety>6</textoffsety>
 			<height>40</height>
 			<font>Liberation22</font>
 			<textcolor>White</textcolor>
-			<focusedcolor>White</focusedcolor>
+			<focusedcolor>Black</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
 			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
 		</control>
@@ -109,7 +109,7 @@
 			<height>40</height>
 			<font>Liberation22</font>
 			<textcolor>White</textcolor>
-			<focusedcolor>White</focusedcolor>
+			<focusedcolor>Black</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
 			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
 			<aligny>center</aligny>

@@ -5,8 +5,24 @@
 		<posx>0</posx>
 		<posy>0</posy>
 	</coordinates>
-	<include>dialogeffect</include>
 	<controls>
+		<control type="image">
+			<posx>20</posx>
+			<posy>400</posy>
+			<width>285</width>
+			<height>298</height>
+			<texture>home/submenus.png</texture>
+			<include>submenu_open_close</include>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+			<visible>Window.IsActive(visualisation)</visible>
+		</control>
+		<control type="image">
+			<posx>276</posx>
+			<posy>440</posy>
+			<width>810</width>
+			<height>260</height>
+			<texture>files_panel1.png</texture>
+		</control>
 		<control type="label" id="20">
 			<description>header label</description>
 			<posx>0</posx>
@@ -110,7 +126,7 @@
 			<height>30</height>
 			<textoffsetx>6</textoffsetx>
 			<font>Liberation16</font>
-			<textcolor>Black</textcolor>
+			<textcolor>White</textcolor>
 			<focusedcolor>Black</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
 			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
@@ -119,7 +135,7 @@
 			<description>Default RadioButton</description>
 			<height>30</height>
 			<font>Liberation16</font>
-			<textcolor>Black</textcolor>
+			<textcolor>White</textcolor>
 			<focusedcolor>Black</focusedcolor>
 			<textoffsety>6</textoffsety>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
@@ -129,7 +145,7 @@
 			<description>Default spincontrolex</description>
 			<height>30</height>
 			<font>Liberation16</font>
-			<textcolor>Black</textcolor>
+			<textcolor>White</textcolor>
 			<focusedcolor>Black</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
 			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
@@ -139,7 +155,7 @@
 		<control type="label" id="7">
 			<height>30</height>
 			<font>Liberation16</font>
-			<textcolor>Black</textcolor>
+			<textcolor>White</textcolor>
 			<focusedcolor>Black</focusedcolor>
 			<label>-</label>
 			<align>left</align>
@@ -148,13 +164,13 @@
 		<control type="image" id="6">
 			<description>Default Seperator</description>
 			<height>2</height>
-			<texture>separator2.png</texture>
+			<texture>-</texture>
 		</control>
 		<control type="sliderex" id="8">
 			<description>Default Slider</description>
 			<height>30</height>
 			<font>Liberation16</font>
-			<textcolor>Black</textcolor>
+			<textcolor>White</textcolor>
 			<focusedcolor>Black</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
 			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>

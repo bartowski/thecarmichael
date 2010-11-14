@@ -33,7 +33,7 @@
 					<ondown>9010</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(2)</visible>
-					<control type="button" id="90101">
+					<!--<control type="button" id="90101">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>342</label>
 						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
@@ -44,18 +44,18 @@
 						<label>20343</label>
 						<onclick>ActivateWindow(VideoLibrary,TvShowTitles,return)</onclick>
 						<visible>Library.HasContent(TVShows)</visible>
-					</control>
+					</control>-->
 					<control type="button" id="90103">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>20389</label>
 						<onclick>ActivateWindow(VideoLibrary,MusicVideoTitles,return)</onclick>
 						<visible>Library.HasContent(MusicVideos)</visible>
 					</control>
-					<control type="button" id="90104">
+					<!--<control type="button" id="90104">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>744</label>
 						<onclick>ActivateWindow(VideoFiles)</onclick>
-					</control>
+					</control>-->
 					<control type="button" id="90105">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>14022</label>
@@ -240,11 +240,6 @@
 					<ondown>9000</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(3) | Container(9000).HasFocus(4)</visible>
-					<control type="button" id="90161">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>369</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieTitles,return)</onclick>
-					</control>
 					<control type="button" id="90162">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>135</label>
@@ -282,11 +277,6 @@
 					<ondown>9017</ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(5)</visible>
-					<control type="button" id="90171">
-						<include>ButtonHomeSubCommonValues</include>
-						<label>369</label>
-						<onclick>ActivateWindow(VideoLibrary,TVShowTitles,return)</onclick>
-					</control>
 					<control type="button" id="90172">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>135</label>
@@ -649,172 +639,7 @@
 	</control>  
   
   
-	<!--<control type="group">
-		<animation effect="slide" start="0" end="-184,0" time="0" condition="Container(9000).Column(0)">Conditional</animation>
-		<animation effect="slide" start="0" end="-124,0" time="0" condition="Container(9000).Column(1)">Conditional</animation>
-		<animation effect="slide" start="0" end="-64,0" time="0" condition="Container(9000).Column(2)">Conditional</animation>
-		<animation effect="slide" start="0" end="-4,0" time="0" condition="Container(9000).Column(3)">Conditional</animation>
-		<animation effect="slide" start="0" end="56,0" time="0" condition="Container(9000).Column(4)">Conditional</animation>
-		<animation effect="slide" start="0" end="116,0" time="0" condition="Container(9000).Column(5)">Conditional</animation>
-		<animation effect="slide" start="0" end="176,0" time="0" condition="Container(9000).Column(6)">Conditional</animation>
-		<animation effect="slide" start="0" end="236,0" time="0" condition="Container(9000).Column(7)">Conditional</animation>
-		<animation effect="slide" start="0" end="296,0" time="0" condition="Container(9000).Column(8)">Conditional</animation>
-		<include>main_home_panel_open_close</include>
-			<control type="label">
-				<posx>-630</posx>
-				<posy>184</posy>
-				<width>800</width>
-				<label>$INFO[Container(9000).ListItem.label]</label>
-				<font>Large</font>
-				<textcolor>White</textcolor>
-				<align>center</align>
-				<animation effect="rotate" start="90" end="90" time="0" condition="true">Conditional</animation>
-			</control>
-	</control>
 	
-	<control type="group">
-		<animation effect="slide" start="0" end="-184,0" time="0" condition="true">Conditional</animation>
-		<include>main_home_panel_open_close</include>
-			<control type="label">
-				<posx>-630</posx>
-				<posy>184</posy>
-				<width>800</width>
-				<label>2</label>
-				<font>Large</font>
-				<textcolor>Black</textcolor>
-				<align>center</align>
-				<visible>!Container(9000).Column(0)</visible>
-				<animation effect="rotate" start="90" end="90" time="0" condition="true">Conditional</animation>
-			</control>
-	</control>
-	<control type="group">
-		<animation effect="slide" start="0" end="-124,0" time="0" condition="true">Conditional</animation>
-		<animation effect="slide" start="0" end="746,0" time="0" condition="Container(9000).Column(0)">Conditional</animation>
-		<include>main_home_panel_open_close</include>
-			<control type="label">
-				<posx>-630</posx>
-				<posy>184</posy>
-				<width>800</width>
-				<label>$LOCALIZE[10006]</label>
-				<font>Large</font>
-				<textcolor>Black</textcolor>
-				<align>center</align>
-				<visible>!Container(9000).Column(1)</visible>
-				<animation effect="rotate" start="90" end="90" time="0" condition="true">Conditional</animation>
-			</control>
-	</control>
-	<control type="group">
-		<animation effect="slide" start="0" end="-64,0" time="0" condition="true">Conditional</animation>
-		<animation effect="slide" start="0" end="746,0" time="0" condition="Container(9000).Column(0) | Container(9000).Column(1)">Conditional</animation>
-		<include>main_home_panel_open_close</include>
-			<control type="label">
-				<posx>-630</posx>
-				<posy>184</posy>
-				<width>800</width>
-				<label>$LOCALIZE[20342]</label>
-				<font>Large</font>
-				<textcolor>Black</textcolor>
-				<align>center</align>
-				<visible>!Container(9000).Column(2)</visible>
-				<animation effect="rotate" start="90" end="90" time="0" condition="true">Conditional</animation>
-			</control>
-	</control>
-	<control type="group">
-		<animation effect="slide" start="0" end="-4,0" time="0" condition="true">Conditional</animation>
-		<animation effect="slide" start="0" end="746,0" time="0" condition="Container(9000).Column(0) | Container(9000).Column(1) | Container(9000).Column(2)">Conditional</animation>
-		<include>main_home_panel_open_close</include>
-			<control type="label">
-				<posx>-630</posx>
-				<posy>184</posy>
-				<width>800</width>
-				<label>$LOCALIZE[30000]</label>
-				<font>Large</font>
-				<textcolor>Black</textcolor>
-				<align>center</align>
-				<visible>!Container(9000).Column(3)</visible>
-				<animation effect="rotate" start="90" end="90" time="0" condition="true">Conditional</animation>
-			</control>
-	</control>
-	<control type="group">
-		<animation effect="slide" start="0" end="56,0" time="0" condition="true">Conditional</animation>
-		<animation effect="slide" start="0" end="746,0" time="0" condition="Container(9000).Column(0) | Container(9000).Column(1) | Container(9000).Column(2) | Container(9000).Column(3)">Conditional</animation>
-		<include>main_home_panel_open_close</include>
-			<control type="label">
-				<posx>-630</posx>
-				<posy>184</posy>
-				<width>800</width>
-				<label>$LOCALIZE[31004]</label>
-				<font>Large</font>
-				<textcolor>Black</textcolor>
-				<align>center</align>
-				<visible>!Container(9000).Column(4)</visible>
-				<animation effect="rotate" start="90" end="90" time="0" condition="true">Conditional</animation>
-			</control>
-	</control>
-	<control type="group">
-		<animation effect="slide" start="0" end="116,0" time="0" condition="true">Conditional</animation>
-		<animation effect="slide" start="0" end="746,0" time="0" condition="Container(9000).Column(0) | Container(9000).Column(1) | Container(9000).Column(2) | Container(9000).Column(3) | Container(9000).Column(4)">Conditional</animation>
-		<include>main_home_panel_open_close</include>
-			<control type="label">
-				<posx>-630</posx>
-				<posy>184</posy>
-				<width>800</width>
-				<label>1</label>
-				<font>Large</font>
-				<textcolor>Black</textcolor>
-				<align>center</align>
-				<visible>!Container(9000).Column(5)</visible>
-				<animation effect="rotate" start="90" end="90" time="0" condition="true">Conditional</animation>
-			</control>
-	</control>
-	<control type="group">
-		<animation effect="slide" start="0" end="176,0" time="0" condition="true">Conditional</animation>
-		<animation effect="slide" start="0" end="746,0" time="0" condition="Container(9000).Column(0) | Container(9000).Column(1) | Container(9000).Column(2) | Container(9000).Column(3) | Container(9000).Column(4) | Container(9000).Column(5)">Conditional</animation>
-		<include>main_home_panel_open_close</include>
-			<control type="label">
-				<posx>-630</posx>
-				<posy>184</posy>
-				<width>800</width>
-				<label>$LOCALIZE[30001]</label>
-				<font>Large</font>
-				<textcolor>Black</textcolor>
-				<align>center</align>
-				<visible>!Container(9000).Column(6)</visible>
-				<animation effect="rotate" start="90" end="90" time="0" condition="true">Conditional</animation>
-			</control>
-	</control>
-	<control type="group">
-		<animation effect="slide" start="0" end="236,0" time="0" condition="true">Conditional</animation>
-		<animation effect="slide" start="0" end="746,0" time="0" condition="Container(9000).Column(0) | Container(9000).Column(1) | Container(9000).Column(2) | Container(9000).Column(3) | Container(9000).Column(4) | Container(9000).Column(5) | Container(9000).Column(6)">Conditional</animation>
-		<include>main_home_panel_open_close</include>
-			<control type="label">
-				<posx>-630</posx>
-				<posy>184</posy>
-				<width>800</width>
-				<label>8</label>
-				<font>Large</font>
-				<textcolor>Black</textcolor>
-				<align>center</align>
-				<visible>!Container(9000).Column(7)</visible>
-				<animation effect="rotate" start="90" end="90" time="0" condition="true">Conditional</animation>
-			</control>
-	</control>
-	<control type="group">
-		<animation effect="slide" start="0" end="296,0" time="0" condition="true">Conditional</animation>
-		<animation effect="slide" start="0" end="746,0" time="0" condition="Container(9000).Column(0) | Container(9000).Column(1) | Container(9000).Column(2) | Container(9000).Column(3) | Container(9000).Column(4) | Container(9000).Column(5) | Container(9000).Column(6) | Container(9000).Column(7)">Conditional</animation>
-		<include>main_home_panel_open_close</include>
-			<control type="label">
-				<posx>-630</posx>
-				<posy>184</posy>
-				<width>800</width>
-				<label>5</label>
-				<font>Large</font>
-				<textcolor>Black</textcolor>
-				<align>center</align>
-				<visible>!Container(9000).Column(8)</visible>
-				<animation effect="rotate" start="90" end="90" time="0" condition="true">Conditional</animation>
-			</control>
-	</control>-->
 	
 <!--  Left Side Info  -->
 	
@@ -1043,7 +868,7 @@
 					<control type="label">
 						<posx>250</posx>
 						<posy>500</posy>
-						<width>500</width>
+						<width>300</width>
 						<height>20</height>
 						<align>left</align>
 						<font>DejaVuSans_Bold_Caps_100</font>
@@ -1051,6 +876,29 @@
 						<label fallback="-">$INFO[Weather.Temperature]</label>
 					</control>
 			</control>
+			<!--<control type="group">
+				<include>recent_right_side</include>
+				<visible>Container(9000).HasFocus(6)</visible>
+					<control type="image">
+						<posx>40</posx>
+						<posy>450</posy>
+						<width>433</width>
+						<height>243</height>
+						<texture>misc/back.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+					</control>
+					<control type="multiimage">
+						<posx>40</posx>
+						<posy>450</posy>
+						<width>433</width>
+						<height>243</height>
+						<timeperimage>47000</timeperimage>
+						<randomize>true</randomize>
+						<fadetime>1000</fadetime>
+						<imagepath background="true">$INFO[Skin.String(CustomPicturesFolder)]</imagepath>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+					</control>
+			</control>-->
 	</control>
 	
 <!--  Right Side Info  -->
@@ -1154,6 +1002,204 @@
 				<include>recent_left_side</include>
 				<visible>Container(9000).HasFocus(1) + Control.HasFocus(8012)</visible>
 			</control>
+		<control type="group">
+			<posx>790</posx>
+			<visible>Container(9000).HasFocus(2)</visible>
+			<include>recent_left_side</include>
+				<control type="label">
+					<posx>0</posx>
+					<posy>430</posy>
+					<width>500</width>
+					<height>20</height>
+					<align>left</align>
+					<font>DejaVuSans_Bold_Caps_20</font>
+					<textcolor>Black</textcolor>
+					<label>31023</label>
+				</control>
+					<control type="image" id="3430">
+						<posx>0</posx>
+						<posy>450</posy>
+						<width>129</width>
+						<height>50</height>
+						<texture background="true">$INFO[Window(Home).Property(NextAired.1.Showpath)]logo.png</texture>
+						<fadetime>300</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>substring(Window(Home).Property(NextAired.1.Today),true)</visible>
+					</control>
+						<control type="textbox">
+							<posx>0</posx>
+							<posy>454</posy>
+							<width>129</width>
+							<height>50</height>
+							<align>left</align>
+							<font>Liberation22</font>
+							<textcolor>Darkest_Green</textcolor>
+							<label fallback="-">[B]$INFO[Window(Home).Property(NextAired.1.ShowTitle)][/B]</label>
+							<visible>substring(Window(Home).Property(NextAired.1.Today),true) + IsEmpty(Control.GetLabel(3430))</visible>
+						</control>
+						<control type="label">
+							<posx>140</posx>
+							<posy>462</posy>
+							<width>360</width>
+							<height>30</height>
+							<align>left</align>
+							<font>Liberation20</font>
+							<textcolor>Darkest_Green</textcolor>
+							<label fallback="-">[B]$INFO[Window(Home).Property(NextAired.1.NextTitle)][/B]</label>
+							<visible>substring(Window(Home).Property(NextAired.1.Today),true)</visible>
+						</control>
+						<control type="label">
+							<posx>140</posx>
+							<posy>484</posy>
+							<width>360</width>
+							<height>30</height>
+							<align>left</align>
+							<font>Liberation16</font>
+							<textcolor>Black</textcolor>
+							<label fallback="-">[B]$INFO[Window(Home).Property(NextAired.1.shortime)][/B] on [B]$INFO[Window(Home).Property(NextAired.1.Network)][/B]</label>
+							<visible>substring(Window(Home).Property(NextAired.1.Today),true)</visible>
+						</control>
+					<control type="image" id="3431">
+						<posx>0</posx>
+						<posy>510</posy>
+						<width>129</width>
+						<height>50</height>
+						<texture background="true">$INFO[Window(Home).Property(NextAired.2.Showpath)]logo.png</texture>
+						<fadetime>300</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>substring(Window(Home).Property(NextAired.2.Today),true)</visible>
+					</control>
+						<control type="textbox">
+							<posx>0</posx>
+							<posy>514</posy>
+							<width>129</width>
+							<height>50</height>
+							<align>left</align>
+							<font>Liberation22</font>
+							<textcolor>Darkest_Green</textcolor>
+							<label fallback="-">[B]$INFO[Window(Home).Property(NextAired.2.ShowTitle)][/B]</label>
+							<visible>substring(Window(Home).Property(NextAired.2.Today),true) + IsEmpty(Control.GetLabel(3431))</visible>
+						</control>
+						<control type="label">
+							<posx>140</posx>
+							<posy>522</posy>
+							<width>360</width>
+							<height>30</height>
+							<align>left</align>
+							<font>Liberation20</font>
+							<textcolor>Darkest_Green</textcolor>
+							<label fallback="-">[B]$INFO[Window(Home).Property(NextAired.2.NextTitle)][/B]</label>
+							<visible>substring(Window(Home).Property(NextAired.2.Today),true)</visible>
+						</control>
+						<control type="label">
+							<posx>140</posx>
+							<posy>544</posy>
+							<width>360</width>
+							<height>30</height>
+							<align>left</align>
+							<font>Liberation16</font>
+							<textcolor>Black</textcolor>
+							<label fallback="-">[B]$INFO[Window(Home).Property(NextAired.2.shortime)][/B] on [B]$INFO[Window(Home).Property(NextAired.2.Network)][/B]</label>
+							<visible>substring(Window(Home).Property(NextAired.2.Today),true)</visible>
+						</control>
+					<control type="image" id="3432">
+						<posx>0</posx>
+						<posy>564</posy>
+						<width>129</width>
+						<height>50</height>
+						<texture background="true">$INFO[Window(Home).Property(NextAired.3.Showpath)]logo.png</texture>
+						<fadetime>300</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>substring(Window(Home).Property(NextAired.3.Today),true)</visible>
+					</control>
+						<control type="textbox">
+							<posx>0</posx>
+							<posy>570</posy>
+							<width>129</width>
+							<height>50</height>
+							<align>left</align>
+							<font>Liberation22</font>
+							<textcolor>Darkest_Green</textcolor>
+							<label fallback="-">[B]$INFO[Window(Home).Property(NextAired.3.ShowTitle)][/B]</label>
+							<visible>substring(Window(Home).Property(NextAired.3.Today),true) + IsEmpty(Control.GetLabel(3432))</visible>
+						</control>
+						<control type="label">
+							<posx>140</posx>
+							<posy>582</posy>
+							<width>360</width>
+							<height>30</height>
+							<align>left</align>
+							<font>Liberation20</font>
+							<textcolor>Darkest_Green</textcolor>
+							<label fallback="-">[B]$INFO[Window(Home).Property(NextAired.3.NextTitle)][/B]</label>
+							<visible>substring(Window(Home).Property(NextAired.3.Today),true)</visible>
+						</control>
+						<control type="label">
+							<posx>140</posx>
+							<posy>604</posy>
+							<width>360</width>
+							<height>30</height>
+							<align>left</align>
+							<font>Liberation16</font>
+							<textcolor>Black</textcolor>
+							<label fallback="-">[B]$INFO[Window(Home).Property(NextAired.3.shortime)][/B] on [B]$INFO[Window(Home).Property(NextAired.3.Network)][/B]</label>
+							<visible>substring(Window(Home).Property(NextAired.3.Today),true)</visible>
+						</control>
+					<control type="image" id="3433">
+						<posx>0</posx>
+						<posy>624</posy>
+						<width>129</width>
+						<height>50</height>
+						<texture background="true">$INFO[Window(Home).Property(NextAired.4.Showpath)]logo.png</texture>
+						<fadetime>300</fadetime>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<visible>substring(Window(Home).Property(NextAired.4.Today),true)</visible>
+					</control>
+						<control type="textbox">
+							<posx>0</posx>
+							<posy>630</posy>
+							<width>129</width>
+							<height>50</height>
+							<align>left</align>
+							<font>Liberation22</font>
+							<textcolor>Darkest_Green</textcolor>
+							<label fallback="-">[B]$INFO[Window(Home).Property(NextAired.4.ShowTitle)][/B]</label>
+							<visible>substring(Window(Home).Property(NextAired.4.Today),true) + IsEmpty(Control.GetLabel(3433))</visible>
+						</control>
+						<control type="label">
+							<posx>140</posx>
+							<posy>636</posy>
+							<width>360</width>
+							<height>30</height>
+							<align>left</align>
+							<font>Liberation20</font>
+							<textcolor>Darkest_Green</textcolor>
+							<label fallback="-">[B]$INFO[Window(Home).Property(NextAired.4.NextTitle)][/B]</label>
+							<visible>substring(Window(Home).Property(NextAired.4.Today),true)</visible>
+						</control>
+						<control type="label">
+							<posx>140</posx>
+							<posy>658</posy>
+							<width>360</width>
+							<height>30</height>
+							<align>left</align>
+							<font>Liberation16</font>
+							<textcolor>Black</textcolor>
+							<label fallback="-">[B]$INFO[Window(Home).Property(NextAired.4.shortime)][/B] on [B]$INFO[Window(Home).Property(NextAired.4.Network)][/B]</label>
+							<visible>substring(Window(Home).Property(NextAired.4.Today),true)</visible>
+						</control>
+					<control type="label">
+						<posx>0</posx>
+						<posy>490</posy>
+						<width>360</width>
+						<height>30</height>
+						<align>center</align>
+						<font>DejaVuSans_Bold_Caps_50</font>
+						<textcolor>Main_Grey</textcolor>
+						<label fallback="-">231</label>
+						<visible>![substring(Window(Home).Property(NextAired.1.Today),true) | substring(Window(Home).Property(NextAired.2.Today),true) | substring(Window(Home).Property(NextAired.3.Today),true) | substring(Window(Home).Property(NextAired.4.Today),true)]</visible>
+					</control>
+		</control>
 		<control type="group">
 			<include>recent_left_side</include>
 			<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(14)</visible>
@@ -1279,6 +1325,29 @@
 					<label fallback="-">$INFO[Window(Weather).Property(Day3.Outlook)]</label>
 				</control>
 		</control>
+		<!--<control type="group">
+			<include>recent_left_side</include>
+			<visible>Container(9000).HasFocus(6)</visible>
+				<control type="image">
+					<posx>810</posx>
+					<posy>450</posy>
+					<width>433</width>
+					<height>243</height>
+					<texture>misc/back.png</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+				<control type="multiimage">
+					<posx>810</posx>
+					<posy>450</posy>
+					<width>433</width>
+					<height>243</height>
+					<timeperimage>47000</timeperimage>
+					<randomize>true</randomize>
+					<fadetime>1000</fadetime>
+					<imagepath background="true">$INFO[Skin.String(CustomPicturesFolder)]</imagepath>
+					<aspectratio scalediffuse="false">scale</aspectratio>
+				</control>
+		</control>-->
 	</control>
 	
 	

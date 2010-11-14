@@ -2,139 +2,759 @@
 	<include name="VideoCodecFlaggingConditions">
 		<control type="image">
 			<description>Video rez Image</description>
-			<width>90</width>
-			<height>33</height>
+			<width>66</width>
+			<height>49</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoResolution,flagging/video/,.png]</texture>
 		</control>
 		<control type="image">
-			<description>Common Codec Image</description>
-			<width>90</width>
-			<height>33</height>
+			<description>Xvid Codec Image</description>
+			<width>66</width>
+			<height>49</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.VideoCodec,flagging/video/,.png]</texture>
-			<!-- Don't show if its one of the 500 divx codecs -->
-			<visible>![substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]</visible>
+			<texture>flagging/video/xvid.png</texture>
+			<visible>substring(ListItem.VideoCodec,xvid)</visible>
+		</control>
+		<control type="image">
+			<description>Mpeg4 Codec Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/mp4.png</texture>
+			<visible>substring(ListItem.VideoCodec,fmp4)</visible>
 		</control>
 		<control type="image">
 			<description>Divx Codec Image</description>
-			<width>90</width>
-			<height>33</height>
+			<width>66</width>
+			<height>49</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/divx.png</texture>
-			<visible>[substring(ListItem.VideoCodec,div,left) | stringcompare(ListItem.VideoCodec,dx50)]</visible>
+			<visible>substring(ListItem.VideoCodec,divx)| substring(ListItem.VideoCodec,dx50) | substring(ListItem.VideoCodec,div3) |substring(ListItem.VideoCodec,div4) | substring(ListItem.VideoCodec,div5)</visible>
+		</control>
+		<control type="image">
+			<description>h264 Codec Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/h264.png</texture>
+			<visible>substring(ListItem.VideoCodec,h264)</visible>
+		</control>
+		<control type="image">
+			<description>avc1 Codec Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/avc1.png</texture>
+			<visible>substring(ListItem.VideoCodec,avc1)</visible>
+		</control>
+		<control type="image">
+			<description>wvc1 Codec Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/wvc1.png</texture>
+			<visible>substring(ListItem.VideoCodec,wvc1)</visible>
+		</control>
+		<control type="image">
+			<description>mpeg1video Codec Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/mpeg1video.png</texture>
+			<visible>substring(ListItem.VideoCodec,mpeg1video)</visible>
+		</control>
+		<control type="image">
+			<description>mpeg2video Codec Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/mpeg2video.png</texture>
+			<visible>substring(ListItem.VideoCodec,mpeg2video) | substring(ListItem.VideoCodec,v_mpeg2)</visible>
 		</control>
 	</include>
 	<include name="VideoTypeHackFlaggingConditions">
 		<control type="image">
 			<description>Bluray Image</description>
-			<width>90</width>
-			<height>33</height>
+			<width>66</width>
+			<height>49</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/bluray.png</texture>
-			<visible>[substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip)] + !Skin.HasSetting(HideFilenameFlagging)</visible>
+			<visible>substring(ListItem.FilenameAndPath,bluray)</visible>
 		</control>
 		<control type="image">
 			<description>HDDVD Image</description>
-			<width>90</width>
-			<height>33</height>
+			<width>66</width>
+			<height>49</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/hddvd.png</texture>
-			<visible>substring(ListItem.FilenameAndPath,hddvd) + !Skin.HasSetting(HideFilenameFlagging)</visible>
+			<visible>substring(ListItem.FilenameAndPath,hddvd)</visible>
 		</control>
 		<control type="image">
 			<description>DVD Image</description>
-			<width>90</width>
-			<height>33</height>
+			<width>66</width>
+			<height>49</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/video/dvd.png</texture>
-			<visible>[substring(ListItem.FilenameAndPath,dvd) + ![substring(ListItem.FilenameAndPath,hddvd) | substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip)]] + !Skin.HasSetting(HideFilenameFlagging)</visible>
-		</control>
-		<control type="image">
-			<description>TV Types Image</description>
-			<width>90</width>
-			<height>33</height>
-			<aspectratio>keep</aspectratio>
-			<texture>flagging/video/TV.png</texture>
-			<visible>[substring(ListItem.FilenameAndPath,pdtv) | substring(ListItem.FilenameAndPath,hdtv) | substring(ListItem.FilenameAndPath,dsr)] + !Skin.HasSetting(HideFilenameFlagging)</visible>
-		</control>
-		<control type="image">
-			<description>VHS Image</description>
-			<width>90</width>
-			<height>33</height>
-			<aspectratio>keep</aspectratio>
-			<texture>flagging/video/vhs.png</texture>
-			<visible>substring(ListItem.FilenameAndPath,vhs) + !Skin.HasSetting(HideFilenameFlagging)</visible>
+			<visible>substring(ListItem.FilenameAndPath,dvd) + !substring(ListItem.FilenameAndPath,hddvd)</visible>
 		</control>
 	</include>
 	<include name="VideoMPAAFlaggingConditions">
 		<control type="image">
 			<description>Rated G</description>
-			<width>90</width>
-			<height>33</height>
+			<width>72</width>
+			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/mpaa_general.png</texture>
 			<visible>substring(listitem.mpaa,Rated G)</visible>
 		</control>
 		<control type="image">
 			<description>Rated PG</description>
-			<width>90</width>
-			<height>33</height>
+			<width>72</width>
+			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/mpaa_pg.png</texture>
 			<visible>substring(listitem.mpaa,Rated PG) + !substring(listitem.mpaa,Rated PG-13)</visible>
 		</control>
 		<control type="image">
 			<description>Rated PG-13</description>
-			<width>90</width>
-			<height>33</height>
+			<width>72</width>
+			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/mpaa_pg13.png</texture>
 			<visible>substring(listitem.mpaa,Rated PG-13)</visible>
 		</control>
 		<control type="image">
 			<description>Rated R</description>
-			<width>90</width>
-			<height>33</height>
+			<width>72</width>
+			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/mpaa_restricted.png</texture>
 			<visible>substring(Listitem.mpaa,Rated R)</visible>
 		</control>
 		<control type="image">
 			<description>Rated NC-17</description>
-			<width>90</width>
-			<height>33</height>
+			<width>72</width>
+			<height>27</height>
 			<aspectratio>keep</aspectratio>
 			<texture>flagging/ratings/mpaa_nc17.png</texture>
 			<visible>substring(Listitem.mpaa,Rated NC)</visible>
 		</control>
+		<control type="image">
+			<description>Rated bbfc_u</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/bbfc_u.png</texture>
+			<visible>substring(listitem.mpaa,UK:U)</visible>
+		</control>
+		<control type="image">
+			<description>Rated bbfc_pg</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/bbfc_pg.png</texture>
+			<visible>substring(listitem.mpaa,UK:PG)</visible>
+		</control>
+		<control type="image">
+			<description>Rated bbfc_12</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/bbfc_12.png</texture>
+			<visible>substring(listitem.mpaa,UK:12)</visible>
+		</control>
+		<control type="image">
+			<description>Rated bbfc_12</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/bbfc_12A.png</texture>
+			<visible>substring(listitem.mpaa,UK:12A)</visible>
+		</control>
+		<control type="image">
+			<description>Rated bbfc_15</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/bbfc_15.png</texture>
+			<visible>substring(listitem.mpaa,UK:15)</visible>
+		</control>
+		<control type="image">
+			<description>Rated bbfc_18</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/bbfc_18.png</texture>
+			<visible>substring(listitem.mpaa,UK:18)</visible>
+		</control>
+		<control type="image">
+			<description>Rated bbfc_18</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/bbfc_r18.png</texture>
+			<visible>substring(listitem.mpaa,UK:R18)</visible>
+		</control>
+		
+		<control type="image">
+            <description>France:U</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/csaU.png</texture>
+            <visible>substring(Listitem.mpaa,France:U)</visible>
+        </control>
+		<control type="image">
+            <description>Interdit aux moins de 10 ans</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/csa10.png</texture>
+            <visible>substring(Listitem.mpaa,France:-10)</visible>
+        </control>
+        <control type="image">
+            <description>Interdit aux moins de 12 ans</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/csa12.png</texture>
+            <visible>substring(Listitem.mpaa,France:-12)</visible>
+        </control>
+        <control type="image">
+            <description>Interdit aux moins de 16 ans</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/csa16.png</texture>
+            <visible>substring(Listitem.mpaa,France:-16)</visible>
+        </control>
+        <control type="image">
+            <description>Interdit aux moins de 18 ans</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/csa18.png</texture>
+            <visible>substring(Listitem.mpaa,France:-18)</visible>
+        </control>
+		
+		<control type="image">
+            <description>Germany:0</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany0.png</texture>
+            <visible>substring(Listitem.mpaa,Germany:0)</visible>
+        </control>
+        <control type="image">
+            <description>Germany:6</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany6.png</texture>
+            <visible>substring(Listitem.mpaa,Germany:6)</visible>
+        </control>
+        <control type="image">
+            <description>Germany:12</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany12.png</texture>
+            <visible>substring(Listitem.mpaa,Germany:12)</visible>
+        </control>
+        <control type="image">
+            <description>Germany:16</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany16.png</texture>
+            <visible>substring(Listitem.mpaa,Germany:16)</visible>
+        </control>
+		<control type="image">
+            <description>Germany:18</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany18.png</texture>
+            <visible>substring(Listitem.mpaa,Germany:18)</visible>
+        </control>
 	</include>
 	<include name="AudioCodecFlaggingConditions">
 		<control type="image">
-			<description>Dolby Digital Image</description>
-			<width>90</width>
-			<height>33</height>
+			<description>mp3 Codec Image</description>
+			<width>66</width>
+			<height>49</height>
 			<aspectratio>keep</aspectratio>
-			<texture>flagging/audio/dolbydigital.png</texture>
-			<visible>[stringcompare(ListItem.AudioCodec,ac3) + stringcompare(ListItem.AudioChannels,6)]</visible>
+			<texture>flagging/audio/mp3.png</texture>
+			<visible>substring(ListItem.AudioCodec,mp3)</visible>
 		</control>
 		<control type="image">
-			<description>Audio Codec Image</description>
-			<width>90</width>
-			<height>33</height>
+			<description>dts Codec Image</description>
+			<width>66</width>
+			<height>49</height>
 			<aspectratio>keep</aspectratio>
-			<texture>$INFO[ListItem.AudioCodec,flagging/audio/,.png]</texture>
-			<!-- Don't show if I want the Dolby Digital Logo -->
-			<visible>![stringcompare(ListItem.AudioCodec,ac3) + stringcompare(ListItem.AudioChannels,6)]</visible>
+			<texture>flagging/audio/dts.png</texture>
+			<visible>substring(ListItem.AudioCodec,dca)</visible>
+		</control>
+		<control type="image">
+			<description>ac3 Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/ac3.png</texture>
+			<visible>substring(ListItem.AudioCodec,ac3) + !substring(ListItem.AudioChannels,6)</visible>
+		</control>
+		<control type="image">
+			<description>aac Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/aac.png</texture>
+			<visible>substring(ListItem.AudioCodec,aac)</visible>
+		</control>
+		<control type="image">
+			<description>Dolby Digital Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/dolbydigital.png</texture>
+			<visible>substring(ListItem.AudioCodec,ac3) + substring(ListItem.AudioChannels,6)</visible>
+		</control>
+		<control type="image">
+			<description>WMA Pro Codec Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/wmapro.png</texture>
+			<visible>substring(ListItem.AudioCodec,wmapro)</visible>
+		</control>
+		 <control type="image">
+			<description>vorbis Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/vorbis.png</texture>
+			<visible>substring(ListItem.AudioCodec,vorbis)</visible>
+		</control>
+		<control type="image">
+			<description>Audio Channels Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[ListItem.AudioChannels,flagging/audio/,.png]</texture>
+		</control>
+		<control type="image">
+			<description>dtsma Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/dtsma.png</texture>
+			<visible>substring(ListItem.AudioCodec,dtsma) + substring(ListItem.AudioChannels,6)</visible>
+		</control>
+		<control type="image">
+			<description>truehd Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/truehd.png</texture>
+			<visible>substring(ListItem.AudioCodec,truehd) + substring(ListItem.AudioChannels,6)</visible>
+		</control>
+		<control type="image">
+			<description>flac Image</description>
+			<width>66</width>
+			<height>49</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/flac.png</texture>
+			<visible>substring(ListItem.AudioCodec,flac) + substring(ListItem.AudioChannels,6)</visible>
 		</control>
 	</include>
 	<include name="AspectCodecFlaggingConditions">
 		<control type="image">
 			<description>Aspectratio Image</description>
-			<width>60</width>
-			<height>33</height>
+			<width>66</width>
+			<height>49</height>
 			<aspectratio>keep</aspectratio>
 			<texture>$INFO[ListItem.VideoAspect,flagging/aspectratio/,.png]</texture>
 		</control>
 	</include>
+	
+	
+	<include name="Playing_VideoCodecFlaggingConditions">
+		<control type="image">
+			<description>Video rez Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[videoplayer.VideoResolution,flagging/video/,.png]</texture>
+		</control>
+		<control type="image">
+			<description>Xvid Codec Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/xvid.png</texture>
+			<visible>substring(videoplayer.VideoCodec,xvid)</visible>
+		</control>
+		<control type="image">
+			<description>Mpeg4 Codec Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/mp4.png</texture>
+			<visible>substring(videoplayer.VideoCodec,fmp4)</visible>
+		</control>
+		<control type="image">
+			<description>Divx Codec Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/divx.png</texture>
+			<visible>substring(videoplayer.VideoCodec,divx)| substring(videoplayer.VideoCodec,dx50) | substring(videoplayer.VideoCodec,div3) |substring(videoplayer.VideoCodec,div4) | substring(videoplayer.VideoCodec,div5)</visible>
+		</control>
+		<control type="image">
+			<description>h264 Codec Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/h264.png</texture>
+			<visible>substring(videoplayer.VideoCodec,h264)</visible>
+		</control>
+		<control type="image">
+			<description>avc1 Codec Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/avc1.png</texture>
+			<visible>substring(videoplayer.VideoCodec,avc1)</visible>
+		</control>
+		<control type="image">
+			<description>wvc1 Codec Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/wvc1.png</texture>
+			<visible>substring(videoplayer.VideoCodec,wvc1)</visible>
+		</control>
+		<control type="image">
+			<description>mpeg1video Codec Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/mpeg1video.png</texture>
+			<visible>substring(videoplayer.VideoCodec,mpeg1video)</visible>
+		</control>
+		<control type="image">
+			<description>mpeg2video Codec Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/mpeg2video.png</texture>
+			<visible>substring(videoplayer.VideoCodec,mpeg2video) | substring(videoplayer.VideoCodec,v_mpeg2)</visible>
+		</control>
+	</include>
+	<include name="Playing_VideoTypeHackFlaggingConditions">
+		<control type="image">
+			<description>Bluray Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/bluray.png</texture>
+			<visible>substring(videoplayer.FilenameAndPath,bluray)</visible>
+		</control>
+		<control type="image">
+			<description>HDDVD Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/hddvd.png</texture>
+			<visible>substring(videoplayer.FilenameAndPath,hddvd)</visible>
+		</control>
+		<control type="image">
+			<description>DVD Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/video/dvd.png</texture>
+			<visible>substring(videoplayer.FilenameAndPath,dvd) + !substring(videoplayer.FilenameAndPath,hddvd)</visible>
+		</control>
+	</include>
+	<include name="Playing_VideoMPAAFlaggingConditions">
+		<control type="image">
+			<description>Rated G</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/mpaa_general.png</texture>
+			<visible>substring(videoplayer.mpaa,Rated G)</visible>
+		</control>
+		<control type="image">
+			<description>Rated PG</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/mpaa_pg.png</texture>
+			<visible>substring(videoplayer.mpaa,Rated PG) + !substring(videoplayer.mpaa,Rated PG-13)</visible>
+		</control>
+		<control type="image">
+			<description>Rated PG-13</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/mpaa_pg13.png</texture>
+			<visible>substring(videoplayer.mpaa,Rated PG-13)</visible>
+		</control>
+		<control type="image">
+			<description>Rated R</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/mpaa_restricted.png</texture>
+			<visible>substring(videoplayer.mpaa,Rated R)</visible>
+		</control>
+		<control type="image">
+			<description>Rated NC-17</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/mpaa_nc17.png</texture>
+			<visible>substring(videoplayer.mpaa,Rated NC)</visible>
+		</control>
+		<control type="image">
+			<description>Rated bbfc_u</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/bbfc_u.png</texture>
+			<visible>substring(videoplayer.mpaa,UK:U)</visible>
+		</control>
+		<control type="image">
+			<description>Rated bbfc_pg</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/bbfc_pg.png</texture>
+			<visible>substring(videoplayer.mpaa,UK:PG)</visible>
+		</control>
+		<control type="image">
+			<description>Rated bbfc_12</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/bbfc_12.png</texture>
+			<visible>substring(videoplayer.mpaa,UK:12)</visible>
+		</control>
+		<control type="image">
+			<description>Rated bbfc_12</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/bbfc_12A.png</texture>
+			<visible>substring(videoplayer.mpaa,UK:12A)</visible>
+		</control>
+		<control type="image">
+			<description>Rated bbfc_15</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/bbfc_15.png</texture>
+			<visible>substring(videoplayer.mpaa,UK:15)</visible>
+		</control>
+		<control type="image">
+			<description>Rated bbfc_18</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/bbfc_18.png</texture>
+			<visible>substring(videoplayer.mpaa,UK:18)</visible>
+		</control>
+		<control type="image">
+			<description>Rated bbfc_18</description>
+			<width>72</width>
+			<height>27</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/ratings/bbfc_r18.png</texture>
+			<visible>substring(videoplayer.mpaa,UK:R18)</visible>
+		</control>
+		
+		<control type="image">
+            <description>France:U</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/csaU.png</texture>
+            <visible>substring(videoplayer.mpaa,France:U)</visible>
+        </control>
+		<control type="image">
+            <description>Interdit aux moins de 10 ans</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/csa10.png</texture>
+            <visible>substring(videoplayer.mpaa,France:-10)</visible>
+        </control>
+        <control type="image">
+            <description>Interdit aux moins de 12 ans</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/csa12.png</texture>
+            <visible>substring(videoplayer.mpaa,France:-12)</visible>
+        </control>
+        <control type="image">
+            <description>Interdit aux moins de 16 ans</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/csa16.png</texture>
+            <visible>substring(videoplayer.mpaa,France:-16)</visible>
+        </control>
+        <control type="image">
+            <description>Interdit aux moins de 18 ans</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/csa18.png</texture>
+            <visible>substring(videoplayer.mpaa,France:-18)</visible>
+        </control>
+		
+		<control type="image">
+            <description>Germany:0</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany0.png</texture>
+            <visible>substring(videoplayer.mpaa,Germany:0)</visible>
+        </control>
+        <control type="image">
+            <description>Germany:6</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany6.png</texture>
+            <visible>substring(videoplayer.mpaa,Germany:6)</visible>
+        </control>
+        <control type="image">
+            <description>Germany:12</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany12.png</texture>
+            <visible>substring(videoplayer.mpaa,Germany:12)</visible>
+        </control>
+        <control type="image">
+            <description>Germany:16</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany16.png</texture>
+            <visible>substring(videoplayer.mpaa,Germany:16)</visible>
+        </control>
+		<control type="image">
+            <description>Germany:18</description>
+            <width>72</width>
+			<height>27</height>
+            <aspectratio>keep</aspectratio>
+            <texture>flagging/ratings/Germany18.png</texture>
+            <visible>substring(videoplayer.mpaa,Germany:18)</visible>
+        </control>
+	</include>
+	<include name="Playing_AudioCodecFlaggingConditions">
+		<control type="image">
+			<description>mp3 Codec Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/mp3.png</texture>
+			<visible>substring(videoplayer.AudioCodec,mp3)</visible>
+		</control>
+		<control type="image">
+			<description>dts Codec Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/dts.png</texture>
+			<visible>substring(videoplayer.AudioCodec,dca)</visible>
+		</control>
+		<control type="image">
+			<description>ac3 Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/ac3.png</texture>
+			<visible>substring(videoplayer.AudioCodec,ac3) + !substring(videoplayer.AudioChannels,6)</visible>
+		</control>
+		<control type="image">
+			<description>aac Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/aac.png</texture>
+			<visible>substring(videoplayer.AudioCodec,aac)</visible>
+		</control>
+		<control type="image">
+			<description>Dolby Digital Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/dolbydigital.png</texture>
+			<visible>substring(videoplayer.AudioCodec,ac3) + substring(videoplayer.AudioChannels,6)</visible>
+		</control>
+		<control type="image">
+			<description>WMA Pro Codec Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/wmapro.png</texture>
+			<visible>substring(videoplayer.AudioCodec,wmapro)</visible>
+		</control>
+		 <control type="image">
+			<description>vorbis Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/vorbis.png</texture>
+			<visible>substring(videoplayer.AudioCodec,vorbis)</visible>
+		</control>
+		<control type="image">
+			<description>Audio Channels Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[videoplayer.AudioChannels,flagging/audio/,.png]</texture>
+		</control>
+		<control type="image">
+			<description>dtsma Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/dtsma.png</texture>
+			<visible>substring(videoplayer.AudioCodec,dtsma) + substring(videoplayer.AudioChannels,6)</visible>
+		</control>
+		<control type="image">
+			<description>truehd Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/truehd.png</texture>
+			<visible>substring(videoplayer.AudioCodec,truehd) + substring(videoplayer.AudioChannels,6)</visible>
+		</control>
+		<control type="image">
+			<description>flac Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>flagging/audio/flac.png</texture>
+			<visible>substring(videoplayer.AudioCodec,flac) + substring(videoplayer.AudioChannels,6)</visible>
+		</control>
+	</include>
+	<include name="Playing_AspectCodecFlaggingConditions">
+		<control type="image">
+			<description>Aspectratio Image</description>
+			<width>56</width>
+			<height>41</height>
+			<aspectratio>keep</aspectratio>
+			<texture>$INFO[videoplayer.VideoAspect,flagging/aspectratio/,.png]</texture>
+		</control>
+	</include>
+	
+	
 </includes>

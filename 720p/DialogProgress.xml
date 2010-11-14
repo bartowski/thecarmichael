@@ -10,7 +10,7 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<visible>!Window.IsActive(progressdialog)</visible>
+			<visible>![Window.IsActive(selectdialog) | Window.IsActive(okdialog)]</visible>
 			<control type="label" id="1">
 				<description>heading label</description>
 				<posx>0</posx>

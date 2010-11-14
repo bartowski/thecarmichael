@@ -254,6 +254,16 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>74</posy>
+					<width>747</width>
+					<height>420</height>
+					<fadetime>400</fadetime> 
+					<texture background="true" fallback="backgrounds/movies.jpg" diffuse="maintop/main_fanart_diffuse.png">special://skin/extras/moviegenrefanart/$INFO[ListItem.Label].jpg</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>Container.Content(genres)</visible>
+				</control>
 				<control type="multiimage">
 					<posx>0</posx>
 					<posy>74</posy>
@@ -303,7 +313,7 @@
 					<fadetime>400</fadetime> 
 					<texture background="true" fallback="backgrounds/music.jpg" diffuse="maintop/main_fanart_diffuse.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Window.IsActive(musiclibrary)</visible>
+					<visible>Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist)</visible>
 				</control>
 		</control>
 	</include>
@@ -370,7 +380,19 @@
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 				<scroll>false</scroll>
-				<visible>Container.Content(movies)</visible>
+				<visible>[Container.Content(movies) | substring(container.folderpath,plugin://)] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+			</control>
+			<control type="textbox">
+				<posx>760</posx>
+				<posy>100</posy>
+				<width>510</width>
+				<height>76</height>
+				<align>center</align>
+				<font>Liberation28</font>
+				<textcolor>Main_Green</textcolor>
+				<label>[B]$LOCALIZE[20012][/B]</label>
+				<scroll>false</scroll>
+				<visible>[substring(listitem.path,special://profile/playlists/video) | substring(listitem.path,newsmartplaylist)] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
 				<posx>760</posx>
@@ -382,7 +404,7 @@
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 				<scroll>false</scroll>
-				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(videoplaylist) | substring(container.folderpath,plugin://)] + IsEmpty(Control.GetLabel(7100)) + IsEmpty(Control.GetLabel(7101)) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(videoplaylist)] + IsEmpty(Control.GetLabel(7100)) + IsEmpty(Control.GetLabel(7101)) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
 				<posx>760</posx>
@@ -394,7 +416,7 @@
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
 				<scroll>false</scroll>
-				<visible>Container.Content(episodes) + IsEmpty(Control.GetLabel(7100)) + IsEmpty(Control.GetLabel(7101))</visible>
+				<visible>Container.Content(episodes) + !substring(container.folderpath,plugin://plugin.video.hulu) + IsEmpty(Control.GetLabel(7100)) + IsEmpty(Control.GetLabel(7101))</visible>
 			</control>
 			<control type="textbox">
 				<posx>760</posx>
@@ -407,18 +429,6 @@
 				<label>[B]$LOCALIZE[31010][/B]</label>
 				<scroll>false</scroll>
 				<visible>SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
-			</control>
-			<control type="textbox">
-				<posx>760</posx>
-				<posy>100</posy>
-				<width>510</width>
-				<height>76</height>
-				<align>center</align>
-				<font>Liberation28</font>
-				<textcolor>Main_Green</textcolor>
-				<label>[B]$INFO[ListItem.Label][/B]</label>
-				<scroll>false</scroll>
-				<visible>[Container.Content(movies) | substring(container.folderpath,plugin://)] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
 				<posx>760</posx>
@@ -742,7 +752,7 @@
 			<orientation>horizontal</orientation>
 			<include>main_window_rightside_open_close</include>
 			<animation effect="slide" start="0,0" end="800,0" time="200" condition="Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog)">Conditional</animation>
-			<visible>Container.Content(albums) + !Window.IsActive(contextmenu)</visible>
+			<visible>Container.Content(albums)</visible>
 				<control type="label">
 					<width min="29" max="200">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
@@ -754,15 +764,93 @@
 					<width min="29" max="300">auto</width>
 					<font>DejaVuSans_Bold_Caps_20</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - $INFO[ListItem.genre]</label>
+					<label> - $INFO[ListItem.genre] - </label>
+					<visible>!IsEmpty(ListItem.genre)</visible>
+				</control>
+				<control type="image">
+					<posx>300</posx>
+					<posy>580</posy>
+					<width>110</width>
+					<height>20</height>
+					<texture>$INFO[ListItem.StarRating]</texture>
+					<colordiffuse>Light_Grey</colordiffuse>
+					<animation effect="slide" start="0,0" end="2,5" time="200" condition="true">Conditional</animation>
+				</control>
+		</control>
+		<control type="grouplist">
+			<posx>760</posx>
+			<posy>382</posy>
+			<width>500</width>
+			<height>40</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<include>main_window_rightside_open_close</include>
+			<animation effect="slide" start="0,0" end="800,0" time="200" condition="Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog)">Conditional</animation>
+			<visible>Container.Content(artists)</visible>
+				<control type="label">
+					<width min="29" max="500">auto</width>
+					<font>DejaVuSans_Bold_Caps_20</font>
+					<textcolor>Light_Grey</textcolor>
+					<label>$INFO[ListItem.Property(Artist_YearsActive)]</label>
+					<visible></visible>
+				</control>
+		</control>
+		<control type="grouplist">
+			<posx>760</posx>
+			<posy>382</posy>
+			<width>500</width>
+			<height>40</height>
+			<align>center</align>
+			<orientation>horizontal</orientation>
+			<include>main_window_rightside_open_close</include>
+			<animation effect="slide" start="0,0" end="800,0" time="200" condition="Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog)">Conditional</animation>
+			<visible>Container.Content(songs)</visible>
+				<control type="image">
+					<posx>300</posx>
+					<posy>580</posy>
+					<width>110</width>
+					<height>20</height>
+					<texture>$INFO[ListItem.StarRating]</texture>
+					<colordiffuse>Light_Grey</colordiffuse>
+					<animation effect="slide" start="0,0" end="2,5" time="200" condition="true">Conditional</animation>
+				</control>
+		</control>
+		<control type="grouplist">
+			<posx>760</posx>
+			<posy>60</posy>
+			<width>500</width>
+			<height>300</height>
+			<align>center</align>
+			<orientation>vertical</orientation>
+			<include>main_window_rightside_open_close</include>
+			<animation effect="slide" start="0,0" end="800,0" time="200" condition="Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog)">Conditional</animation>
+			<visible>Container.Content(songs)</visible>
+				<control type="label">
+					<width>510</width>
+					<height>20</height>
+					<align>left</align>
+					<font>Liberation18</font>
+					<textcolor>Light_Grey</textcolor>
+					<label>$LOCALIZE[557] [COLOR=White]$INFO[ListItem.Artist][/COLOR]</label>
+					<visible>!IsEmpty(ListItem.Artist)</visible>
+				</control>
+				<control type="label">
+					<width>510</width>
+					<height>20</height>
+					<align>left</align>
+					<font>Liberation18</font>
+					<textcolor>Light_Grey</textcolor>
+					<label>$LOCALIZE[515] [COLOR=White]$INFO[ListItem.genre][/COLOR]</label>
 					<visible>!IsEmpty(ListItem.genre)</visible>
 				</control>
 				<control type="label">
-					<width min="29" max="200">auto</width>
-					<font>DejaVuSans_Bold_Caps_20</font>
+					<width>510</width>
+					<height>20</height>
+					<align>left</align>
+					<font>Liberation18</font>
 					<textcolor>Light_Grey</textcolor>
-					<label> - $INFO[ListItem.Rating]</label>
-					<visible>!IsEmpty(ListItem.Rating)</visible>
+					<label>$LOCALIZE[562] [COLOR=White]$INFO[ListItem.year][/COLOR]</label>
+					<visible>!IsEmpty(ListItem.year)</visible>
 				</control>
 		</control>
 	</include>
@@ -1402,10 +1490,10 @@
 		<width>860</width>
 		<height>34</height>
 		<textoffsetx>6</textoffsetx>
-		<textoffsety>10</textoffsety>
-		<font>Liberation18</font>
+		<textoffsety>8</textoffsety>
+		<font>Liberation20</font>
 		<textcolor>White</textcolor>
-		<focusedcolor>White</focusedcolor>
+		<focusedcolor>Black</focusedcolor>
 		<texturefocus>MenuItemFO.png</texturefocus>
 		<texturenofocus>MenuItemNF.png</texturenofocus>
 	</include>
@@ -1414,9 +1502,9 @@
 		<height>24</height>
 		<textoffsetx>30</textoffsetx>
 		<textoffsety>4</textoffsety>
-		<font>Liberation18</font>
+		<font>Liberation20</font>
 		<textcolor>White</textcolor>
-		<focusedcolor>White</focusedcolor>
+		<focusedcolor>Black</focusedcolor>
 		<texturefocus>MenuItemFO.png</texturefocus>
 		<texturenofocus>MenuItemNF.png</texturenofocus>
 	</include>

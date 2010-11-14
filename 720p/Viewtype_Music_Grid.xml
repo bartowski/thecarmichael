@@ -10,17 +10,18 @@
 			<posy>416</posy>
 			<width>1380</width>
 			<height>298</height>
-			<pagecontrol>60</pagecontrol>
+			<pagecontrol>63</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<focusposition>3</focusposition>
 			<orientation>vertical</orientation>
 			<viewtype label="Grid">List</viewtype>
 			<onleft>9000</onleft>
-			<onright>9000</onright>
+			<onright>63</onright>
 			<onup>53</onup>
 			<ondown>53</ondown>
 			<preloaditems>2</preloaditems>
 			<include>main_window_open_close</include>
+			<animation effect="slide" start="0,0" end="-50,0" time="400" condition="Control.HasFocus(63)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(musicinformation)">Conditional</animation>
 			<visible>Container.Content(artists) | Container.Content(albums) | !Container.Content(genres)</visible>
@@ -116,5 +117,23 @@
 			</control>
 	</control>
 
+	
+	<control type="scrollbar" id="63">
+		<posx>1250</posx>
+		<posy>420</posy>
+		<width>19</width>
+		<height>285</height>
+		<visible allowhiddenfocus="true">Control.IsVisible(53) + Control.HasFocus(63)</visible>
+		<texturesliderbackground border="0,14,0,14">osd/vertical_slider_back.png</texturesliderbackground>
+		<textureslidernibfocus>osd/vertical_slider_nib.png</textureslidernibfocus>
+		<onleft>53</onleft>
+		<onright>53</onright>
+		<showonepage>true</showonepage>
+		<orientation>vertical</orientation>
+		<include>Animation_CommonFade</include>
+		<animation effect="slide" start="200,0" end="0,0" time="400" delay="200" tween="cubic" easing="inout" condition="true">Conditional</animation>
+	</control>
+	
+	
 	</include>
 </includes>

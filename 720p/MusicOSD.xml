@@ -8,6 +8,14 @@
 			<height>126</height>
 			<texture>osd/osd_back1.png</texture>
 			<aspectratio>stretch</aspectratio>
+			<animation type="WindowOpen">
+				<effect type="slide" start="0,-300" end="0,0" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="0" end="100" time="600" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0,0" end="0,-300" time="600" tween="cubic" easing="out" />
+				<effect type="fade" start="100" end="0" time="600" />
+			</animation>
 			<visible allowhiddenfocus="true">!Controlgroup(2002).HasFocus</visible>
 		</control>
 		<control type="image">

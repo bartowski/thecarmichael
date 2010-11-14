@@ -37,34 +37,36 @@
 				<width>319</width>
 				<height>179</height>
 				<texture>$INFO[VideoPlayer.Cover]</texture>
-				<aspectratio>stretch</aspectratio>
+				<bordertexture border="3">button-nofocus.png</bordertexture>
+				<bordersize>3</bordersize>
+				<aspectratio>keep</aspectratio>
 				<visible>VideoPlayer.Content(movies) + IsEmpty(Control.GetLabel(4141))</visible>
 			</control>
 			
-			<control type="label">
+			<control type="textbox">
 				<posx>0</posx>
 				<posy>186</posy>
 				<width>319</width>
-				<height>25</height>
-				<label>[B]"$INFO[VideoPlayer.Title]"[/B]</label>
+				<height>50</height>
+				<label>[B]$INFO[VideoPlayer.Title][/B]</label>
 				<textcolor>Main_Green</textcolor>
-				<font>Liberation24</font>
+				<font>Liberation24_condensed</font>
 				<align>center</align>
 			</control>
 			<control type="label">
 				<posx>0</posx>
-				<posy>210</posy>
+				<posy>624</posy>
 				<width>319</width>
 				<height>25</height>
 				<label>$LOCALIZE[20373] $INFO[VideoPlayer.season]/$LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
 				<textcolor>Light_Grey</textcolor>
-				<font>Liberation16</font>
+				<font>Liberation18</font>
 				<align>center</align>
 				<visible>VideoPlayer.Content(episodes)</visible>
 			</control>
-			<control type="label">
+			<!--<control type="label">
 				<posx>0</posx>
-				<posy>210</posy>
+				<posy>674</posy>
 				<width>319</width>
 				<height>25</height>
 				<label>$INFO[VideoPlayer.year]/$INFO[VideoPlayer.director]</label>
@@ -72,22 +74,11 @@
 				<font>Liberation16</font>
 				<align>center</align>
 				<visible>VideoPlayer.Content(movies)</visible>
-			</control>
-			<control type="label">
-				<posx>0</posx>
-				<posy>230</posy>
-				<width>319</width>
-				<height>25</height>
-				<label>$LOCALIZE[20416] - $INFO[VideoPlayer.Year]</label>
-				<textcolor>Light_Grey</textcolor>
-				<font>Liberation16</font>
-				<align>center</align>
-				<visible>VideoPlayer.Content(episodes)</visible>
-			</control>
+			</control>-->
 			<control type="textbox">
 				<posx>4</posx>
-				<posy>260</posy>
-				<width>280</width>
+				<posy>240</posy>
+				<width>310</width>
 				<height>370</height>
 				<align>justify</align>
 				<label>$INFO[VideoPlayer.Plot]</label>
@@ -105,7 +96,18 @@
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[VideoPlayer.Time][/B][COLOR=White]/$INFO[VideoPlayer.Duration][/COLOR]</label>
 			</control>
-			
+			<control type="grouplist">
+				<description>Media Codec Flagging Images</description>
+				<posx>0</posx>
+				<posy>650</posy>
+				<width>319</width>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<include>Playing_VideoCodecFlaggingConditions</include>
+				<include>Playing_AudioCodecFlaggingConditions</include>
+				<include>Playing_AspectCodecFlaggingConditions</include>
+			</control>
 		</control>
 	</controls>
 </window>

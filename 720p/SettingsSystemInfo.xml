@@ -4,135 +4,74 @@
 	<controls>
 	
 		<include>background</include>
+		<control type="image">
+			<posx>20</posx>
+			<posy>400</posy>
+			<width>285</width>
+			<height>298</height>
+			<texture>home/submenus.png</texture>
+			<include>submenu_open_close</include>
+			<aspectratio scalediffuse="false">stretch</aspectratio>
+		</control>
+		<control type="image">
+			<posx>276</posx>
+			<posy>410</posy>
+			<width>910</width>
+			<height>310</height>
+			<texture>files_panel1.png</texture>
+			<include>main_window_open_close</include>
+		</control>
 		<include>main_back</include>
-		<include>MainPanel_Info_Files</include>
 		<include>main_fanart_files</include>
 		<include>top_section</include>
 		
 		<control type="group">
 			<posx>0</posx>
 			<posy>50</posy>
-			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-				<effect type="fade" start="0" end="100" time="300" />
-			</animation>
-			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-				<effect type="fade" start="100" end="0" time="300" />
-			</animation>			
 			<control type="grouplist" id="9000">
-				<posx>10</posx>
-				<posy>90</posy>
+				<posx>30</posx>
+				<posy>376</posy>
 				<width>260</width>
 				<height>481</height>
 				<itemgap>-1</itemgap>
 				<onup>9000</onup>
 				<ondown>9000</ondown>
+				<include>submenu_open_close</include>
 				<control type="button" id="95">
 					<description>Button Summary Values</description>
-					<height>60</height>
-					<width>241</width>
-					<textoffsetx>0</textoffsetx>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>grey2</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5">MenuItemFO.png</texturefocus>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-					<pulseonselect>false</pulseonselect>
+					<include>ButtonHomeSubCommonValues</include>
 					<label>20037</label>
 				</control>
 				<control type="button" id="94">
 					<description>Button Storage</description>
-					<height>60</height>
-					<width>241</width>
-					<textoffsetx>0</textoffsetx>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>grey2</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5">MenuItemFO.png</texturefocus>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-					<pulseonselect>false</pulseonselect>
+					<include>ButtonHomeSubCommonValues</include>
 					<label>13277</label>
 				</control>
 				<control type="button" id="92">
 					<description>Button HDD</description>
-					<height>60</height>
-					<width>241</width>
-					<textoffsetx>0</textoffsetx>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>grey2</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5">MenuItemFO.png</texturefocus>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-					<pulseonselect>false</pulseonselect>
+					<include>ButtonHomeSubCommonValues</include>
 					<label>13275</label>
 					<visible>System.Platform.Xbox</visible>
 				</control>
 				<control type="button" id="93">
 					<description>Button DVD</description>
-					<height>60</height>
-					<width>241</width>
-					<textoffsetx>0</textoffsetx>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>grey2</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5">MenuItemFO.png</texturefocus>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-					<pulseonselect>false</pulseonselect>
+					<include>ButtonHomeSubCommonValues</include>
 					<label>13276</label>
 					<visible>System.Platform.Xbox</visible>
 				</control>
 				<control type="button" id="96">
 					<description>Button Network</description>
-					<height>60</height>
-					<width>241</width>
-					<textoffsetx>0</textoffsetx>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>grey2</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5">MenuItemFO.png</texturefocus>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-					<pulseonselect>false</pulseonselect>
+					<include>ButtonHomeSubCommonValues</include>
 					<label>13279</label>
 				</control>
 				<control type="button" id="97">
 					<description>Button Video</description>
-					<height>60</height>
-					<width>241</width>
-					<textoffsetx>0</textoffsetx>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>grey2</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5">MenuItemFO.png</texturefocus>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-					<pulseonselect>false</pulseonselect>
+					<include>ButtonHomeSubCommonValues</include>
 					<label>13280</label>
 				</control>
 				<control type="button" id="98">
 					<description>Button Hardware</description>
-					<height>60</height>
-					<width>241</width>
-					<textoffsetx>0</textoffsetx>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>grey2</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<texturefocus border="5">MenuItemFO.png</texturefocus>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-					<pulseonselect>false</pulseonselect>
+					<include>ButtonHomeSubCommonValues</include>
 					<label>13281</label>
 				</control>
 			</control>
@@ -148,6 +87,7 @@
 				<font>DejaVuSans_Bold_Caps_20</font>
 				<textcolor>Main_Green</textcolor>
 				<label>$LOCALIZE[130] - $INFO[Control.GetLabel(40)]</label>
+				<animation effect="slide" start="0,0" end="800,0" time="200" condition="Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog)">Conditional</animation>
 			</control>
 			<control type="label" id="40">
 				<description>Hiddenlabel to pass to above</description>
@@ -156,6 +96,7 @@
 			<control type="group">
 				<posx>760</posx>
 				<posy>80</posy>
+				<animation effect="slide" start="0,0" end="800,0" time="200" condition="Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog)">Conditional</animation>
 				<control type="label" id="2">
 					<description>Label 2</description>
 					<posx>0</posx>
@@ -236,21 +177,35 @@
 					<label>-</label>
 					<font>Liberation16</font>
 				</control>
+			</control>
+			<control type="group">
+				<posx>760</posx>
+				<posy>80</posy>
+				<include>main_window_open_close</include>
 				<control type="label" id="52">
 					<description>XBMC XBE BUILD Version</description>
-					<posx>750</posx>
-					<posy>400</posy>
-					<width>700</width>
+					<posx>-450</posx>
+					<posy>300</posy>
+					<width>850</width>
 					<label>144</label>
-					<align>right</align>
-					<textcolor>blue</textcolor>
-					<shadowcolor>black</shadowcolor>
-					<font>font13_title</font>
+					<align>center</align>
+					<textcolor>Main_Green</textcolor>
+					<font>DejaVuSans_Bold_Caps_20</font>
+				</control>
+				<control type="label">
+					<description>XBMC XBE BUILD Version</description>
+					<posx>-450</posx>
+					<posy>330</posy>
+					<width>850</width>
+					<label>[B]The Carmichael[/B] - version 1.0.0</label>
+					<align>center</align>
+					<textcolor>Light_Grey</textcolor>
+					<font>Liberation22</font>
 				</control>
 				<control type="label">
 					<description>CPU Text</description>
-					<posx>420</posx>
-					<posy>450</posy>
+					<posx>-120</posx>
+					<posy>480</posy>
 					<width>350</width>
 					<height>25</height>
 					<label>$LOCALIZE[13271] $INFO[System.CPUUsage]</label>
@@ -262,16 +217,16 @@
 				</control>
 				<control type="progress">
 					<description>CPU BAR</description>
-					<posx>430</posx>
-					<posy>455</posy>
+					<posx>-110</posx>
+					<posy>485</posy>
 					<width>320</width>
 					<height>16</height>
 					<info>System.CPUUsage</info>
 				</control>
 				<control type="label">
 					<description>Memory Text</description>
-					<posx>420</posx>
-					<posy>480</posy>
+					<posx>-120</posx>
+					<posy>510</posy>
 					<width>350</width>
 					<height>25</height>
 					<label>$LOCALIZE[31309] $INFO[system.memory(used.percent)]</label>
@@ -283,8 +238,8 @@
 				</control>
 				<control type="progress">
 					<description>Memory BAR</description>
-					<posx>430</posx>
-					<posy>485</posy>
+					<posx>-110</posx>
+					<posy>515</posy>
 					<width>320</width>
 					<height>16</height>
 					<info>system.memory(used)</info>

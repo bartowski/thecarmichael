@@ -29,7 +29,7 @@
 					<posx>210</posx>
 					<include>VisibleFadeEffect</include>
 					<control type="list" id="49">
-						<posx>190</posx>
+						<posx>230</posx>
 						<posy>330</posy>
 						<width>1040</width>
 						<height>330</height>
@@ -138,11 +138,11 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>Container.Content(TVShows) + !Control.HasFocus(50)</visible>
+					<visible>Container.Content(TVShows) + ![Control.HasFocus(15) | Control.IsVisible(50)]</visible>
 					<posy>90</posy>
 					<posx>210</posx>
 					<control type="list" id="49">
-						<posx>300</posx>
+						<posx>230</posx>
 						<posy>380</posy>
 						<width>1040</width>
 						<height>330</height>
@@ -245,12 +245,12 @@
 					</control>
 				</control>
 				<control type="group">
-					<visible>Container.Content(episodes) + !Control.HasFocus(50)</visible>
+					<visible>Container.Content(episodes) + ![Control.HasFocus(15) | Control.IsVisible(50)]</visible>
 					<posy>90</posy>
 					<posx>210</posx>
 					<include>VisibleFadeEffect</include>
 					<control type="list" id="49">
-						<posx>300</posx>
+						<posx>230</posx>
 						<posy>350</posy>
 						<width>1040</width>
 						<height>330</height>
@@ -522,6 +522,15 @@
 					</control>
 				</control>
 		<control type="image">
+			<posx>470</posx>
+			<posy>410</posy>
+			<width>790</width>
+			<height>310</height>
+			<texture>files_panel1.png</texture>
+			<include>main_window_open_close</include>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+		<!--<control type="image">
 			<posx>110</posx>
 			<posy>420</posy>
 			<width>360</width>
@@ -532,10 +541,10 @@
 			<fadetime>300</fadetime>
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<visible>Control.IsVisible(50)</visible>
-		</control>
+		</control>-->
 		<control type="fixedlist" id="50">
-			<posx>210</posx>
-			<posy>418</posy>
+			<posx>230</posx>
+			<posy>432</posy>
 			<width>1500</width>
 			<height>260</height>
 			<pagecontrol>60</pagecontrol>
@@ -548,36 +557,57 @@
 			<ondown>50</ondown>
 			<focusposition>6</focusposition>
 			<movement>6</movement>
-			<itemlayout width="630" height="20">
+			<include>main_window_open_close</include>
+			<itemlayout width="630" height="22">
 				<control type="group">
 					<posx>20</posx>
 					<posy>0</posy>
-					<control type="label">
-						<posx>250</posx>
-						<posy>-6</posy>
-						<width>600</width>
-						<height>20</height>
-						<font>Liberation20</font>
-						<textcolor>Black</textcolor>
-						<scroll>false</scroll>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
+						<control type="image">
+							<posx>240</posx>
+							<posy>-6</posy>
+							<width>740</width>
+							<height>24</height>
+							<texture>MenuItemNF.png</texture>
+							<!--<animation type="Focus" reversible="false">
+								<effect type="fade" start="0" end="70" time="800" />
+							</animation>-->
+						</control>
+						<control type="label">
+							<posx>250</posx>
+							<posy>-6</posy>
+							<width>530</width>
+							<height>20</height>
+							<font>Liberation22</font>
+							<textcolor>White</textcolor>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.label]</label>
+						</control>
 				</control>
 			</itemlayout>
-			<focusedlayout width="630" height="20">
+			<focusedlayout width="900" height="22">
 				<control type="group">
 					<posx>20</posx>
 					<posy>0</posy>
-					<control type="label">
-						<posx>250</posx>
-						<posy>-8</posy>
-						<width>600</width>
-						<height>20</height>
-						<font>Liberation22</font>
-						<textcolor>Dark_Green</textcolor>
-						<scroll>false</scroll>
-						<label>[B]$INFO[ListItem.Label][/B]</label>
-					</control>
+						<control type="image">
+							<posx>242</posx>
+							<posy>-6</posy>
+							<width>740</width>
+							<height>26</height>
+							<texture>MenuItemFO.png</texture>
+							<!--<animation type="Focus" reversible="false">
+								<effect type="fade" start="0" end="70" time="800" />
+							</animation>-->
+						</control>
+						<control type="label">
+							<posx>250</posx>
+							<posy>-6</posy>
+							<width>530</width>
+							<height>20</height>
+							<font>Liberation22</font>
+							<textcolor>Black</textcolor>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.label]</label>
+						</control>
 				</control>
 			</focusedlayout>
 		</control>
@@ -644,14 +674,14 @@
 				</control>
 				<control type="grouplist">
 					<posx>400</posx>
-					<posy>680</posy>
+					<posy>686</posy>
 					<width>1030</width>
 					<height>40</height>
 					<itemgap>20</itemgap>
 					<align>center</align>
 					<orientation>horizontal</orientation>
 					<animation effect="slide" start="0,0" end="-200,0" time="0" condition="Container.Content(movies)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="-100,0" time="0" condition="Container.Content(tvshows) | Container.Content(episodes)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-200,0" time="0" condition="Container.Content(tvshows) | Container.Content(episodes)">Conditional</animation>
 					<control type="label">
 						<description>Cast/Review</description>
 						<include>ButtonInfoDialogsCommonValues</include>
@@ -741,7 +771,5 @@
 				</control>
 			</control>
 		</control>
-		<include>SideBladeRight</include>
-		<include>Clock</include>
 	</controls>
 </window>

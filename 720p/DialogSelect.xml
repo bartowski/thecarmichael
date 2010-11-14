@@ -13,6 +13,14 @@
 		<posy>120</posy>
 	</coordinates>
 	<controls>
+		<control type="image">
+			<posx>0</posx>
+			<posy>-66</posy>
+			<width>790</width>
+			<height>410</height>
+			<texture>files_panel1.png</texture>
+			<visible>Window.IsActive(visualisation)</visible>
+		</control>
 		<control type="label">
 			<posx>150</posx>
 			<posy>-40</posy>

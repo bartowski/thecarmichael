@@ -22,6 +22,7 @@
 			<preloaditems>2</preloaditems>
 			<include>main_window_open_close</include>
 			<visible>Container.Content(tvshows) + Skin.HasSetting(TVBanners)</visible>
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 			<itemlayout width="624" height="130" condition="!Skin.HasSetting(more_banners)">
 				<control type="group">
@@ -49,7 +50,7 @@
 						<posy>0</posy>
 						<width>595</width>
 						<height>110</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.path]banner.jpg</texture>
 						<fadetime>300</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
@@ -81,7 +82,7 @@
 						<posy>0</posy>
 						<width>406</width>
 						<height>75</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.path]banner.jpg</texture>
 						<fadetime>300</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
@@ -124,7 +125,7 @@
 						<posy>0</posy>
 						<width>595</width>
 						<height>110</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.path]banner.jpg</texture>
 						<fadetime>300</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
@@ -167,7 +168,7 @@
 						<posy>0</posy>
 						<width>406</width>
 						<height>75</height>
-						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<texture background="true">$INFO[ListItem.path]banner.jpg</texture>
 						<bordertexture border="2">folder-focus.png</bordertexture>
 						<bordersize>2</bordersize>
 						<fadetime>300</fadetime>
@@ -178,7 +179,39 @@
 		</control>
 	
 	
-		
+	<control type="group">
+		<posx>30</posx>
+		<posy>610</posy>
+		<animation effect="slide" start="-800,0" end="0,0" time="400">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation) + Control.IsVisible(50)">Conditional</animation>
+		<visible>Control.IsVisible(55) + Window.IsActive(movieinformation)</visible>
+			<control type="image">
+				<posx>-10</posx>
+				<posy>-4</posy>
+				<width>428</width>
+				<height>83</height>
+				<texture>banner/banner_big_shadow.png</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>406</width>
+				<height>75</height>
+				<texture>misc/back.png</texture>
+				<fadetime>300</fadetime>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>406</width>
+				<height>75</height>
+				<texture background="true">$INFO[ListItem.path]banner.jpg</texture>
+				<fadetime>300</fadetime>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+			</control>
+	</control>
 		
 
 	</include>

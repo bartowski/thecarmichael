@@ -20,6 +20,7 @@
 			<onup>9000</onup>
 			<ondown>9000</ondown>
 			<include>main_window_open_close</include>
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 			<visible>Container.Content(episodes)</visible>
 			<itemlayout width="634" height="150">
@@ -52,21 +53,21 @@
 						<fadetime>300</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
-					<control type="label">
-						<posx>252</posx>
-						<posy>-6</posy>
-						<width>374</width>
-						<height>20</height>
+					<control type="textbox">
+						<posx>256</posx>
+						<posy>-8</posy>
+						<width>356</width>
+						<height>44</height>
 						<align>left</align>
-						<font>DejaVuSans_Bold_Caps_20</font>
+						<font>DejaVuSans_Bold_Caps_18</font>
 						<textcolor>Dark_Green</textcolor>
 						<scroll>false</scroll>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="textbox"><!-- Plot and TV -->
-						<posx>252</posx>
+						<posx>256</posx>
 						<posy>32</posy>
-						<width>360</width>
+						<width>356</width>
 						<height>94</height>
 						<align>justify</align>
 						<info>ListItem.Plot</info>
@@ -114,21 +115,21 @@
 						<fadetime>300</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
-					<control type="label">
-						<posx>252</posx>
-						<posy>-6</posy>
-						<width>374</width>
-						<height>20</height>
+					<control type="textbox">
+						<posx>256</posx>
+						<posy>-8</posy>
+						<width>356</width>
+						<height>44</height>
 						<align>left</align>
-						<font>DejaVuSans_Bold_Caps_20</font>
+						<font>DejaVuSans_Bold_Caps_18</font>
 						<textcolor>Dark_Green</textcolor>
 						<scroll>false</scroll>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="textbox"><!-- Plot and TV -->
-						<posx>252</posx>
+						<posx>256</posx>
 						<posy>32</posy>
-						<width>360</width>
+						<width>356</width>
 						<height>94</height>
 						<align>justify</align>
 						<info>ListItem.Plot</info>
@@ -141,7 +142,43 @@
 		</control>
 	
 	
-		
+	<control type="group">
+		<posx>30</posx>
+		<posy>440</posy>
+		<animation effect="slide" start="-800,0" end="0,0" time="400">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation) + Control.IsVisible(50)">Conditional</animation>
+		<visible>Control.IsVisible(54) + Window.IsActive(movieinformation)</visible>
+			<control type="image">
+				<posx>-18</posx>
+				<posy>-6</posy>
+				<width>487</width>
+				<height>269</height>
+				<texture>landscape/focus_shadow.png</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<animation type="Focus" reversible="false">
+					<effect type="fade" start="0" end="100" time="400" delay="100" />
+				</animation>
+				<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>451</width>
+				<height>254</height>
+				<texture>misc/back.png</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>451</width>
+				<height>254</height>
+				<texture background="true">$INFO[ListItem.Icon]</texture>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
+			</control>
+	</control>
 		
 
 	</include>

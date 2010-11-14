@@ -73,8 +73,8 @@
 						<height>20</height>
 						<align>center</align>
 						<font>humanist_521_24</font>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>false</scroll>
 					</control>
@@ -126,8 +126,8 @@
 						<height>20</height>
 						<align>center</align>
 						<font>humanist_521_30</font>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
+						<textcolor>Main_Green</textcolor>
+						<shadowcolor>Black</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<scroll>false</scroll>
 					</control>

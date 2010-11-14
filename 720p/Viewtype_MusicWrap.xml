@@ -22,6 +22,7 @@
 			<ondown>61</ondown>
 			<include>main_window_open_close</include>
 			<visible>!Container.Content(songs) | Container.Content(genres) | Window.IsActive(programs) | Window.IsVisible(AddonBrowser.xml)</visible>
+			<animation effect="slide" start="0,0" end="0,-6" time="400" delay="100" condition="Control.HasFocus(61)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 			<itemlayout width="220" height="300">
 				<control type="group">
@@ -58,7 +59,7 @@
 						<posy>0</posy>
 						<width>202</width>
 						<height>202</height>
-						<texture background="true" fallback="extras/musicgenres/default.bmp">extras/musicgenres/$INFO[ListItem.Label].bmp</texture>
+						<texture background="true" fallback="special://skin/extras/musicgenres/default.bmp">special://skin/extras/musicgenres/$INFO[ListItem.Label].bmp</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Container.Content(Genres)</visible>
 					</control>
@@ -102,7 +103,7 @@
 							<posy>0</posy>
 							<width>246</width>
 							<height>246</height>
-							<texture background="true" fallback="extras/musicgenres/default.bmp">extras/musicgenres/$INFO[ListItem.Label].bmp</texture>
+							<texture background="true" fallback="special://skin/extras/musicgenres/default.bmp">special://skin/extras/musicgenres/$INFO[ListItem.Label].bmp</texture>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<visible>Container.Content(Genres)</visible>
 						</control>

@@ -62,7 +62,7 @@
 						<posy>0</posy>
 						<width>161</width>
 						<height>242</height>
-						<texture background="true" fallback="extras/moviegenres/default.png">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture background="true" fallback="special://skin/extras/moviegenres/default.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<fadetime>300</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Container.Content(Genres)</visible>
@@ -86,7 +86,7 @@
 				</animation>
 				<animation effect="slide" start="0,0" end="-300,0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
 				<animation effect="slide" start="0,0" end="-140,0" time="500" delay="100" condition="Control.HasFocus(2449) + !Container.Content(movies)">Conditional</animation>
-				<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation) + Control.IsVisible(50)">Conditional</animation>
+				<!--<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation) + Control.IsVisible(50)">Conditional</animation>-->
 					<control type="image">
 						<posx>-14</posx>
 						<posy>-8</posy>
@@ -120,7 +120,7 @@
 						<posy>0</posy>
 						<width>181</width>
 						<height>273</height>
-						<texture background="true" fallback="extras/moviegenres/default.png">extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<texture background="true" fallback="special://skin/extras/moviegenres/default.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Container.Content(Genres)</visible>
 					</control>

@@ -1422,118 +1422,98 @@
                             <include>skin_settings_labels</include> 
                             <label>$LOCALIZE[31009]</label> 
 							<onclick>Skin.ToggleSetting(landscape_thumbs)</onclick> 
-                            <onclick>Skin.Reset(TVBanners)</onclick> 
+							<onclick>Skin.Reset(TVBanners)</onclick> 
+							<onclick>Skin.ToggleSetting(landscape_jpg)</onclick> 
                             <selected>Skin.HasSetting(landscape_thumbs)</selected> 
                         </control> 
-                        <control type="radiobutton" id="502"> 
+						<control type="radiobutton" id="502">
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31269]</label>
+							<onclick>Skin.Reset(landscape_thumbs)</onclick> 
+                            <onclick>Skin.Reset(TVBanners)</onclick> 
+							<onclick>Skin.ToggleSetting(landscape_jpg)</onclick>
+							<selected>Skin.HasSetting(landscape_jpg)</selected>
+						</control>
+						<control type="label" id="503">
+							<width>860</width>
+							<height>20</height>
+							<textoffsetx>26</textoffsetx>
+							<textoffsety>0</textoffsety>
+							<font>Liberation16</font>
+							<textcolor>Light_Grey</textcolor>
+							<label>*$LOCALIZE[31270]*</label>
+						</control>
+                        <control type="radiobutton" id="504"> 
                             <include>skin_settings_labels</include>
                             <label>$LOCALIZE[31045]</label> 
                             <onclick>Skin.ToggleSetting(TVBanners)</onclick> 
                             <onclick>Skin.Reset(landscape_thumbs)</onclick> 
+							<onclick>Skin.ToggleSetting(landscape_jpg)</onclick> 
                             <selected>Skin.HasSetting(TVBanners)</selected> 
                         </control> 
-						<control type="radiobutton" id="503">
+						<control type="radiobutton" id="505">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31033]</label>
 							<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 							<selected>Skin.HasSetting(autoscroll)</selected>
 						</control>
-						<control type="radiobutton" id="505">
+						<control type="radiobutton" id="506">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31035]</label>
 							<onclick>Skin.ToggleSetting(movieoverlays)</onclick>
 							<selected>Skin.HasSetting(movieoverlays)</selected>
 						</control>
-						<control type="radiobutton" id="506">
+						<control type="radiobutton" id="507">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31036]</label>
 							<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
 							<selected>Skin.HasSetting(tvoverlays)</selected>
 						</control>
-						<control type="radiobutton" id="507">
+						<control type="radiobutton" id="508">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31282]</label>
 							<onclick>Skin.ToggleSetting(genrefanart)</onclick>
 							<onclick>Skin.Reset(extrafanart)</onclick> 
 							<selected>Skin.HasSetting(genrefanart)</selected>
 						</control>
-						<control type="radiobutton" id="508">
-							<include>skin_settings_labels</include>
-							<label>$LOCALIZE[31269]</label>
-							<onclick>Skin.ToggleSetting(landscape_jpg)</onclick>
-							<selected>Skin.HasSetting(landscape_jpg)</selected>
-						</control>
-						<!--<control type="label" id="509">
-							<width>860</width>
-							<height>26</height>
-							<font>Font_KeyboardTitle</font>
-							<textoffsetx>40</textoffsetx>
-							<label>$LOCALIZE[31270]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<align>left</align>
-							<aligny>top</aligny>
-						</control>-->
-						<control type="radiobutton" id="510">
+						<control type="radiobutton" id="509">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31266]</label>
 							<onclick>Skin.ToggleSetting(extrafanart)</onclick>
 							<selected>Skin.HasSetting(extrafanart)</selected>
 						</control>
-						<control type="radiobutton" id="513">
+						<control type="label" id="510">
+							<width>860</width>
+							<height>20</height>
+							<textoffsetx>26</textoffsetx>
+							<textoffsety>0</textoffsety>
+							<font>Liberation16</font>
+							<textcolor>Light_Grey</textcolor>
+							<label>*$LOCALIZE[31267]*</label>
+						</control>
+						<control type="radiobutton" id="511">
 							<include>skin_settings_labels</include>
 							<label>31019</label>
 							<onclick>Skin.ToggleSetting(tv_theme)</onclick>
 							<selected>Skin.HasSetting(tv_theme)</selected>
 							<!--<visible>system.hasaddon(script.TvTunes)</visible>-->
 						</control>
-						<!--<control type="label" id="511">
+						<control type="button" id="512">
 							<width>860</width>
-							<height>26</height>
-							<font>Font_KeyboardTitle</font>
-							<textoffsetx>40</textoffsetx>
-							<label>$LOCALIZE[31267]</label>
-							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
-							<align>left</align>
-							<aligny>top</aligny>
-						</control>
-						
-						<control type="label" id="513">
-							<width>860</width>
-							<height>45</height>
-							<font>font13caps</font>
-							<label>$LOCALIZE[31263]</label>
-							<textcolor>mainblue</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<align>left</align>
-							<aligny>center</aligny>
-						</control>-->
-						<control type="button" id="514">
-							<width>280</width>
-							<height>40</height>
-							<font>Font_KeyboardKeys</font>
-							<textoffsetx>10</textoffsetx>
-							<label>$LOCALIZE[31264]</label>
-							<textcolor>Black</textcolor>
+							<height>24</height>
+							<textoffsetx>6</textoffsetx>
+							<textoffsety>4</textoffsety>
+							<font>Liberation18</font>
+							<align>center</align>
+							<textcolor>White</textcolor>
 							<focusedcolor>White</focusedcolor>
-							<texturefocus>confluence/button-focus.png</texturefocus>
-							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<label>$LOCALIZE[31264]</label>
 							<onclick>XBMC.RunScript(script.logo-downloader,mode=bulk,clearart=False,logo=True,showthumb=False)</onclick>
 						</control>
 						
 					</control>
-						<!--<control type="textbox" id="515">
-							<posx>400</posx>
-							<posy>550</posy>
-							<width>600</width>
-							<height>290</height>
-							<align>justify</align>
-							<label>$LOCALIZE[31265]</label>
-							<font>Font_Bartowski_Movies_Plot</font>
-							<textcolor>ffffffff</textcolor>
-							<visible>Container(9000).Hasfocus(5)</visible>
-						</control>-->
 				</control>
 				<control type="group"><!--mcborzu tv-->
 					<control type="grouplist" id="9006">

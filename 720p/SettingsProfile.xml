@@ -18,8 +18,8 @@
 				<textoffsety></textoffsety>
 				<label>20096</label>
 				<font>Liberation28</font>
-				<textcolor>Main_Green</textcolor>
-				<focusedcolor>White</focusedcolor>
+				<textcolor>White</textcolor>
+				<focusedcolor>Black</focusedcolor>
 				<align>center</align>
 				<aligny>top</aligny>
 				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
@@ -39,7 +39,7 @@
 				<align>center</align>
 				<textoffsety></textoffsety>
 				<font>Liberation16</font>
-				<textcolor>White</textcolor>
+				<textcolor>Main_Grey</textcolor>
 				<label>305</label>
 				<include>main_window_open_close</include>
 				<visible>System.HasLoginScreen</visible>
@@ -52,7 +52,7 @@
 				<align>center</align>
 				<textoffsety></textoffsety>
 				<font>Liberation16</font>
-				<textcolor>White</textcolor>
+				<textcolor>Main_Grey</textcolor>
 				<label>1223</label>
 				<include>main_window_open_close</include>
 				<visible>!System.HasLoginScreen</visible>

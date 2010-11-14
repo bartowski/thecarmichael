@@ -7,5 +7,5 @@
 	<color name="Main_Green">ff66fe57</color>
 	<color name="Dark_Green">ff0e9401</color>
 	<color name="Darkest_Green">ff026909</color>
-	<color name="selected">ff0e9401</color>
+	<color name="selected">FFFF0000</color>
 </colors>

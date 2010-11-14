@@ -69,9 +69,9 @@
 			<textoffsetx>6</textoffsetx>
 			<width>860</width>
 			<height>30</height>
-			<font>Liberation16</font>
+			<font>Liberation20</font>
 			<textcolor>White</textcolor>
-			<focusedcolor>White</focusedcolor>
+			<focusedcolor>Black</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
 			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
 		</control>
@@ -82,9 +82,9 @@
 			<textoffsety>4</textoffsety>
 			<width>860</width>
 			<height>30</height>
-			<font>Liberation16</font>
+			<font>Liberation20</font>
 			<textcolor>White</textcolor>
-			<focusedcolor>White</focusedcolor>
+			<focusedcolor>Black</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
 			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
 		</control>
@@ -94,9 +94,9 @@
 			<posy>0</posy>
 			<width>860</width>
 			<height>30</height>
-			<font>Liberation16</font>
+			<font>Liberation20</font>
 			<textcolor>White</textcolor>
-			<focusedcolor>White</focusedcolor>
+			<focusedcolor>Black</focusedcolor>
 			<texturefocus border="0,2,0,2">MenuItemFO.png</texturefocus>
 			<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
 			<aligny>center</aligny>

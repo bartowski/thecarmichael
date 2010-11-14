@@ -7,6 +7,15 @@
 	</coordinates>
 	<controls>
 	
+	<control type="image">
+		<posx>190</posx>
+		<posy>440</posy>
+		<width>840</width>
+		<height>270</height>
+		<texture>files_panel1.png</texture>
+		<visible>![Window.IsVisible(contentsettings) | Window.IsVisible(filebrowser)]</visible>
+	</control>
+	
 	<control type="label" id="2">
 		<description>header label</description>
 		<posx>0</posx>
@@ -61,10 +70,10 @@
 					<posy>0</posy>
 					<width>490</width>
 					<height>40</height>
-					<font>Liberation16</font>
+					<font>Liberation20</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>Black</textcolor>
+					<textcolor>White</textcolor>
 					<selectedcolor>selected</selectedcolor>
 					<info>ListItem.Label</info>
 				</control>
@@ -91,10 +100,10 @@
 					<posy>0</posy>
 					<width>490</width>
 					<height>40</height>
-					<font>Liberation16</font>
+					<font>Liberation20</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<textcolor>White</textcolor>
+					<textcolor>Black</textcolor>
 					<selectedcolor>selected</selectedcolor>
 					<info>ListItem.Label</info>
 				</control>
@@ -110,11 +119,11 @@
 				<width>200</width>
 				<height>41</height>
 				<label>1024</label>
-				<font>font12_title</font>
+				<font>Liberation20</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>Black</textcolor>
-				<focusedcolor>White</focusedcolor>
+				<textcolor>White</textcolor>
+				<focusedcolor>Black</focusedcolor>
 				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 				<texturefocus border="5">button-focus.png</texturefocus>
 				<onup>9001</onup>
@@ -129,11 +138,11 @@
 				<width>200</width>
 				<height>41</height>
 				<label>15019</label>
-				<font>font12_title</font>
+				<font>Liberation20</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>Black</textcolor>
-				<focusedcolor>White</focusedcolor>
+				<textcolor>White</textcolor>
+				<focusedcolor>Black</focusedcolor>
 				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 				<texturefocus border="5">button-focus.png</texturefocus>
 				<onup>11</onup>
@@ -148,11 +157,11 @@
 				<width>200</width>
 				<height>41</height>
 				<label>1210</label>
-				<font>font12_title</font>
+				<font>Liberation20</font>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>Black</textcolor>
-				<focusedcolor>White</focusedcolor>
+				<textcolor>White</textcolor>
+				<focusedcolor>Black</focusedcolor>
 				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 				<texturefocus border="5">button-focus.png</texturefocus>
 				<onup>13</onup>
@@ -169,10 +178,10 @@
 			<height>30</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<font>font12caps</font>
+			<font>Liberation20</font>
 			<label>1022</label>
-			<textcolor>Darkest_Green</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<textcolor>White</textcolor>
+			<shadowcolor>Black</shadowcolor>
 		</control>
 	</control>
 		<control type="grouplist" id="9001">

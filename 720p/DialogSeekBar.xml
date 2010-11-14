@@ -47,6 +47,19 @@
 			<animation effect="slide" start="0,0" end="500,0" time="200" delay="200">WindowClose</animation>
 			<visible>VideoPlayer.Content(episodes)</visible>
 		</control>
+		<control type ="image" id="7659"> 
+			<description>tv show image</description>
+			<posx>1050</posx>     
+			<posy>630</posy>    
+			<width>220</width>     
+			<height>85</height> 
+			<texture background="true">$INFO[Player.FolderPath]../logo.png</texture>
+			<aspectratio>stretch</aspectratio>
+			<animation effect="slide" start="500,0" end="0,0" time="400" delay="400">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="500,0" time="200" delay="200">WindowClose</animation>
+			<visible>VideoPlayer.Content(episodes) + IsEmpty(Control.GetLabel(7657)) + IsEmpty(Control.GetLabel(7658))</visible>
+		</control>
+		
 		
 		
 		<control type="group">
@@ -100,7 +113,7 @@
 					<height>25</height>
 					<label>[B]"$INFO[VideoPlayer.Title]"[/B]</label>
 					<textcolor>Main_Green</textcolor>
-					<font>Liberation28</font>
+					<font>DejaVuSans_Bold_Caps_24</font>
 					<align>center</align>
 				</control>
 				<control type="label">
@@ -127,18 +140,7 @@
 				</control>
 		</control>
 	
-		<control type ="image" id="7659"> 
-			<description>tv show image</description>
-			<posx>1050</posx>     
-			<posy>630</posy>    
-			<width>220</width>     
-			<height>85</height> 
-			<texture background="true">$INFO[Player.FolderPath]../logo.png</texture>
-			<aspectratio>stretch</aspectratio>
-			<animation effect="slide" start="500,0" end="0,0" time="400" delay="400">WindowOpen</animation>
-			<animation effect="slide" start="0,0" end="500,0" time="200" delay="200">WindowClose</animation>
-			<visible>VideoPlayer.Content(episodes) + IsEmpty(Control.GetLabel(7657)) + IsEmpty(Control.GetLabel(7658))</visible>
-		</control>
+		
 	
 	</controls>
 </window>

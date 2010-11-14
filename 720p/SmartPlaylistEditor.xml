@@ -1,70 +1,45 @@
 <window id="129">
 	<defaultcontrol always="true">22</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	<zorder>3</zorder>
+	<allowoverlay>yes</allowoverlay>
 	<coordinates>
 		<system>1</system>
-		<posx>240</posx>
-		<posy>45</posy>
+		<posx>0</posx>
+		<posy>0</posy>
 	</coordinates>
-	<include>dialogeffect</include>
 	<controls>
 		<control type="group">
+			<posx>0</posx>
+			<posy>406</posy>
 			<visible>!Window.IsVisible(smartplaylistrule)</visible>
-			<include>VisibleFadeEffect</include>
 			<control type="image">
-				<description>background image</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>800</width>
-				<height>630</height>
-				<texture border="40">DialogBack.png</texture>
+				<posx>-10</posx>
+				<posy>30</posy>
+				<width>610</width>
+				<height>270</height>
+				<texture>files_panel1.png</texture>
 			</control>
-			<control type="image">
-				<posx>80</posx>
-				<posy>10</posy>
-				<width>640</width>
-				<height>90</height>
-				<aspectratio>stretch</aspectratio>
-				<texture>GlassTitleBar.png</texture>
-			</control>
-			<control type="button">
-				<description>Close Window button</description>
-				<posx>710</posx>
-				<posy>9</posy>
-				<width>64</width>
-				<height>32</height>
-				<label>-</label>
-				<font>-</font>
-				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
-				<texturenofocus>DialogCloseButton.png</texturenofocus>
-				<onleft>22</onleft>
-				<onright>22</onright>
-				<onup>22</onup>
-				<ondown>22</ondown>
-				<visible>system.getbool(input.enablemouse)</visible>
-			</control>
-			<control type="label" id="2">
+			<control type="label">
 				<description>header label</description>
-				<posx>20</posx>
-				<posy>18</posy>
-				<width>760</width>
+				<posx>10</posx>
+				<posy>0</posy>
+				<width>1280</width>
 				<height>30</height>
-				<font>font13_title</font>
-				<label>$LOCALIZE[21432]</label>
+				<font>Large</font>
+				<label>[B]$LOCALIZE[21432][/B]</label>
 				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>Black</textcolor>
 			</control>
 			<control type="spincontrolex" id="22">
 				<description>Set Playlist type</description>
-				<posx>20</posx>
-				<posy>70</posy>
-				<width>760</width>
-				<height>40</height>
+				<posx>10</posx>
+				<posy>50</posy>
+				<width>560</width>
+				<height>30</height>
 				<label>467</label>
-				<font>font13</font>
+				<font>Liberation18</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>Black</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onright>22</onright>
@@ -74,23 +49,24 @@
 			</control>
 			<control type="label">
 				<description>Name Label</description>
-				<posx>30</posx>
-				<posy>125</posy>
-				<width>740</width>
+				<posx>10</posx>
+				<posy>80</posy>
+				<width>545</width>
 				<label>21433</label>
-				<font>font12caps</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<font>DejaVuSans_Bold_Caps_20</font>
+				<textcolor>Dark_Green</textcolor>
 			</control>
 			<control type="edit" id="12">
 				<description>Name Button</description>
-				<posx>20</posx>
-				<posy>155</posy>
-				<width>760</width>
-				<height>40</height>
+				<posx>10</posx>
+				<posy>110</posy>
+				<width>560</width>
+				<height>30</height>
 				<textoffsetx>10</textoffsetx>
 				<textwidth>750</textwidth>
-				<font>font13</font>
+				<font>Liberation18</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>Black</focusedcolor>
 				<align>center</align>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
@@ -101,20 +77,18 @@
 				<ondown>10</ondown>
 			</control>
 			<control type="label">
-				<description>rules label</description>
-				<posx>30</posx>
-				<posy>210</posy>
-				<width>740</width>
-				<align>left</align>
+				<description>Name Label</description>
+				<posx>10</posx>
+				<posy>160</posy>
+				<width>545</width>
 				<label>21434</label>
-				<font>font12caps</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<font>DejaVuSans_Bold_Caps_20</font>
+				<textcolor>Dark_Green</textcolor>
 			</control>
 			<control type="list" id="10">
 				<description>Rules List Control</description>
-				<posx>20</posx>
-				<posy>245</posy>
+				<posx>10</posx>
+				<posy>190</posy>
 				<width>560</width>
 				<height>121</height>
 				<onup>12</onup>
@@ -126,18 +100,19 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>560</width>
-						<height>41</height>
+						<height>31</height>
 						<texture>MenuItemNF.png</texture>
 					</control>
 					<control type="label">
 						<posx>10</posx>
 						<posy>0</posy>
 						<width>545</width>
-						<height>40</height>
+						<height>30</height>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 						<selectedcolor>selected</selectedcolor>
-						<font>font13</font>
+						<font>Liberation18</font>
+						<textcolor>White</textcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout width="560" height="40">
@@ -145,7 +120,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>560</width>
-						<height>41</height>
+						<height>31</height>
 						<texture>MenuItemFO.png</texture>
 						<visible>Control.HasFocus(10)</visible>
 					</control>
@@ -153,7 +128,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>560</width>
-						<height>41</height>
+						<height>31</height>
 						<texture>MenuItemNF.png</texture>
 						<visible>!Control.HasFocus(10)</visible>
 					</control>
@@ -161,23 +136,39 @@
 						<posx>10</posx>
 						<posy>0</posy>
 						<width>540</width>
-						<height>40</height>
+						<height>30</height>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
 						<selectedcolor>selected</selectedcolor>
-						<font>font13</font>
+						<font>Liberation18</font>
+						<textcolor>White</textcolor>
+						<visible>!Control.HasFocus(10)</visible>
+					</control>
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>540</width>
+						<height>30</height>
+						<aligny>center</aligny>
+						<info>ListItem.Label</info>
+						<selectedcolor>selected</selectedcolor>
+						<font>Liberation18</font>
+						<textcolor>Black</textcolor>
+						<visible>Control.HasFocus(10)</visible>
 					</control>
 				</focusedlayout>
 			</control>
 			<control type="group" id="9000">
 				<control type="button" id="13">
 					<description>Add Rule Button</description>
-					<posx>600</posx>
-					<posy>245</posy>
+					<posx>550</posx>
+					<posy>145</posy>
 					<width>180</width>
 					<height>41</height>
 					<label>15019</label>
-					<font>font12_title</font>
+					<font>Liberation18</font>
+					<textcolor>Black</textcolor>
+					<focusedcolor>Black</focusedcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
@@ -189,12 +180,14 @@
 				</control>
 				<control type="button" id="14">
 					<description>Remove Rule Button</description>
-					<posx>600</posx>
-					<posy>285</posy>
+					<posx>550</posx>
+					<posy>185</posy>
 					<height>41</height>
 					<width>180</width>
 					<label>1210</label>
-					<font>font12_title</font>
+					<font>Liberation18</font>
+					<textcolor>Black</textcolor>
+					<focusedcolor>Black</focusedcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
@@ -206,12 +199,14 @@
 				</control>
 				<control type="button" id="15">
 					<description>Edit Rule Button</description>
-					<posx>600</posx>
-					<posy>325</posy>
+					<posx>550</posx>
+					<posy>225</posy>
 					<height>41</height>
 					<width>180</width>
 					<label>21435</label>
-					<font>font12_title</font>
+					<font>Liberation18</font>
+					<textcolor>Black</textcolor>
+					<focusedcolor>Black</focusedcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
@@ -223,23 +218,32 @@
 				</control>
 			</control>
 
+			
+			<control type="image">
+				<posx>700</posx>
+				<posy>30</posy>
+				<width>590</width>
+				<height>270</height>
+				<texture>files_panel1.png</texture>
+			</control>
 			<control type="label">
 				<description>Name Label</description>
-				<posx>30</posx>
-				<posy>380</posy>
-				<width>740</width>
+				<posx>720</posx>
+				<posy>46</posy>
+				<width>545</width>
 				<label>31325</label>
-				<font>font12caps</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<font>DejaVuSans_Bold_Caps_20</font>
+				<textcolor>Dark_Green</textcolor>
 			</control>
 			<control type="spincontrolex" id="16">
-				<posx>20</posx>
-				<posy>415</posy>
-				<width>760</width>
-				<height>41</height>
+				<posx>720</posx>
+				<posy>80</posy>
+				<width>560</width>
+				<height>30</height>
 				<label>21424</label>
-				<font>font13</font>
+				<font>Liberation18</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>Black</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onright>16</onright>
@@ -249,12 +253,14 @@
 			</control>
 
 			<control type="spincontrolex" id="17">
-				<posx>20</posx>
-				<posy>455</posy>
-				<width>760</width>
-				<height>41</height>
+				<posx>720</posx>
+				<posy>155</posy>
+				<width>560</width>
+				<height>30</height>
 				<label>21427</label>
-				<font>font13</font>
+				<font>Liberation18</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>Black</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onright>17</onright>
@@ -264,12 +270,14 @@
 			</control>
 
 			<control type="spincontrolex" id="18">
-				<posx>20</posx>
-				<posy>495</posy>
-				<width>560</width>
-				<height>41</height>
+				<posx>720</posx>
+				<posy>195</posy>
+				<width>360</width>
+				<height>30</height>
 				<label>21429</label>
-				<font>font13</font>
+				<font>Liberation18</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>Black</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onright>19</onright>
@@ -279,11 +287,13 @@
 			</control>
 
 			<control type="togglebutton" id="19">
-				<posx>600</posx>
-				<posy>495</posy>
+				<posx>1090</posx>
+				<posy>195</posy>
 				<width>180</width>
-				<height>40</height>
-				<font>font12_title</font>
+				<height>30</height>
+				<font>Liberation18</font>
+				<textcolor>White</textcolor>
+				<focusedcolor>Black</focusedcolor>
 				<align>center</align>
 				<aligny>center</aligny>
 				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
@@ -300,16 +310,16 @@
 			<control type="group" id="9001">
 				<control type="button" id="20">
 					<description>Ok Button</description>
-					<posx>195</posx>
-					<posy>560</posy>
+					<posx>470</posx>
+					<posy>274</posy>
 					<width>200</width>
 					<height>40</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-					<texturefocus border="5">button-focus.png</texturefocus>
 					<label>186</label>
-					<font>font12_title</font>
+					<font>DejaVuSans_Bold_Caps_20</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Main_Green</focusedcolor>
 					<onup>18</onup>
 					<onleft>21</onleft>
 					<onright>21</onright>
@@ -317,16 +327,16 @@
 				</control>
 				<control type="button" id="21">
 					<description>Cancel Button</description>
-					<posx>405</posx>
-					<posy>560</posy>
+					<posx>630</posx>
+					<posy>274</posy>
 					<width>200</width>
 					<height>40</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
-					<texturefocus border="5">button-focus.png</texturefocus>
 					<label>222</label>
-					<font>font12_title</font>
+					<font>DejaVuSans_Bold_Caps_20</font>
+					<textcolor>White</textcolor>
+					<focusedcolor>Main_Green</focusedcolor>
 					<onup>18</onup>
 					<onleft>20</onleft>
 					<onright>20</onright>

@@ -27,7 +27,7 @@
 			<orientation>vertical</orientation>
 			<viewtype label="Files">list</viewtype>
 			<onleft>9000</onleft>
-			<onright>9000</onright>
+			<onright>60</onright>
 			<onup>50</onup>
 			<ondown>50</ondown>
 			<focusposition>6</focusposition>
@@ -90,7 +90,7 @@
 							<width>20</width>
 							<height>16</height>
 							<texture>star.png</texture>
-							<visible>Window.IsActive(videolibrary) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+							<visible>Window.IsActive(videolibrary) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !IsEmpty(ListItem.rating)</visible>
 						</control>
 				</control>
 			</itemlayout>
@@ -114,7 +114,7 @@
 							<width>530</width>
 							<height>20</height>
 							<font>Liberation22</font>
-							<textcolor>White</textcolor>
+							<textcolor>Black</textcolor>
 							<scroll>false</scroll>
 							<label>$INFO[ListItem.label]</label>
 						</control>
@@ -125,7 +125,7 @@
 							<height>20</height>
 							<align>right</align>
 							<font>Liberation20</font>
-							<textcolor>Light_Grey</textcolor>
+							<textcolor>Black</textcolor>
 							<scroll>false</scroll>
 							<label>$INFO[ListItem.label2]</label>
 							<visible>!Window.IsActive(videolibrary)</visible>
@@ -137,7 +137,7 @@
 							<height>20</height>
 							<align>right</align>
 							<font>Liberation20</font>
-							<textcolor>Light_Grey</textcolor>
+							<textcolor>Black</textcolor>
 							<scroll>false</scroll>
 							<label>$INFO[ListItem.rating]</label>
 							<visible>Window.IsActive(videolibrary)</visible>
@@ -148,7 +148,11 @@
 							<width>20</width>
 							<height>16</height>
 							<texture>star.png</texture>
-							<visible>Window.IsActive(videolibrary) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+							<colordiffuse>Main_Green</colordiffuse>
+							<animation type="Focus" reversible="false">
+								<effect type="fade" start="30" end="100" time="300" />
+							</animation>
+							<visible>Window.IsActive(videolibrary) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !IsEmpty(ListItem.rating)</visible>
 						</control>
 				</control>
 			</focusedlayout>
@@ -158,7 +162,7 @@
 		<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-40,0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
 		<include>recent_right_side</include>
-		<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left) + Control.IsVisible(50)</visible>
+		<visible>Control.IsVisible(50)</visible>
 			<control type="image">
 				<posx>60</posx>
 				<posy>420</posy>
@@ -179,5 +183,22 @@
 			</control>
 	</control>
 
+	
+	<control type="scrollbar" id="60">
+		<posx>1250</posx>
+		<posy>420</posy>
+		<width>19</width>
+		<height>285</height>
+		<visible allowhiddenfocus="true">Control.IsVisible(50) + Control.HasFocus(60)</visible>
+		<texturesliderbackground border="0,14,0,14">osd/vertical_slider_back.png</texturesliderbackground>
+		<textureslidernibfocus>osd/vertical_slider_nib.png</textureslidernibfocus>
+		<onleft>50</onleft>
+		<onright>50</onright>
+		<showonepage>true</showonepage>
+		<orientation>vertical</orientation>
+		<include>Animation_CommonFade</include>
+		<animation effect="slide" start="200,0" end="0,0" time="400" tween="cubic" easing="inout" condition="true">Conditional</animation>
+	</control>
+	
 	</include>
 </includes>
