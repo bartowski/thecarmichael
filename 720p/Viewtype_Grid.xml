@@ -24,7 +24,7 @@
 			<animation effect="slide" start="0,0" end="-50,0" time="400" condition="Control.HasFocus(63)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,50" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
-			<visible>Container.Content(movies) + !substring(container.folderpath,plugin://plugin.video.apple.movie.trailers.lite)</visible>
+			<visible>[Container.Content(movies) + !substring(container.folderpath,plugin://)] | [Container.Content(tvshows) + ![Skin.HasSetting(TVBanners) | Skin.HasSetting(landscape_thumbs)]]</visible>
 			<itemlayout width="106" height="150">
 				<control type="group">
 					<posx>30</posx>

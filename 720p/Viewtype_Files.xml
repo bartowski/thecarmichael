@@ -59,6 +59,18 @@
 							<textcolor>White</textcolor>
 							<scroll>false</scroll>
 							<label>$INFO[ListItem.label]</label>
+							<visible>!Container.Content(songs)</visible>
+						</control>
+						<control type="label">
+							<posx>250</posx>
+							<posy>-6</posy>
+							<width>530</width>
+							<height>20</height>
+							<font>Liberation22</font>
+							<textcolor>White</textcolor>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]</label>
+							<visible>Container.Content(songs)</visible>
 						</control>
 						<control type="label">
 							<posx>974</posx>
@@ -117,6 +129,18 @@
 							<textcolor>Black</textcolor>
 							<scroll>false</scroll>
 							<label>$INFO[ListItem.label]</label>
+							<visible>!Container.Content(songs)</visible>
+						</control>
+						<control type="label">
+							<posx>250</posx>
+							<posy>-6</posy>
+							<width>530</width>
+							<height>20</height>
+							<font>Liberation22</font>
+							<textcolor>Black</textcolor>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.TrackNumber]$INFO[ListItem.Title,. ]</label>
+							<visible>Container.Content(songs)</visible>
 						</control>
 						<control type="label">
 							<posx>974</posx>

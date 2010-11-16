@@ -115,7 +115,7 @@
 						<width>880</width>
 						<height>30</height>
 						<label>[B]$LOCALIZE[209][/B]</label>
-						<scroll>true</scroll>
+						<scroll>false</scroll>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Liberation24</font>
@@ -125,10 +125,10 @@
 					<control type="label">
 						<posx>318</posx>
 						<posy>114</posy>
-						<width>880</width>
+						<width>650</width>
 						<height>30</height>
 						<label>$INFO[MusicPlayer.offset(1).Title] - $INFO[MusicPlayer.offset(1).Artist]</label>
-						<scroll>true</scroll>
+						<scroll>false</scroll>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Liberation18</font>
@@ -140,7 +140,7 @@
 						<width>880</width>
 						<height>30</height>
 						<label>$INFO[MusicPlayer.offset(2).Title] - $INFO[MusicPlayer.offset(2).Artist]</label>
-						<scroll>true</scroll>
+						<scroll>false</scroll>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Liberation18</font>
@@ -152,7 +152,7 @@
 						<width>880</width>
 						<height>30</height>
 						<label>$INFO[MusicPlayer.offset(3).Title] - $INFO[MusicPlayer.offset(3).Artist]</label>
-						<scroll>true</scroll>
+						<scroll>false</scroll>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Liberation18</font>
@@ -164,7 +164,7 @@
 						<width>880</width>
 						<height>30</height>
 						<label>$INFO[MusicPlayer.offset(4).Title] - $INFO[MusicPlayer.offset(4).Artist]</label>
-						<scroll>true</scroll>
+						<scroll>false</scroll>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>Liberation18</font>

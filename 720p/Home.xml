@@ -265,6 +265,11 @@
 						<label>31007</label>
 						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
 					</control>
+					<control type="button" id="90176">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>31027</label>
+						<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/randommovie.xsp,return)</onclick>
+					</control>
 				</control>
 <!-- TV -->	    <control type="grouplist" id="9017">
 					<posx>10</posx>
@@ -299,7 +304,7 @@
 					</control>
 					<control type="button" id="90176">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>Random Episodes</label>
+						<label>31026</label>
 						<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/random.xsp,return)</onclick>
 					</control>
 				</control>

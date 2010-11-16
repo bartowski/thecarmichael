@@ -404,7 +404,7 @@
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 				<scroll>false</scroll>
-				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(videoplaylist)] + IsEmpty(Control.GetLabel(7100)) + IsEmpty(Control.GetLabel(7101)) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+				<visible>[Container.Content(tvshows) | Container.Content(seasons) | Window.IsActive(videoplaylist)] + IsEmpty(Control.GetLabel(7100)) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
 				<posx>760</posx>
@@ -416,7 +416,7 @@
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[ListItem.TVShowTitle][/B]</label>
 				<scroll>false</scroll>
-				<visible>Container.Content(episodes) + !substring(container.folderpath,plugin://plugin.video.hulu) + IsEmpty(Control.GetLabel(7100)) + IsEmpty(Control.GetLabel(7101))</visible>
+				<visible>Container.Content(episodes) + !substring(container.folderpath,plugin://plugin.video.hulu) + IsEmpty(Control.GetLabel(7100)) + IsEmpty(Control.GetLabel(7101)) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
 				<posx>760</posx>
@@ -1437,7 +1437,7 @@
 			<highlightcolor>White</highlightcolor>
 			<titlecolor>Main_Green</titlecolor>
 			<urlset>1</urlset>
-			<visible>system.getbool(lookandfeel.enablerssfeeds) + !Window.IsActive(infodialog)</visible>
+			<visible>system.getbool(lookandfeel.enablerssfeeds) + ![Window.IsActive(infodialog) | Window.IsActive(musicscan) | Window.IsActive(videoscan)]</visible>
 		</control>
 	</include>
 	

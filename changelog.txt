@@ -1,11 +1,9 @@
-[B]1.1.0[/B]
+Update 11-15
+  -Lowered Navigation sounds by 40%
+  -Fixed TV show label fallback when no logo
+  -Fixed track # and title in song level selection
+  -Hide RSS when scan dialogs visible
+  -"Grid" view available on TV level
+  -Added Random Movie playlist submenu
+  -Added banner.jpg support
 
-- Redesigned the video and Music OSD Info and controls
-- Added more images for codec flagging on videos and audio
-- Added all the windows needed for the new Addon Browser
-- Removed the right hand side bar graphic from all windows and only made the left hand one visible if a menu is there
-- Lots of other little changes
-
-[B]1.0.0[/B]
-
-- Initial Commit to the SVN

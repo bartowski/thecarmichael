@@ -1430,8 +1430,7 @@
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31269]</label>
 							<onclick>Skin.Reset(landscape_thumbs)</onclick> 
-                            <onclick>Skin.Reset(TVBanners)</onclick> 
-							<onclick>Skin.ToggleSetting(landscape_jpg)</onclick>
+                           <onclick>Skin.ToggleSetting(landscape_jpg)</onclick>
 							<selected>Skin.HasSetting(landscape_jpg)</selected>
 						</control>
 						<control type="label" id="503">
@@ -1453,36 +1452,53 @@
                         </control> 
 						<control type="radiobutton" id="505">
 							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31024]</label>
+							<onclick>Skin.Reset(landscape_thumbs)</onclick> 
+                            <onclick>Skin.Reset(TVBanners)</onclick> 
+							<onclick>Skin.ToggleSetting(banner_jpg)</onclick>
+							<selected>Skin.HasSetting(banner_jpg)</selected>
+						</control>
+						<control type="label" id="506">
+							<width>860</width>
+							<height>20</height>
+							<textoffsetx>26</textoffsetx>
+							<textoffsety>0</textoffsety>
+							<font>Liberation16</font>
+							<textcolor>Light_Grey</textcolor>
+							<label>*$LOCALIZE[31025]*</label>
+						</control>
+						<control type="radiobutton" id="507">
+							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31033]</label>
 							<onclick>Skin.ToggleSetting(autoscroll)</onclick>
 							<selected>Skin.HasSetting(autoscroll)</selected>
 						</control>
-						<control type="radiobutton" id="506">
+						<control type="radiobutton" id="508">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31035]</label>
 							<onclick>Skin.ToggleSetting(movieoverlays)</onclick>
 							<selected>Skin.HasSetting(movieoverlays)</selected>
 						</control>
-						<control type="radiobutton" id="507">
+						<control type="radiobutton" id="509">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31036]</label>
 							<onclick>Skin.ToggleSetting(tvoverlays)</onclick>
 							<selected>Skin.HasSetting(tvoverlays)</selected>
 						</control>
-						<control type="radiobutton" id="508">
+						<control type="radiobutton" id="510">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31282]</label>
 							<onclick>Skin.ToggleSetting(genrefanart)</onclick>
 							<onclick>Skin.Reset(extrafanart)</onclick> 
 							<selected>Skin.HasSetting(genrefanart)</selected>
 						</control>
-						<control type="radiobutton" id="509">
+						<control type="radiobutton" id="511">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31266]</label>
 							<onclick>Skin.ToggleSetting(extrafanart)</onclick>
 							<selected>Skin.HasSetting(extrafanart)</selected>
 						</control>
-						<control type="label" id="510">
+						<control type="label" id="512">
 							<width>860</width>
 							<height>20</height>
 							<textoffsetx>26</textoffsetx>
@@ -1491,14 +1507,14 @@
 							<textcolor>Light_Grey</textcolor>
 							<label>*$LOCALIZE[31267]*</label>
 						</control>
-						<control type="radiobutton" id="511">
+						<control type="radiobutton" id="513">
 							<include>skin_settings_labels</include>
 							<label>31019</label>
 							<onclick>Skin.ToggleSetting(tv_theme)</onclick>
 							<selected>Skin.HasSetting(tv_theme)</selected>
 							<!--<visible>system.hasaddon(script.TvTunes)</visible>-->
 						</control>
-						<control type="button" id="512">
+						<control type="button" id="514">
 							<width>860</width>
 							<height>24</height>
 							<textoffsetx>6</textoffsetx>
@@ -1506,7 +1522,7 @@
 							<font>Liberation18</font>
 							<align>center</align>
 							<textcolor>White</textcolor>
-							<focusedcolor>White</focusedcolor>
+							<focusedcolor>Black</focusedcolor>
 							<texturefocus>MenuItemFO.png</texturefocus>
 							<texturenofocus>MenuItemNF.png</texturenofocus>
 							<label>$LOCALIZE[31264]</label>

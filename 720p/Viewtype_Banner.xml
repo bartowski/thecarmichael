@@ -21,7 +21,7 @@
 			<ondown>9000</ondown>
 			<preloaditems>2</preloaditems>
 			<include>main_window_open_close</include>
-			<visible>Container.Content(tvshows) + Skin.HasSetting(TVBanners)</visible>
+			<visible>[Container.Content(tvshows) + Skin.HasSetting(TVBanners)] | [Container.Content(tvshows) + Skin.HasSetting(banner_jpg)]</visible>
 			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 			<itemlayout width="624" height="130" condition="!Skin.HasSetting(more_banners)">

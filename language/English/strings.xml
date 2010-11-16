@@ -25,6 +25,10 @@
 	<string id="31021">LastFM Love</string>
 	<string id="31022">LastFM Ban</string>
 	<string id="31023">TV Airing Today</string>
+	<string id="31024">Use banner.jpg on TV level</string>
+	<string id="31025">User needs a banner.jpg image at the root of TV Show folder</string>
+	<string id="31026">Random Episodes</string>
+	<string id="31027">Random Movies</string>
 	<string id="31264">Click to Run the logo script - *will match and download TV shows in your library*</string>
 
 <!-- From Confluence -->	
