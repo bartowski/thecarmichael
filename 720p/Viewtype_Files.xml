@@ -59,6 +59,8 @@
 							<textcolor>White</textcolor>
 							<scroll>false</scroll>
 							<label>$INFO[ListItem.label]</label>
+							<animation effect="slide" start="0,0" end="8,0" time="0" condition="!Container.Content(movies) + Skin.HasSetting(tvoverlays) + stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="8,0" time="0" condition="Container.Content(movies) + Skin.HasSetting(movieoverlays) + stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 							<visible>!Container.Content(songs)</visible>
 						</control>
 						<control type="label">
@@ -104,6 +106,22 @@
 							<texture>star.png</texture>
 							<visible>Window.IsActive(videolibrary) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !IsEmpty(ListItem.rating)</visible>
 						</control>
+						<control type="image">
+							<posx>240</posx>
+							<posy>-2</posy>
+							<width>22</width>
+							<height>20</height>
+							<texture>$INFO[ListItem.Overlay]</texture>
+							<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						</control>
+						<control type="image">
+							<posx>240</posx>
+							<posy>-2</posy>
+							<width>22</width>
+							<height>20</height>
+							<texture>$INFO[ListItem.Overlay]</texture>
+							<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						</control>
 				</control>
 			</itemlayout>
 			<focusedlayout width="900" height="22">
@@ -129,6 +147,8 @@
 							<textcolor>Black</textcolor>
 							<scroll>false</scroll>
 							<label>$INFO[ListItem.label]</label>
+							<animation effect="slide" start="0,0" end="8,0" time="0" condition="!Container.Content(movies) + Skin.HasSetting(tvoverlays) + stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+							<animation effect="slide" start="0,0" end="8,0" time="0" condition="Container.Content(movies) + Skin.HasSetting(movieoverlays) + stringcompare(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 							<visible>!Container.Content(songs)</visible>
 						</control>
 						<control type="label">
@@ -178,6 +198,24 @@
 							</animation>
 							<visible>Window.IsActive(videolibrary) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !IsEmpty(ListItem.rating)</visible>
 						</control>
+						<control type="image">
+							<posx>240</posx>
+							<posy>-2</posy>
+							<width>22</width>
+							<height>20</height>
+							<texture>$INFO[ListItem.Overlay]</texture>
+							<colordiffuse>Black</colordiffuse>
+							<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						</control>
+						<control type="image">
+							<posx>240</posx>
+							<posy>-2</posy>
+							<width>22</width>
+							<height>20</height>
+							<texture>$INFO[ListItem.Overlay]</texture>
+							<colordiffuse>Black</colordiffuse>
+							<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						</control>
 				</control>
 			</focusedlayout>
 		</control>
@@ -204,6 +242,15 @@
 				<width>40</width>
 				<height>36</height>
 				<texture>$INFO[ListItem.Overlay]</texture>
+				<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+			</control>
+			<control type="image">
+				<posx>430</posx>
+				<posy>654</posy>
+				<width>40</width>
+				<height>36</height>
+				<texture>$INFO[ListItem.Overlay]</texture>
+				<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 			</control>
 	</control>
 

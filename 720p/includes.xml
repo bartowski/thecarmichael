@@ -1425,6 +1425,12 @@
 			<include>Global_HeadingSectionVars</include>
 			<visible>Window.IsActive(pictures) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
 		</control>
+		<control type="label">
+			<description>pictures</description>
+			<label>$LOCALIZE[157] $LOCALIZE[24001] - $INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
+			<include>Global_HeadingSectionVars</include>
+			<visible>substring(container.folderpath,plugin://) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
+		</control>
 		<control type="rss" id="1">
 			<posx>0</posx>
 			<posy>6</posy>

@@ -1,3 +1,6 @@
+Update 11-18
+  Watched flag and setting corrections/completion
+
 Update 11-15
   -Lowered Navigation sounds by 40%
   -Fixed TV show label fallback when no logo

@@ -52,7 +52,15 @@
 						<width>40</width>
 						<height>36</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>!IsEmpty(ListItem.Overlay)</visible>
+						<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					</control>
+					<control type="image">
+						<posx>60</posx>
+						<posy>106</posy>
+						<width>40</width>
+						<height>36</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 				</control>
 			</itemlayout>
@@ -89,7 +97,15 @@
 						<width>40</width>
 						<height>36</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>!IsEmpty(ListItem.Overlay)</visible>
+						<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					</control>
+					<control type="image">
+						<posx>80</posx>
+						<posy>136</posy>
+						<width>40</width>
+						<height>36</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 				</control>
 			</focusedlayout>

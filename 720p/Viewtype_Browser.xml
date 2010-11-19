@@ -94,7 +94,7 @@
 						<width>60</width>
 						<height>54</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>!IsEmpty(ListItem.Overlay)</visible>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 				</control>
 			</itemlayout>
@@ -180,7 +180,7 @@
 						<height>54</height>
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
-						<visible>!IsEmpty(ListItem.Overlay)</visible>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 					<control type="label">
 						<posx>560</posx>
