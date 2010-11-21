@@ -11,6 +11,16 @@
 	
 	<control type="image">
 		<posx>0</posx>
+		<posy>0</posy>
+		<width>1280</width>
+		<height>720</height>
+		<texture>maintop/background2.png</texture>
+		<aspectratio scalediffuse="false">stretch</aspectratio>
+		<visible>Window.IsActive(musicinformation)</visible>
+	</control>
+	
+	<control type="image">
+		<posx>0</posx>
 		<posy>400</posy>
 		<width>1280</width>
 		<height>83</height>

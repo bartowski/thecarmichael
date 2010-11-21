@@ -1267,7 +1267,7 @@
 				<visible>SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="grouplist">
-				<posx>700</posx>
+				<posx>760</posx>
 				<posy>60</posy>
 				<width>500</width>
 				<height>300</height>
@@ -1363,7 +1363,7 @@
 			<description>Movies</description>
 			<label>$LOCALIZE[342] - $INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
 			<include>Global_HeadingSectionVars</include>
-			<visible>Window.IsActive(videolibrary) + Container.Content(movies) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
+			<visible>Window.IsActive(videolibrary) + Container.Content(movies) + ![system.getbool(lookandfeel.enablerssfeeds) | substring(container.folderpath,plugin://)]</visible>
 		</control>
 		<control type="label">
 			<description>TV Shows</description>
@@ -1381,7 +1381,7 @@
 			<description>TV Shows</description>
 			<label>$LOCALIZE[31004] - $LOCALIZE[20360] - $INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
 			<include>Global_HeadingSectionVars</include>
-			<visible>Window.IsActive(videolibrary) + Container.Content(episodes) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
+			<visible>Window.IsActive(videolibrary) + Container.Content(episodes) + ![system.getbool(lookandfeel.enablerssfeeds) | substring(container.folderpath,plugin://)]</visible>
 		</control>
 		<control type="label">
 			<description>video files</description>

@@ -95,25 +95,20 @@
 	
 	
 	<control type="group">
-		<posx>250</posx>
+		<posx>0</posx>
 		<posy>430</posy>
 		<animation effect="slide" start="-800,0" end="0,0" time="400">Visible</animation>
 		<visible>Control.IsVisible(53) + Window.IsActive(musicinformation)</visible>
 			<control type="image">
-				<posx>-14</posx>
-				<posy>-8</posy>
-				<width>210</width>
-				<height>285</height>
-				<texture>poster/poster_focus_shadow.png</texture>
-				<aspectratio scalediffuse="false">stretch</aspectratio>
-			</control>
-			<control type="image">
-				<posx>0</posx>
+				<posx>60</posx>
 				<posy>0</posy>
-				<width>181</width>
-				<height>273</height>
+				<width>420</width>
+				<height>280</height>
 				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<bordertexture border="10">ThumbShadow.png</bordertexture>
+				<bordersize>8</bordersize>
+				<fadetime>300</fadetime>
+				<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			</control>
 	</control>
 

@@ -93,11 +93,11 @@
 				<animation effect="slide" start="0,0" end="-24,0" delay="600" time="2000" condition="IsEmpty(Control.GetLabel(7026))">Conditional</animation>
 					<control type="image">
 						<description>media info background image</description>
-						<posx>0</posx>
-						<posy>72</posy>
-						<width>1280</width>
-						<height>148</height>
-						<texture>osd/musicOSD_back.png</texture>
+						<posx>226</posx>
+						<posy>66</posy>
+						<width>1070</width>
+						<height>153</height>
+						<texture>osd/music_back.png</texture>
 					</control>
 					<control type="label">
 						<posx>290</posx>

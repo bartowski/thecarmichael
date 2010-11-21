@@ -24,7 +24,7 @@
 				<control type="group">
 					<posy>90</posy>
 					<posx>210</posx>
-					<visible>container.content(Albums)</visible>
+					<visible>container.content(Albums) + !Control.IsVisible(50)</visible>
 					<control type="list" id="49">
 						<posx>190</posx>
 						<posy>370</posy>
@@ -131,7 +131,7 @@
 				<control type="group">
 					<posy>90</posy>
 					<posx>210</posx>
-					<visible>container.content(Artists)</visible>
+					<visible>container.content(Artists) + !Control.IsVisible(50)</visible>
 					<control type="list" id="49">
 						<posx>220</posx>
 						<posy>370</posy>
@@ -253,79 +253,116 @@
 						</content>
 					</control>
 				</control>
-				<control type="image">
-					<description>Actor image</description>
-					<posx>210</posx>
-					<posy>480</posy>
-					<width>160</width>
-					<height>160</height>
-					<texture>$INFO[Container(50).Listitem.Icon]</texture>
-					<aspectratio>keep</aspectratio>
-					<visible>Control.IsVisible(50)</visible>
-				</control>
-				<control type="panel" id="50">
-					<posx>380</posx>
-					<posy>520</posy>
-					<width>860</width>
-					<height>120</height>
-					<onleft>9000</onleft>
-					<onright>61</onright>
-					<onup>61</onup>
-					<ondown>9000</ondown>
-					<viewtype label="">list</viewtype>
-					<pagecontrol>61</pagecontrol>
-					<scrolltime>200</scrolltime>
-					<orientation>vertical</orientation>
-					<itemlayout height="40" width="430">
+		<control type="image">
+			<posx>470</posx>
+			<posy>410</posy>
+			<width>790</width>
+			<height>310</height>
+			<texture>files_panel1.png</texture>
+			<include>main_window_open_close</include>
+			<visible>Control.IsVisible(50)</visible>
+		</control>	
+		<!--<control type="image">
+			<description>Actor image</description>
+			<posx>210</posx>
+			<posy>480</posy>
+			<width>160</width>
+			<height>160</height>
+			<texture>$INFO[Container(50).Listitem.Icon]</texture>
+			<aspectratio>keep</aspectratio>
+			<visible>Control.IsVisible(50)</visible>
+		</control>-->
+		<control type="fixedlist" id="50">
+			<posx>230</posx>
+			<posy>432</posy>
+			<width>1500</width>
+			<height>260</height>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<orientation>vertical</orientation>
+			<viewtype label="Files">list</viewtype>
+			<onleft>9000</onleft>
+			<onright>9000</onright>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<focusposition>6</focusposition>
+			<movement>6</movement>
+			<include>main_window_open_close</include>
+			<itemlayout width="630" height="22">
+				<control type="group">
+					<posx>20</posx>
+					<posy>0</posy>
 						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>430</width>
-							<height>40</height>
-							<texture border="5">button-nofocus.png</texture>
+							<posx>240</posx>
+							<posy>-6</posy>
+							<width>740</width>
+							<height>24</height>
+							<texture>MenuItemNF.png</texture>
+							<!--<animation type="Focus" reversible="false">
+								<effect type="fade" start="0" end="70" time="800" />
+							</animation>-->
 						</control>
 						<control type="label">
-							<posx>10</posx>
-							<posy>0</posy>
-							<width>410</width>
-							<height>40</height>
-							<font>font12</font>
-							<align>left</align>
-							<aligny>center</aligny>
-							<selectedcolor>white</selectedcolor>
-							<info>ListItem.Label</info>
-						</control>
-					</itemlayout>
-					<focusedlayout height="40" width="430">
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>430</width>
-							<height>40</height>
-							<visible>!Control.HasFocus(50)</visible>
-							<texture border="5">button-nofocus.png</texture>
-						</control>
-						<control type="image">
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>430</width>
-							<height>40</height>
-							<visible>Control.HasFocus(50)</visible>
-							<texture border="5">button-focus.png</texture>
+							<posx>250</posx>
+							<posy>-6</posy>
+							<width>530</width>
+							<height>20</height>
+							<font>Liberation22</font>
+							<textcolor>White</textcolor>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.label]</label>
 						</control>
 						<control type="label">
-							<posx>10</posx>
-							<posy>0</posy>
-							<width>410</width>
-							<height>40</height>
-							<font>font12</font>
-							<align>left</align>
-							<aligny>center</aligny>
-							<selectedcolor>white</selectedcolor>
-							<info>ListItem.Label</info>
+							<posx>974</posx>
+							<posy>-6</posy>
+							<width>220</width>
+							<height>20</height>
+							<align>right</align>
+							<font>Liberation20</font>
+							<textcolor>Light_Grey</textcolor>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.duration]</label>
 						</control>
-					</focusedlayout>
 				</control>
+			</itemlayout>
+			<focusedlayout width="900" height="22">
+				<control type="group">
+					<posx>20</posx>
+					<posy>0</posy>
+						<control type="image">
+							<posx>242</posx>
+							<posy>-6</posy>
+							<width>740</width>
+							<height>26</height>
+							<texture>MenuItemFO.png</texture>
+							<!--<animation type="Focus" reversible="false">
+								<effect type="fade" start="0" end="70" time="800" />
+							</animation>-->
+						</control>
+						<control type="label">
+							<posx>250</posx>
+							<posy>-6</posy>
+							<width>530</width>
+							<height>20</height>
+							<font>Liberation22</font>
+							<textcolor>Black</textcolor>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.label]</label>
+						</control>
+						<control type="label">
+							<posx>974</posx>
+							<posy>-6</posy>
+							<width>220</width>
+							<height>20</height>
+							<align>right</align>
+							<font>Liberation20</font>
+							<textcolor>Black</textcolor>
+							<scroll>false</scroll>
+							<label>$INFO[ListItem.duration]</label>
+						</control>
+				</control>
+			</focusedlayout>
+		</control>
 				<control type="grouplist" id="9000">
 					<posx>400</posx>
 					<posy>680</posy>
@@ -374,7 +411,7 @@
 				</control>
 				<control type="grouplist">
 					<posx>500</posx>
-					<posy>680</posy>
+					<posy>686</posy>
 					<width>1030</width>
 					<height>40</height>
 					<itemgap>20</itemgap>
