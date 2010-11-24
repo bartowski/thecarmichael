@@ -1521,7 +1521,7 @@
 		<onfocus>SetFocus(50)</onfocus>
 	</include>
 	<include name="yes_tv_theme">
-		 <onfocus>XBMC.RunScript(script.TvTunes,backend=True&amploop=True)</onfocus>
+		 <onfocus>XBMC.RunScript(script.TvTunes,backend=True&amp;loop=True)</onfocus>
          <onfocus>SetFocus(50)</onfocus>
 	</include>
 	

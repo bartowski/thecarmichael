@@ -1,3 +1,7 @@
+Update 11-20
+  -Changed pause screen added current/end time
+  -Started to finish Music Info screens
+
 Update 11-18
   Watched flag and setting corrections/completion
 

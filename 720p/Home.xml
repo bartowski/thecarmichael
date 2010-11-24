@@ -30,7 +30,7 @@
 					<onleft>9000</onleft>
 					<onright>Control.SetFocus(8000,0)</onright>
 					<onup>9000</onup>
-					<ondown>9010</ondown>
+					<ondown></ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(2)</visible>
 					<!--<control type="button" id="90101">
@@ -81,7 +81,7 @@
 					<onleft>Control.SetFocus(8002,2)</onleft>
 					<onright>Control.SetFocus(8012,0)</onright>
 					<onup>9000</onup>
-					<ondown>9000</ondown>
+					<ondown></ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(1)</visible>
 					<control type="button" id="90115">
@@ -125,7 +125,7 @@
 						<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
 						<visible>!Library.HasContent(Music)</visible>
 					</control>
-					<control type="button" id="90117">
+					<control type="button" id="90118">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>$LOCALIZE[136]</label>
 						<onclick>ActivateWindow(MusicLibrary,Playlists,return)</onclick>
@@ -139,7 +139,7 @@
 					<onleft>9000</onleft>
 					<onright>9001</onright>
 					<onup>9000</onup>
-					<ondown>9014</ondown>
+					<ondown></ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(9)</visible>
 					<control type="button" id="90141">
@@ -182,7 +182,7 @@
 					<onleft>9000</onleft>
 					<onright>9001</onright>
 					<onup>9000</onup>
-					<ondown>9015</ondown>
+					<ondown></ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(10) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
 					<control type="button" id="90151">
@@ -242,7 +242,7 @@
 					<onleft>Control.SetFocus(8000,2)</onleft>
 					<onright>Control.SetFocus(8010,0)</onright>
 					<onup>9000</onup>
-					<ondown>9000</ondown>
+					<ondown></ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(3) | Container(9000).HasFocus(4)</visible>
 					<control type="button" id="90162">
@@ -284,7 +284,7 @@
 					<onleft>Control.SetFocus(8001,3)</onleft>
 					<onright>Control.SetFocus(8011,0)</onright>
 					<onup>9000</onup>
-					<ondown>9017</ondown>
+					<ondown></ondown>
 					<itemgap>0</itemgap>
 					<visible>Container(9000).HasFocus(5)</visible>
 					<control type="button" id="90172">

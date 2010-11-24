@@ -42,7 +42,7 @@
 				<focusedcolor>Black</focusedcolor>
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
-				<onright>22</onright>
+				<onright>13</onright>
 				<onleft>22</onleft>
 				<onup>9001</onup>
 				<ondown>12</ondown>
@@ -73,7 +73,7 @@
 				<label>-</label>
 				<onup>22</onup>
 				<onleft>12</onleft>
-				<onright>12</onright>
+				<onright>13</onright>
 				<ondown>10</ondown>
 			</control>
 			<control type="label">
@@ -94,7 +94,7 @@
 				<onup>12</onup>
 				<onleft>9000</onleft>
 				<onright>9000</onright>
-				<ondown>16</ondown>
+				<ondown>9001</ondown>
 				<itemlayout width="560" height="40">
 					<control type="image">
 						<posx>0</posx>
@@ -174,8 +174,8 @@
 					<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<onup>17</onup>
-					<onleft>10</onleft>
-					<onright>10</onright>
+					<onleft>12</onleft>
+					<onright>17</onright>
 					<ondown>14</ondown>
 				</control>
 				<control type="button" id="14">
@@ -194,7 +194,7 @@
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<onup>13</onup>
 					<onleft>10</onleft>
-					<onright>10</onright>
+					<onright>17</onright>
 					<ondown>15</ondown>
 				</control>
 				<control type="button" id="15">
@@ -213,7 +213,7 @@
 					<texturefocus border="5">button-focus.png</texturefocus>
 					<onup>14</onup>
 					<onleft>10</onleft>
-					<onright>10</onright>
+					<onright>17</onright>
 					<ondown>16</ondown>
 				</control>
 			</control>
@@ -247,7 +247,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onright>16</onright>
-				<onleft>16</onleft>
+				<onleft>13</onleft>
 				<onup>10</onup>
 				<ondown>17</ondown>
 			</control>
@@ -264,7 +264,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onright>17</onright>
-				<onleft>17</onleft>
+				<onleft>13</onleft>
 				<onup>16</onup>
 				<ondown>18</ondown>
 			</control>
@@ -281,7 +281,7 @@
 				<texturefocus>MenuItemFO.png</texturefocus>
 				<texturenofocus>MenuItemNF.png</texturenofocus>
 				<onright>19</onright>
-				<onleft>19</onleft>
+				<onleft>13</onleft>
 				<onup>17</onup>
 				<ondown>9001</ondown>
 			</control>

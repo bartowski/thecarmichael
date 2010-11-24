@@ -35,7 +35,7 @@
 	<include>main_fanart_diffuse_music</include>
 	
 	<control type="group">
-		<visible>![Window.IsVisible(FileBrowser) | Window.IsVisible(contentsettings) | Window.IsVisible(mediasource) | Window.IsActive(addonsettings)]</visible>
+		<visible>![Window.IsVisible(FileBrowser) | Window.IsVisible(contentsettings) | Window.IsVisible(mediasource) | Window.IsActive(addonsettings) | Window.IsActive(smartplaylisteditor)]</visible>
 			<include>Viewtype_Files</include><!-- 50 -->
 			<include>Viewtype_MusicWrap</include><!-- 51 -->
 			<include>Viewtype_Music_Grid</include><!-- 53 -->
