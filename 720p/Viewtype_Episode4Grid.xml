@@ -14,7 +14,7 @@
 			<scrolltime>200</scrolltime>
 			<focusposition>1</focusposition>
 			<orientation>horizontal</orientation>
-			<viewtype label="4rows">list</viewtype>
+			<viewtype label="4 $LOCALIZE[455]">list</viewtype>
 			<onleft>54</onleft>
 			<onright>54</onright>
 			<onup>9000</onup>

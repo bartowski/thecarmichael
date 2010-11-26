@@ -206,7 +206,7 @@
 		<onup>51</onup>
 		<ondown>51</ondown>
 		<orientation>horizontal</orientation>
-		<viewtype label="535">list</viewtype>
+		<viewtype label="$LOCALIZE[535]">list</viewtype>
 		<focusposition>0</focusposition>
 		<pagecontrol>-</pagecontrol>
 		<scrolltime>0</scrolltime>

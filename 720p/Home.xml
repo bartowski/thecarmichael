@@ -456,7 +456,7 @@
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</item>
 				<item id="4">
-					<description>movies</description>
+					<description>HD movies</description>
 					<label>$LOCALIZE[30000]</label>
 					<icon>backgrounds/HDmovies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomHDMoviesFolder)]</thumb>			

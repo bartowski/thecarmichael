@@ -1,3 +1,9 @@
+Update 11-26
+  -Fixed label/logo overlap on 'now playing' queue screen
+  -Fixed Music scan
+  -Some more strings
+  -Added logo button to info screen
+
 Update 11-20
   -Changed pause screen added current/end time
   -Started to finish Music Info screens

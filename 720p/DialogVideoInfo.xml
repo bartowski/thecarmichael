@@ -663,6 +663,14 @@
 						<label>20410</label>
 						<visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(WindowedTrailer)</visible>
 					</control>
+					<control type="button" id="14">
+						<description>Play Trailer</description>
+						<width>1</width>
+						<height>1</height>
+						<label>$LOCALIZE[31249]</label>
+						<onclick>XBMC.RunScript(script.logo-downloader,mode=solo,logo=True,clearart=True,showthumb=True,showname=$INFO[ListItem.TVShowTitle])</onclick>
+						<visible>Container.Content(tvshows)</visible>
+					</control>
 					<control type="button" id="15">
 						<description>Play Trailer Windowed</description>
 						<width>1</width>
@@ -753,6 +761,18 @@
 						<include>ButtonInfoDialogsCommonValues_Focus</include>
 						<label>$INFO[Control.GetLabel(11)]</label>
 						<visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(WindowedTrailer) + Control.HasFocus(11)</visible>
+					</control>
+					<control type="label">
+						<description>Get logo</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>$INFO[Control.GetLabel(14)]</label>
+						<visible>!Control.HasFocus(14) + Container.Content(tvshows)</visible>
+					</control>
+					<control type="label">
+						<description>Get logo</description>
+						<include>ButtonInfoDialogsCommonValues_Focus</include>
+						<label>$INFO[Control.GetLabel(14)]</label>
+						<visible>Control.HasFocus(14) + Container.Content(tvshows)</visible>
 					</control>
 					<control type="label">
 						<description>Play Trailer Windowed</description>

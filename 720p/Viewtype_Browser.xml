@@ -15,7 +15,7 @@
 			<focusposition>1</focusposition>
 			<orientation>horizontal</orientation>
 			<preloaditems>2</preloaditems>
-			<viewtype label="Browser">list</viewtype>
+			<viewtype label="$LOCALIZE[31029]">list</viewtype>
 			<onleft>51</onleft>
 			<onright>51</onright>
 			<onup>9000</onup>

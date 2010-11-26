@@ -29,8 +29,19 @@
 	<string id="31025">User needs a banner.jpg image at the root of TV Show folder</string>
 	<string id="31026">Random Episodes</string>
 	<string id="31027">Random Movies</string>
+<!-- Views -->		
+	<string id="31028">Big Grid</string>
+	<string id="31029">Landscape</string>
+	<string id="31030">Music Wrap</string>
+	<string id="31031">Banner</string>
+<!-- End Views -->	
+	<string id="31032">Try to leave atleast 9 on screen to fill width of Home screen</string>
 	<string id="31264">Click to Run the logo script - *will match and download TV shows in your library*</string>
 
+	
+	
+	
+	
 <!-- From Confluence -->	
     <string id="31055">Open playlist</string>
 	<string id="31056">Save playlist</string>
@@ -70,7 +81,7 @@
     <string id="41404">Set three cities to collect weather information</string>
     <string id="41405">Setup control of XBMC via UPnP and HTTP · Configure file sharing · Set internet access options</string>
     <string id="41406">Setup and calibrate displays · Configure audio output · Setup remote controls · Set power saving options · Enable debugging · Setup master lock</string>
-    <string id="41407">Setup the Confluence skin · Add and remove home menu items · Change skin backgrounds</string>
+    <string id="41407">Setup the Carmichael skin · Add and remove home menu items · Change skin backgrounds</string>
     <string id="41408">Manage your installed Add-ons · Browse for and install Add-ons from xbmc.org · Modify Add-on settings</string>
 	
 	
@@ -87,6 +98,7 @@
 	<string id="31209">TV</string>
 	<string id="31215">Show subtitle script button in OSD</string>
 	<string id="31221">Use Condition based weather fanart</string>
+	<string id="31249">Get Logo</string>
 	<string id="31257">Use random music backdrops - Same ones used on Home</string>
 	<string id="31258">Use random photo backdrops - Same ones used on Home</string>
 	<string id="31261">Custom Favorite</string>

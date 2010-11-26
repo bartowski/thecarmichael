@@ -14,7 +14,7 @@
 			<scrolltime>200</scrolltime>
 			<focusposition>1</focusposition>
 			<orientation>horizontal</orientation>
-			<viewtype label="Banner">list</viewtype>
+			<viewtype label="$LOCALIZE[31031]">list</viewtype>
 			<onleft>55</onleft>
 			<onright>55</onright>
 			<onup>9000</onup>

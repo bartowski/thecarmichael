@@ -25,7 +25,7 @@
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>200</scrolltime>
 			<orientation>vertical</orientation>
-			<viewtype label="Files">list</viewtype>
+			<viewtype label="$LOCALIZE[744]">list</viewtype>
 			<onleft>9000</onleft>
 			<onright>60</onright>
 			<onup>50</onup>
