@@ -1,3 +1,9 @@
+Update 12-2
+  -Fixed banner watched flags
+  -Finished File Manager
+  -Changed look of 'System Info'
+  -Changed 'View Options' buttons
+
 Update 11-26
   -Fixed label/logo overlap on 'now playing' queue screen
   -Fixed Music scan

@@ -7,7 +7,7 @@
 	
 		<control type="panel" id="53">
 			<posx>-26</posx>
-			<posy>416</posy>
+			<posy>420</posy>
 			<width>1380</width>
 			<height>298</height>
 			<pagecontrol>63</pagecontrol>
@@ -28,7 +28,7 @@
 			<itemlayout width="142" height="148">
 				<control type="group">
 					<posx>30</posx>
-					<posy>10</posy>
+					<posy>6</posy>
 						<control type="image">
 							<posx>-8</posx>
 							<posy>-4</posy>
@@ -59,7 +59,7 @@
 			<focusedlayout width="142" height="148">
 				<control type="group">
 				<posx>30</posx>
-				<posy>10</posy>
+				<posy>6</posy>
 				<animation type="Focus" reversible="false">
 					<effect type="zoom" center="auto" start="60" end="114" time="500" tween="back" easing="out" />
 				</animation>

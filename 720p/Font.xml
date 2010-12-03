@@ -103,6 +103,12 @@
     <size>26</size>
   </font>
   <font>
+    <name>DejaVuSans_Bold_Caps_16</name>
+    <filename>DejaVuSans-Bold-Caps.ttf</filename>
+    <size>16</size>
+	<linespacing>.8</linespacing>
+  </font>
+  <font>
     <name>DejaVuSans_Bold_Caps_18</name>
     <filename>DejaVuSans-Bold-Caps.ttf</filename>
     <size>18</size>

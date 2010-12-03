@@ -180,11 +180,16 @@
 					<width>240</width>
 					<height>240</height>
 					<onleft>9000</onleft>
-					<onright>9001</onright>
+					<onright>18012</onright>
 					<onup>9000</onup>
 					<ondown></ondown>
 					<itemgap>0</itemgap>
-					<visible>Container(9000).HasFocus(10) + [[Skin.HasSetting(HomeScriptButton1) + !IsEmpty(Skin.String(HomeScriptButton1_label))] | [Skin.HasSetting(HomeScriptButton2) + !IsEmpty(Skin.String(HomeScriptButton2_label))] | [Skin.HasSetting(HomeScriptButton3) + !IsEmpty(Skin.String(HomeScriptButton3_label))] | [Skin.HasSetting(HomeScriptButton4) + !IsEmpty(Skin.String(HomeScriptButton4_label))] | [Skin.HasSetting(HomeScriptButton5) + !IsEmpty(Skin.String(HomeScriptButton5_label))] | [Skin.HasSetting(HomeScriptButton6) + !IsEmpty(Skin.String(HomeScriptButton6_label))]]</visible>
+					<visible>Container(9000).HasFocus(10)</visible>
+					<control type="button" id="90150">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>24001</label>
+						<onclick>ActivateWindow(AddonBrowser)</onclick>
+					</control>
 					<control type="button" id="90151">
 						<description>Button1</description>
 						<include>ButtonHomeSubCommonValues</include>
@@ -321,6 +326,7 @@
 	
 	<include>HomeRecentlyAddedInfo</include>
 	<include>Home_Random</include>
+	<!--<include>home_addons</include>-->
 	
 	<control type="multiimage">
 		<posx>60</posx>

@@ -62,6 +62,14 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
+					<!--<control type="image">
+						<posx>64</posx>
+						<posy>0</posy>
+						<width>27</width>
+						<height>22</height>
+						<texture>misc/hd_focus.png</texture>
+						<visible>substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080)</visible>
+					</control>-->
 				</control>
 			</itemlayout>
 			<focusedlayout width="140" height="200">
@@ -107,6 +115,14 @@
 						<texture>$INFO[ListItem.Overlay]</texture>
 						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
+					<!--<control type="image">
+						<posx>76</posx>
+						<posy>1</posy>
+						<width>34</width>
+						<height>28</height>
+						<texture>misc/hd_focus.png</texture>
+						<visible>substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080)</visible>
+					</control>-->
 				</control>
 			</focusedlayout>
 		</control>

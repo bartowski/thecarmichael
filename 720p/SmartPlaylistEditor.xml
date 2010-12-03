@@ -161,9 +161,9 @@
 			<control type="group" id="9000">
 				<control type="button" id="13">
 					<description>Add Rule Button</description>
-					<posx>550</posx>
+					<posx>586</posx>
 					<posy>145</posy>
-					<width>180</width>
+					<width>130</width>
 					<height>41</height>
 					<label>15019</label>
 					<font>Liberation18</font>
@@ -180,10 +180,10 @@
 				</control>
 				<control type="button" id="14">
 					<description>Remove Rule Button</description>
-					<posx>550</posx>
+					<posx>586</posx>
 					<posy>185</posy>
 					<height>41</height>
-					<width>180</width>
+					<width>130</width>
 					<label>1210</label>
 					<font>Liberation18</font>
 					<textcolor>Black</textcolor>
@@ -199,10 +199,10 @@
 				</control>
 				<control type="button" id="15">
 					<description>Edit Rule Button</description>
-					<posx>550</posx>
+					<posx>586</posx>
 					<posy>225</posy>
 					<height>41</height>
-					<width>180</width>
+					<width>130</width>
 					<label>21435</label>
 					<font>Liberation18</font>
 					<textcolor>Black</textcolor>

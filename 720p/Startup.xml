@@ -1,6 +1,6 @@
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	<allowoverlay>yes</allowoverlay>
 	<controls>
 		<control type="button" id="10">
 			<description>trigger</description>

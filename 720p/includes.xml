@@ -6,6 +6,7 @@
 	<include file="IncludesHome_Random.xml" />
 	<include file="IncludesCodecFlagging.xml" />
 	<include file="Includes_Next_Aired.xml" />
+	<include file="Includes_home_addons.xml" />
 	<include file="Viewtype_Files.xml" />
     <include file="Viewtype_Browser.xml" />
 	<include file="Viewtype_Poster.xml" />
@@ -137,7 +138,7 @@
 					<fadetime>1000</fadetime>
 					<imagepath background="true" fallback="backgrounds/settings.jpg" diffuse="maintop/main_fanart_diffuse.png">$INFO[Skin.String(CustomSettingsFolder)]</imagepath>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Window.IsActive(settings) | Window.IsActive(systeminfo)</visible>
+					<visible>Window.IsActive(settings) | Window.IsActive(systeminfo) | Window.IsActive(filemanager)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -914,6 +915,30 @@
 				<align>center</align>
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
+				<label>[B]$LOCALIZE[7][/B]</label>
+				<scroll>false</scroll>
+				<visible>Window.IsActive(filemanager)</visible>
+			</control>
+			<control type="textbox">
+				<posx>760</posx>
+				<posy>180</posy>
+				<width>500</width>
+				<height>190</height>
+				<align>justify</align>
+				<label>$LOCALIZE[31700]</label>
+				<font>Liberation18</font>
+				<textcolor>White</textcolor>
+				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>Window.IsActive(filemanager)</visible>
+			</control>
+			<control type="textbox">
+				<posx>760</posx>
+				<posy>100</posy>
+				<width>510</width>
+				<height>76</height>
+				<align>center</align>
+				<font>Liberation28</font>
+				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[Container(2).ListItem.Label][/B]</label>
 				<scroll>false</scroll>
 				<visible>Window.IsActive(profiles)</visible>
@@ -1351,7 +1376,7 @@
 	</include>
 	
 	<include name="Global_HeadingSectionVars">
-		<posx>0</posx>
+		<posx>6</posx>
 		<posy>2</posy>
 		<width>960</width>
 		<font>Liberation22</font>
@@ -1427,6 +1452,12 @@
 		</control>
 		<control type="label">
 			<description>pictures</description>
+			<label>5</label>
+			<include>Global_HeadingSectionVars</include>
+			<visible>Window.IsActive(Settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(custom_SkinSetting_1111.xml)</visible>
+		</control>
+		<control type="label">
+			<description>pictures</description>
 			<label>$LOCALIZE[157] $LOCALIZE[24001] - $INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
 			<include>Global_HeadingSectionVars</include>
 			<visible>substring(container.folderpath,plugin://) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
@@ -1455,8 +1486,12 @@
 		<align>center</align>
 		<font>DejaVuSans_16</font>
 		<textoffsetx>10</textoffsetx>
+		<textoffsety>2</textoffsety>
 		<textcolor>White</textcolor>
 		<focusedcolor>Main_Green</focusedcolor>
+		<disabledcolor>Light_Grey</disabledcolor>
+		<texturenofocus>misc/nav_button_unfocus.png</texturenofocus>
+		<texturefocus>misc/nav_button_focus.png</texturefocus>
 	</include>
 	<include name="ButtonInfoDialogsCommonValues">
 		<height>40</height>

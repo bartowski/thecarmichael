@@ -1377,7 +1377,7 @@
 						<posx>300</posx>
 						<posy>430</posy>
 						<width>860</width>
-						<height>530</height>
+						<height>260</height>
 						<itemgap>-1</itemgap>
 						<pagecontrol>61</pagecontrol>
 						<onleft>9000</onleft>
@@ -1510,6 +1510,32 @@
 							<onclick>Skin.SetAddon(HomeScriptButton7_Path,xbmc.python.script)</onclick>
 							<visible>Skin.HasSetting(HomeScriptButton6)</visible>
 						</control>
+						<!--<control type="radiobutton" id="1702">
+							<description>custom home 20</description>
+							<include>skin_settings_labels</include>
+							<label>$LOCALIZE[31261] 1</label>
+							<onfocus>Skin.SetString(MoviesCustom,20)</onfocus>
+							<onclick>Skin.ToggleSetting(Menu_Custom20)</onclick>
+							<selected>Skin.HasSetting(Menu_Custom20)</selected>
+							<enable>!Skin.HasSetting(Menu_Movies_Sub20)</enable>
+						</control>
+						<control type="button" id="18201">
+							<description>Menu Movies Sub Custom8 Label</description>
+							<label>- $LOCALIZE[31262]</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom20_Label)][/COLOR]</label2>
+							<include>skin_settings_button</include>
+							<onclick>Skin.SetString(Menu_Custom20_Label)</onclick>
+							<visible>Skin.HasSetting(Menu_Custom20) + Skin.String(MoviesCustom,20)</visible>
+						</control>
+						<control type="button" id="18202">
+							<description>Menu Movies Sub Custom8 Path</description>
+							<label>- $LOCALIZE[31290]</label>
+							<label2>[COLOR=selected]$INFO[Skin.String(Menu_Custom20_Path)][/COLOR]</label2>
+							<include>skin_settings_button</include>
+							<onclick>Skin.SetString(Menu_Sub_Custom_Favourites_Path,Menu_Custom20_Path)</onclick>
+							<onclick>ActivateWindow(1114)</onclick>
+							<visible>Skin.HasSetting(Menu_Custom20) + Skin.String(MoviesCustom,20)</visible>
+						</control>-->
 					</control>
 				</control>
 				<control type="group"><!--mcborzu tv-->

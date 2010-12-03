@@ -1,6 +1,6 @@
 <window id="129">
 	<defaultcontrol always="true">9001</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	<allowoverlay>yes</allowoverlay>
 	<coordinates>
 		<system>1</system>
 		<posx>240</posx>

@@ -132,5 +132,8 @@
 	
 	<string id="40281">Items</string>
 	
+<!-- New 12/2 -->
+	<string id="31700">XBMC has a built-in filemanager which lets you transfer/copy/move/delete/rename files and folders on your local hard drive, FTP-shares and Windows File-Shares (SMB/SAMBA/CIFS)</string>
+	<string id="31309">Memory Used:</string>
 	
 </strings>

@@ -65,6 +65,14 @@
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Skin.HasSetting(banner_jpg)</visible>
 					</control>
+					<control type="image">
+						<posx>564</posx>
+						<posy>76</posy>
+						<width>40</width>
+						<height>36</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					</control>
 				</control>
 			</itemlayout>
 			<itemlayout width="416" height="86" condition="Skin.HasSetting(more_banners)">
@@ -107,6 +115,14 @@
 						<fadetime>300</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Skin.HasSetting(banner_jpg)</visible>
+					</control>
+					<control type="image">
+						<posx>376</posx>
+						<posy>44</posy>
+						<width>40</width>
+						<height>36</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 				</control>
 			</itemlayout>
@@ -162,6 +178,14 @@
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Skin.HasSetting(banner_jpg)</visible>
 					</control>
+					<control type="image">
+						<posx>564</posx>
+						<posy>76</posy>
+						<width>40</width>
+						<height>36</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+					</control>
 				</control>
 			</focusedlayout>
 			<focusedlayout width="416" height="86" condition="Skin.HasSetting(more_banners)">
@@ -215,6 +239,14 @@
 						<fadetime>300</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<visible>Skin.HasSetting(banner_jpg)</visible>
+					</control>
+					<control type="image">
+						<posx>376</posx>
+						<posy>44</posy>
+						<width>40</width>
+						<height>36</height>
+						<texture>$INFO[ListItem.Overlay]</texture>
+						<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					</control>
 				</control>
 			</focusedlayout>

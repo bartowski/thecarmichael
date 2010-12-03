@@ -1,6 +1,6 @@
 <window id="2006">
 	<defaultcontrol>-</defaultcontrol>
-	<allowoverlay>no</allowoverlay>
+	<allowoverlay>yes</allowoverlay>
 	<controls>
 	
 		<control type="group">

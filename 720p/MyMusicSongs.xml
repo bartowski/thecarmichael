@@ -1,10 +1,13 @@
 <window id="501">
 <defaultcontrol>50</defaultcontrol>
-<allowoverlay>no</allowoverlay>
+<allowoverlay>yes</allowoverlay>
 <views>50</views>
 <controls>
 
-	<include>background</include>
+	<control type="group">
+		<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+			<include>background</include>
+	</control>
 	
 	<control type="image">
 		<posx>0</posx>
@@ -34,7 +37,7 @@
 		<visible>!Skin.HasSetting(LockViews)</visible>
 			<control type="grouplist" id="9000">
 				<posx>0</posx>
-				<posy>430</posy>
+				<posy>424</posy>
 				<width>1280</width>
 				<height>480</height>
 				<onleft>9000</onleft>
@@ -42,6 +45,7 @@
 				<onup>50</onup>
 				<ondown>50</ondown>
 				<align>center</align>
+				<itemgap>-2</itemgap>
 				<orientation>horizontal</orientation>
 				<animation effect="fade" start="0" end="100" time="400" delay="600" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 				<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus + !Skin.HasSetting(LockViews)</visible>

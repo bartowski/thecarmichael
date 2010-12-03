@@ -252,6 +252,14 @@
 				<texture>$INFO[ListItem.Overlay]</texture>
 				<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 			</control>
+			<control type="image">
+				<posx>420</posx>
+				<posy>426</posy>
+				<width>57</width>
+				<height>44</height>
+				<texture>misc/hd_unfocused.png</texture>
+				<visible>Container.Content(movies) + [substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080)]</visible>
+			</control>
 	</control>
 
 	
