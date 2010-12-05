@@ -346,6 +346,20 @@
 				</control>
 		</control>
 	</include>
+	<include name="main_fanart_diffuse_rom_browser">
+		<control type="group">
+			<include>main_home_panel_open_close</include>
+				<control type="image">
+					<posx>0</posx>
+					<posy>74</posy>
+					<width>747</width>
+					<height>420</height>
+					<fadetime>400</fadetime> 
+					<texture background="true" fallback="backgrounds/addons.jpg" diffuse="maintop/main_fanart_diffuse.png">$INFO[ListItem.Property(mainviewbackground)]</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+				</control>
+		</control>
+	</include>
 	
 	<include name="MainPanel_Info_Videos">
 		<control type="group">
@@ -1330,7 +1344,96 @@
 			</control>
 		</control>
 	</include>
-	
+	<include name="MainPanel_Info_Rom_Browser">
+		<control type="group">
+		<include>main_window_rightside_open_close</include>
+		<animation effect="slide" start="0,0" end="800,0" time="200" condition="Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog)">Conditional</animation>
+			<control type="textbox">
+				<posx>760</posx>
+				<posy>100</posy>
+				<width>510</width>
+				<height>76</height>
+				<align>center</align>
+				<font>Liberation28</font>
+				<textcolor>Main_Green</textcolor>
+				<label>[B]$INFO[ListItem.Label][/B]</label>
+				<scroll>false</scroll>
+				<visible>!SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+			</control>
+			<control type="textbox">
+				<posx>760</posx>
+				<posy>100</posy>
+				<width>510</width>
+				<height>76</height>
+				<align>center</align>
+				<font>Liberation28</font>
+				<textcolor>Main_Green</textcolor>
+				<label>[B]$LOCALIZE[31010][/B]</label>
+				<scroll>false</scroll>
+				<visible>SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+			</control>
+			<control type="textbox">
+				<posx>760</posx>
+				<posy>180</posy>
+				<width>500</width>
+				<height>190</height>
+				<align>justify</align>
+				<info>ListItem.Property(plot)</info>
+				<font>Liberation18</font>
+				<textcolor>White</textcolor>
+				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+			</control>
+			<control type="label">
+				<posx>760</posx>
+				<posy>382</posy>
+				<width>500</width>
+				<height>20</height>
+				<align>center</align>
+				<font>DejaVuSans_Bold_Caps_20</font>
+				<textcolor>Light_Grey</textcolor>
+				<label>$LOCALIZE[515]: $INFO[ListItem.Genre]</label>
+				<visible>Window.IsActive(Programs) + substring(container.folderpath,plugin://plugin.program.launcher) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left) + !IsEmpty(ListItem.Genre)</visible>
+			</control>
+			<control type="grouplist">
+				<posx>760</posx>
+				<posy>382</posy>
+				<width>500</width>
+				<height>40</height>
+				<align>center</align>
+				<orientation>horizontal</orientation>
+				<include>main_window_rightside_open_close</include>
+				<animation effect="slide" start="0,0" end="800,0" time="200" condition="Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog)">Conditional</animation>
+					<control type="label">
+						<width min="29" max="300">auto</width>
+						<font>DejaVuSans_Bold_Caps_20</font>
+						<textcolor>Light_Grey</textcolor>
+						<label>$INFO[ListItem.Property(year)]</label>
+					</control>
+					<control type="label">
+						<width min="29" max="300">auto</width>
+						<font>DejaVuSans_Bold_Caps_20</font>
+						<textcolor>Light_Grey</textcolor>
+						<label> - $INFO[ListItem.Property(console)]</label>
+					</control>
+			</control>
+			<control type="grouplist">
+				<posx>760</posx>
+				<posy>382</posy>
+				<width>500</width>
+				<height>40</height>
+				<align>center</align>
+				<orientation>horizontal</orientation>
+				<include>main_window_rightside_open_close</include>
+				<visible>Window.IsVisible(AddonBrowser.xml)</visible>
+					<control type="label">
+						<width min="29" max="300">auto</width>
+						<font>DejaVuSans_Bold_Caps_20</font>
+						<textcolor>Light_Grey</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+			</control>
+		</control>
+	</include>
 	
 	<include name="Global_Time">
 		<control type="label">
