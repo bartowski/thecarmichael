@@ -11,6 +11,54 @@
 			<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 				<include>background</include>
 		</control>
+		
+	<control type="group">
+		<animation effect="slide" start="0,-100" end="0,0" time="400" delay="200" condition="ControlGroup(400).HasFocus">Conditional</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>400</posy>
+				<width>1280</width>
+				<height>83</height>
+				<texture>maintop/option_bar.png</texture>
+				<fadetime>300</fadetime>
+				<aspectratio scalediffuse="false">stretch</aspectratio>
+				<visible allowhiddenfocus="true">ControlGroup(400).HasFocus + !Skin.HasSetting(LockViews)</visible>
+			</control>
+			<control type="group">
+				<visible>!Skin.HasSetting(LockViews)</visible>
+					<control type="grouplist" id="400">
+						<posx>0</posx>
+						<posy>424</posy>
+						<width>1280</width>
+						<height>480</height>
+						<onleft>400</onleft>
+						<onright>400</onright>
+						<onup>50</onup>
+						<ondown>50</ondown>
+						<align>center</align>
+						<itemgap>-2</itemgap>
+						<orientation>horizontal</orientation>
+						<visible allowhiddenfocus="true">ControlGroup(400).HasFocus + !Skin.HasSetting(LockViews)</visible>
+						<orientation>vertical</orientation>
+						<control type="button" id="3000">
+							<description>View</description>
+							<label>Import Settings</label>
+							<include>WindowMenuButton</include>
+						</control>
+						<control type="button" id="3100">
+							<description>Sort</description>
+							<label>Import Games</label>	
+							<include>WindowMenuButton</include>
+						</control>
+						<control type="button" id="2">
+							<description>Ascending</description>
+							<width>150</width>
+							<label>Change View</label>
+							<include>WindowMenuButton</include>
+						</control>
+					</control>
+			</control>
+	</control>
 	<include>main_back</include>
 	<include>MainPanel_Info_Rom_Browser</include>
 	<include>main_fanart_diffuse_rom_browser</include>
@@ -31,7 +79,7 @@
 					<texture>files_panel1.png</texture>
 					<include>main_window_open_close</include>
 					<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(songinformation)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(400).HasFocus">Conditional</animation>
 					<visible>Control.IsVisible(50)</visible>
 				</control>
 				<control type="fixedlist" id="50">
@@ -51,7 +99,7 @@
 					<movement>6</movement>
 					<include>main_window_open_close</include>
 					<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(musicinformation) | Window.IsActive(movieinformation) | Window.IsActive(addoninformation) | Window.IsActive(songinformation)">Conditional</animation>
-					<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(400).HasFocus">Conditional</animation>
 					<itemlayout width="630" height="22">
 						<control type="group">
 							<posx>20</posx>
@@ -110,7 +158,7 @@
 					</focusedlayout>
 				</control>
 				<control type="group">
-					<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(400).HasFocus">Conditional</animation>
 					<animation effect="slide" start="0,0" end="-40,0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
 					<include>recent_right_side</include>
 					<visible>Control.IsVisible(50)</visible>
@@ -138,15 +186,15 @@
 					<viewtype label="Poster">list</viewtype>
 					<onleft>52</onleft>
 					<onright>52</onright>
-					<onup>62</onup>
-					<ondown>2448</ondown>
+					<onup>100</onup>
+					<ondown>100</ondown>
 					<pagecontrol>62</pagecontrol>
 					<scrolltime>200</scrolltime>
 					<focusposition>3</focusposition>
 					<preloaditems>2</preloaditems>
 					<orientation>horizontal</orientation>
 					<include>main_window_open_close</include>
-					<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+					<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(400).HasFocus">Conditional</animation>
 					<visible>!Container.Content(episodes)</visible>
 					<itemlayout width="178" height="230">
 						<control type="group">
@@ -225,117 +273,100 @@
 			
 			<!-- gamelists without video support go from id 55-58--> 			
 			
-			<!-- gamelist 58 -->
+			<!-- gamelist 51 -->
 			<control type="group">
-				<visible>Control.IsVisible(58)</visible>
-				<control type="image">	
-					<description>gamelist background image</description>
+				<control type="wraplist" id="51">
 					<posx>0</posx>
-					<posy>100</posy>
-					<width>720</width>
-					<height>450</height>
-					<texture>rom_browser/rcb-ContentPanel2.png</texture>
-					<colordiffuse>90FFFFFF</colordiffuse>					
-				</control>
-				<control type="wraplist" id="58">
-					<posx>0</posx>
-					<posy>120</posy>
-					<width>720</width>
+					<posy>420</posy>
+					<width>1280</width>
 					<height>400</height>
-					<onleft>58</onleft>
-					<onright>58</onright>
-					<onup>500</onup>
-					<ondown>3000</ondown>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<focusposition>1</focusposition>
 					<orientation>horizontal</orientation>
-					<focusposition>2</focusposition>
-					<viewtype label="Thumbs">wrap</viewtype>			
-					<scrolltime>100</scrolltime>
-					<itemlayout width="145">
-						<control type="image">
-							<width>145</width>
-							<height>220</height>
-							<posx>0</posx>
-							<posy>25</posy>							
-							<aspectratio>stretch</aspectratio>							
-							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-						</control>						
+					<preloaditems>2</preloaditems>
+					<viewtype label="$LOCALIZE[31029]">list</viewtype>
+					<onleft>51</onleft>
+					<onright>51</onright>
+					<onup>100</onup>
+					<ondown>100</ondown>
+					<include>main_window_open_close</include>
+					<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(400).HasFocus">Conditional</animation>
+					<itemlayout width="390" height="230">
+						<control type="group">
+							<posx>20</posx>
+							<posy>70</posy>
+							<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
+							<animation effect="fade" start="100" end="0" time="400" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
+							<animation effect="fade" start="100" end="0" time="400" delay="100" condition="Control.HasFocus(2448)">Conditional</animation>
+							<control type="image">
+								<posx>-16</posx>
+								<posy>-4</posy>
+								<width>397</width>
+								<height>207</height>
+								<texture>landscape/unfocused_shadow.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>355</width>
+								<height>200</height>
+								<texture>misc/back.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>355</width>
+								<height>200</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<fadetime>300</fadetime>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+						</control>
 					</itemlayout>
-					<focusedlayout width="145">
-						<control type="image">
-							<posx>-25</posx>
-							<posy>0</posy>
-							<width>200</width>
-							<height>300</height>
-							<aspectratio>stretch</aspectratio>
-							<bordertexture border="8">rom_browser/rcb-ThumbBorder.png</bordertexture>
-							<bordersize>8</bordersize>
-							<texture background="true">$INFO[ListItem.Thumb]</texture>
-							<animation reversible="false" effect="zoom" start="0,0,145,220" end="-25,0,200,300" time="100">focus</animation>
-							<animation reversible="false" effect="zoom" end="0,0,145,220" start="-25,0,200,300" time="100">unfocus</animation>
-						</control>						
-						<control type="image">
-							<posx>-20</posx>
-							<posy>5</posy>
-							<width>100</width>
-							<height>75</height>
-							<aspectratio>stretch</aspectratio>
-							<texture>rom_browser/rcb-GlassOverlay.png</texture>
-							<animation reversible="false" effect="zoom" start="0,0,60,40" end="-20,0,100,75" time="100">focus</animation>
-							<animation reversible="false" effect="zoom" end="0,0,60,40" start="-20,0,100,75" time="100">unfocus</animation>
+					<focusedlayout width="490" height="280">
+						<control type="group">
+						<posx>20</posx>
+						<posy>20</posy>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="60" end="100" time="500" tween="back" easing="out" />
+						</animation>
+						<animation effect="slide" start="0,0" end="-300,0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
+						<animation effect="slide" start="0,0" end="-260,0" time="500" delay="100" condition="Control.HasFocus(2448)">Conditional</animation>
+							<control type="image">
+								<posx>-18</posx>
+								<posy>-6</posy>
+								<width>487</width>
+								<height>269</height>
+								<texture>landscape/focus_shadow.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<animation type="Focus" reversible="false">
+									<effect type="fade" start="0" end="100" time="400" delay="100" />
+								</animation>
+								<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>451</width>
+								<height>254</height>
+								<texture>misc/back.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
+							</control>
+							<control type="image">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>451</width>
+								<height>254</height>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
+							</control>
 						</control>
 					</focusedlayout>
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>430</posy>
-					<width>720</width>
-					<height>30</height>
-					<font>font30caps_title</font>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>DDFFFFFF</textcolor>
-					<selectedcolor>FFe2ff43</selectedcolor>						
-					<label>$INFO[ListItem.Label]</label>					
-				</control>
-				<control type="label">
-					<posx>0</posx>
-					<posy>490</posy>
-					<width>720</width>
-					<height>20</height>
-					<font>font16caps</font>
-					<aligny>center</aligny>
-					<textcolor>DDFFFFFF</textcolor>
-					<selectedcolor>FFe2ff43</selectedcolor>
-					<align>center</align>
-					<label>$INFO[ListItem.Property(console)]</label>
-					<visible>IsEmpty(ListItem.Property(mainview2)) + Control.IsVisible(58)</visible>
-				</control>					
-				<!-- mainview1 -->
-				<control type="image">
-					<description>mainview1</description>
-					<posx>180</posx>
-					<posy>480</posy>
-					<width>60</width>
-					<height>40</height>						
-					<texture>$INFO[ListItem.Property(mainview1)]</texture>						
-				</control>
-				<!-- mainview2 -->
-				<control type="image">
-					<description>mainview2</description>
-					<posx>330</posx>
-					<posy>480</posy>
-					<width>60</width>
-					<height>40</height>						
-					<texture>$INFO[ListItem.Property(mainview2)]</texture>						
-				</control>
-				<!-- mainview3 -->
-				<control type="image">
-					<description>mainview3</description>
-					<posx>480</posx>
-					<posy>480</posy>
-					<width>60</width>
-					<height>40</height>						
-					<texture>$INFO[ListItem.Property(mainview3)]</texture>						
 				</control>
 			</control>
 		</control>
@@ -345,26 +376,15 @@
 				
 		<!-- filter controls -->
 		<control type="group" id="100">		
-			<animation effect="slide" start="0,0" end="0,0" delay="0" time="400" tween="quadratic" easing="out" condition="ControlGroup(100).HasFocus">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,-200" delay="0"time="400" tween="quadratic" easing="out" condition="!ControlGroup(100).HasFocus">Conditional</animation>
-			<!--<visible allowhiddenfocus="true">Control.HasFocus(500) | Control.HasFocus(600) | Control.HasFocus(700) | Control.HasFocus(800)</visible>-->
-			<control type="image">
-				<animation effect="zoom" start="0,0,720,1" end="0,0,720,180" time="300" tween="quadratic" easing="out" condition="ControlGroup(100).HasFocus">Conditional</animation>
-				<description>filter background image</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>720</width>
-				<height>160</height>
-				<texture>rom_browser/rcb-Blade-Upper.png</texture>
-				<colordiffuse>FFFFFFFF</colordiffuse>
-			</control>
+			<posy>120</posy>
+			<visible allowhiddenfocus="true">Control.HasFocus(500) | Control.HasFocus(600) | Control.HasFocus(700) | Control.HasFocus(800) | Control.HasFocus(900)</visible>
 			<!-- Console filter -->
 			<control type="label">
 				<description>Consoles</description>
 				<posx>90</posx>
 				<posy>20</posy>
-				<textcolor>DDFFFFFF</textcolor>
-				<label>Consoles</label>
+				<textcolor>Main_Green</textcolor>
+				<label>[B]Consoles[/B]</label>
 			</control>		
 			<control type="wraplist" id="500">
 				<posx>50</posx>
@@ -384,16 +404,16 @@
 						<height>30</height>
 						<posx>0</posx>
 						<posy>0</posy>
-						<texture border="5">rom_browser/rcb-button-nofocus.png</texture>
+						<texture border="5">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
 						<posx>5</posx>
 						<posy>0</posy>
 						<width>120</width>
 						<height>30</height>
-						<font>font13</font>
+						<font>Liberation16</font>
 						<aligny>center</aligny>
-						<textcolor>DDFFFFFF</textcolor>
+						<textcolor>White</textcolor>
 						<selectedcolor>FFe2ff43</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
@@ -406,7 +426,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<visible>Control.HasFocus(500)</visible>
-						<texture border="5">rom_browser/rcb-button-focus.png</texture>
+						<texture border="5">MenuItemFO.png</texture>
 					</control>
 					<control type="image">
 						<width>125</width>
@@ -414,19 +434,33 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<visible>!Control.HasFocus(500)</visible>
-						<texture border="5">rom_browser/rcb-button-nofocus.png</texture>
+						<texture border="5">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
 						<posx>5</posx>
 						<posy>0</posy>
 						<width>120</width>
 						<height>30</height>
-						<font>font13</font>
+						<font>Liberation16</font>
 						<aligny>center</aligny>
-						<textcolor>DDFFFFFF</textcolor>
+						<textcolor>Black</textcolor>
 						<selectedcolor>FFe2ff43</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
+						<visible>Control.HasFocus(500)</visible>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>120</width>
+						<height>30</height>
+						<font>Liberation16</font>
+						<aligny>center</aligny>
+						<textcolor>Red</textcolor>
+						<selectedcolor>FFe2ff43</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+						<visible>!Control.HasFocus(500)</visible>
 					</control>
 				</focusedlayout>
 			</control>	
@@ -435,8 +469,8 @@
 				<description>Genre</description>
 				<posx>250</posx>
 				<posy>20</posy>
-					<textcolor>DDFFFFFF</textcolor>
-					<label>Genre</label>
+					<textcolor>Main_Green</textcolor>
+					<label>[B]Genre[/B]</label>
 			</control>
 			<control type="wraplist" id="600">
 				<posx>200</posx>
@@ -456,16 +490,16 @@
 						<height>30</height>
 						<posx>0</posx>
 						<posy>0</posy>
-						<texture border="5">rom_browser/rcb-button-nofocus.png</texture>
+						<texture border="5">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
 						<posx>5</posx>
 						<posy>0</posy>
 						<width>120</width>
 						<height>30</height>
-						<font>font13</font>
+						<font>Liberation16</font>
 						<aligny>center</aligny>
-						<textcolor>DDFFFFFF</textcolor>
+						<textcolor>White</textcolor>
 						<selectedcolor>FFe2ff43</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
@@ -478,7 +512,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<visible>Control.HasFocus(600)</visible>
-						<texture border="5">rom_browser/rcb-button-focus.png</texture>
+						<texture border="5">MenuItemFO.png</texture>
 					</control>
 					<control type="image">
 						<width>125</width>
@@ -486,19 +520,33 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<visible>!Control.HasFocus(600)</visible>
-						<texture border="5">rom_browser/rcb-button-nofocus.png</texture>
+						<texture border="5">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
 						<posx>5</posx>
 						<posy>0</posy>
 						<width>120</width>
 						<height>30</height>
-						<font>font13</font>
+						<font>Liberation16</font>
 						<aligny>center</aligny>
-						<textcolor>DDFFFFFF</textcolor>
+						<textcolor>Black</textcolor>
 						<selectedcolor>FFe2ff43</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
+						<visible>Control.HasFocus(600)</visible>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>120</width>
+						<height>30</height>
+						<font>Liberation16</font>
+						<aligny>center</aligny>
+						<textcolor>Red</textcolor>
+						<selectedcolor>FFe2ff43</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+						<visible>!Control.HasFocus(600)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -507,8 +555,8 @@
 				<description>Year</description>
 				<posx>400</posx>
 				<posy>20</posy>
-					<textcolor>DDFFFFFF</textcolor>
-					<label>Year</label>
+					<textcolor>Main_Green</textcolor>
+					<label>[B]Year[/B]</label>
 			</control>		
 			<control type="wraplist" id="700">
 				<posx>350</posx>
@@ -528,16 +576,16 @@
 						<height>30</height>
 						<posx>0</posx>
 						<posy>0</posy>
-						<texture border="5">rom_browser/rcb-button-nofocus.png</texture>
+						<texture border="5">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
 						<posx>5</posx>
 						<posy>0</posy>
 						<width>120</width>
 						<height>30</height>
-						<font>font13</font>
+						<font>Liberation16</font>
 						<aligny>center</aligny>
-						<textcolor>DDFFFFFF</textcolor>
+						<textcolor>White</textcolor>
 						<selectedcolor>FFe2ff43</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
@@ -550,7 +598,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<visible>Control.HasFocus(700)</visible>
-						<texture border="5">rom_browser/rcb-button-focus.png</texture>
+						<texture border="5">MenuItemFO.png</texture>
 					</control>
 					<control type="image">
 						<width>125</width>
@@ -558,19 +606,33 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<visible>!Control.HasFocus(700)</visible>
-						<texture border="5">rom_browser/rcb-button-nofocus.png</texture>
+						<texture border="5">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
 						<posx>5</posx>
 						<posy>0</posy>
 						<width>120</width>
 						<height>30</height>
-						<font>font13</font>
+						<font>Liberation16</font>
 						<aligny>center</aligny>
-						<textcolor>DDFFFFFF</textcolor>
+						<textcolor>Black</textcolor>
 						<selectedcolor>FFe2ff43</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
+						<visible>Control.HasFocus(700)</visible>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>120</width>
+						<height>30</height>
+						<font>Liberation16</font>
+						<aligny>center</aligny>
+						<textcolor>Red</textcolor>
+						<selectedcolor>FFe2ff43</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+						<visible>!Control.HasFocus(700)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -579,8 +641,8 @@
 				<description>Publisher</description>
 				<posx>535</posx>
 				<posy>20</posy>
-					<textcolor>DDFFFFFF</textcolor>
-					<label>Publisher</label>
+				<textcolor>Main_Green</textcolor>
+				<label>[B]Publisher[/B]</label>
 			</control>		
 			<control type="wraplist" id="800">
 				<posx>500</posx>
@@ -600,16 +662,16 @@
 						<height>30</height>
 						<posx>0</posx>
 						<posy>0</posy>
-						<texture border="5">rom_browser/rcb-button-nofocus.png</texture>
+						<texture border="5">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
 						<posx>5</posx>
 						<posy>0</posy>
 						<width>120</width>
 						<height>30</height>
-						<font>font13</font>
+						<font>Liberation16</font>
 						<aligny>center</aligny>
-						<textcolor>DDFFFFFF</textcolor>
+						<textcolor>White</textcolor>
 						<selectedcolor>FFe2ff43</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
@@ -622,7 +684,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<visible>Control.HasFocus(800)</visible>
-						<texture border="5">rom_browser/rcb-button-focus.png</texture>
+						<texture border="5">MenuItemFO.png</texture>
 					</control>
 					<control type="image">
 						<width>125</width>
@@ -630,19 +692,33 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<visible>!Control.HasFocus(800)</visible>
-						<texture border="5">rom_browser/rcb-button-nofocus.png</texture>
+						<texture border="5">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
 						<posx>5</posx>
 						<posy>0</posy>
 						<width>120</width>
 						<height>30</height>
-						<font>font13</font>
+						<font>Liberation16</font>
 						<aligny>center</aligny>
-						<textcolor>DDFFFFFF</textcolor>
+						<textcolor>Black</textcolor>
 						<selectedcolor>FFe2ff43</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
+						<visible>Control.HasFocus(800)</visible>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>120</width>
+						<height>30</height>
+						<font>Liberation16</font>
+						<aligny>center</aligny>
+						<textcolor>Red</textcolor>
+						<selectedcolor>FFe2ff43</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+						<visible>!Control.HasFocus(800)</visible>
 					</control>
 				</focusedlayout>
 			</control>
@@ -651,8 +727,8 @@
 				<description>Character</description>
 				<posx>655</posx>
 				<posy>20</posy>
-				<textcolor>DDFFFFFF</textcolor>
-				<label>A-Z</label>
+				<textcolor>Main_Green</textcolor>
+				<label>[B]A-Z[/B]</label>
 			</control>		
 			<control type="wraplist" id="900">
 				<posx>650</posx>
@@ -673,16 +749,16 @@
 						<height>30</height>
 						<posx>0</posx>
 						<posy>0</posy>
-						<texture border="5">rom_browser/rcb-button-nofocus.png</texture>
+						<texture border="5">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
 						<posx>5</posx>
 						<posy>0</posy>
 						<width>30</width>
 						<height>30</height>
-						<font>font13</font>
+						<font>Liberation16</font>
 						<aligny>center</aligny>
-						<textcolor>DDFFFFFF</textcolor>
+						<textcolor>White</textcolor>
 						<selectedcolor>FFe2ff43</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
@@ -695,7 +771,7 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<visible>Control.HasFocus(900)</visible>
-						<texture border="5">rom_browser/rcb-button-focus.png</texture>
+						<texture border="5">MenuItemFO.png</texture>
 					</control>
 					<control type="image">
 						<width>30</width>
@@ -703,109 +779,39 @@
 						<posx>0</posx>
 						<posy>0</posy>
 						<visible>!Control.HasFocus(900)</visible>
-						<texture border="5">rom_browser/rcb-button-nofocus.png</texture>
+						<texture border="5">MenuItemNF.png</texture>
 					</control>
 					<control type="label">
 						<posx>5</posx>
 						<posy>0</posy>
 						<width>30</width>
 						<height>30</height>
-						<font>font13</font>
+						<font>Liberation16</font>
 						<aligny>center</aligny>
-						<textcolor>DDFFFFFF</textcolor>
+						<textcolor>Black</textcolor>
 						<selectedcolor>FFe2ff43</selectedcolor>
 						<align>left</align>
 						<info>ListItem.Label</info>
+						<visible>Control.HasFocus(900)</visible>
+					</control>
+					<control type="label">
+						<posx>5</posx>
+						<posy>0</posy>
+						<width>30</width>
+						<height>30</height>
+						<font>Liberation16</font>
+						<aligny>center</aligny>
+						<textcolor>Red</textcolor>
+						<selectedcolor>FFe2ff43</selectedcolor>
+						<align>left</align>
+						<info>ListItem.Label</info>
+						<visible>!Control.HasFocus(900)</visible>
 					</control>
 				</focusedlayout>
 			</control>	
 			
 		</control>
 		
-		<!-- Button group -->
-		<control type="group" id="400">
-			<animation effect="slide" start="0,500" end="0,500" delay="0" time="400" tween="quadratic" easing="out" condition="ControlGroup(400).HasFocus">Conditional</animation>
-			<animation effect="slide" start="0,0" end="0,800" delay="0"time="400" tween="quadratic" easing="out" condition="!ControlGroup(400).HasFocus">Conditional</animation>
-			<control type="image">
-				<animation effect="zoom" start="0,500,620,1" end="0,500,720,80" time="300" tween="quadratic" easing="out" condition="ControlGroup(400).HasFocus">Conditional</animation>
-				<description>filter background image</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>720</width>
-				<height>80</height>
-				<texture>rom_browser/rcb-Blade-Lower.png</texture>
-				<colordiffuse>90FFFFFF</colordiffuse>				
-			</control>
-			<control type="button" id="3000"> 
-				<description>Import Settings</description>
-				<posx>50</posx>
-				<posy>25</posy>
-				<width>100</width>
-				<height>30</height>
-				<visible>true</visible>
-				<colordiffuse>DDFFFFFF</colordiffuse>
-				<texturefocus>rom_browser/rcb-button-focus.png</texturefocus>
-				<texturenofocus>rom_browser/rcb-button-nofocus.png</texturenofocus>
-				<label>Import Settings</label>				
-				<textcolor>DDFFFFFF</textcolor>
-				<disabledcolor>80FFFFFF</disabledcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textoffsetx></textoffsetx>
-				<textoffsety></textoffsety>
-				<pulseonselect></pulseonselect>
-				<onup>50</onup>
-				<ondown>500</ondown>
-				<onleft>500</onleft>
-				<onright>3100</onright>
-			</control>
-			<control type="button" id="3100"> 
-				<description>Import Games</description>
-				<posx>175</posx>
-				<posy>25</posy>
-				<width>100</width>
-				<height>30</height>
-				<visible>true</visible>
-				<colordiffuse>DDFFFFFF</colordiffuse>
-				<texturefocus>rom_browser/rcb-button-focus.png</texturefocus>
-				<texturenofocus>rom_browser/rcb-button-nofocus.png</texturenofocus>
-				<label>Import Games</label>				
-				<textcolor>DDFFFFFF</textcolor>
-				<disabledcolor>80FFFFFF</disabledcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textoffsetx></textoffsetx>
-				<textoffsety></textoffsety>
-				<pulseonselect></pulseonselect>
-				<onup>50</onup>
-				<ondown>500</ondown>
-				<onleft>3000</onleft>
-				<onright>2</onright>
-			</control>
-			<control type="button" id="2"> 
-				<description>Change View</description>
-				<posx>300</posx>
-				<posy>25</posy>
-				<width>100</width>
-				<height>30</height>
-				<visible>true</visible>
-				<colordiffuse>DDFFFFFF</colordiffuse>
-				<texturefocus>rom_browser/rcb-button-focus.png</texturefocus>
-				<texturenofocus>rom_browser/rcb-button-nofocus.png</texturenofocus>
-				<label>Change View</label>			
-				<textcolor>DDFFFFFF</textcolor>
-				<disabledcolor>80FFFFFF</disabledcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textoffsetx></textoffsetx>
-				<textoffsety></textoffsety>
-				<pulseonselect></pulseonselect>
-				<onup>50</onup>
-				<ondown>500</ondown>
-				<onleft>3000</onleft>
-				<onright>900</onright>				
-			</control>			
-		</control>			
 		
 		<control type="label" id="4000">
 			<description>Notes</description>
@@ -815,7 +821,7 @@
 			<height>10</height>
 			<align>left</align>
 			<scroll>true</scroll>
-		    <textcolor>DDFFFFFF</textcolor>
+		    <textcolor>White</textcolor>
 		    <label></label>
 			<font>font10</font>
 		</control>	

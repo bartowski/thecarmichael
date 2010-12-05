@@ -54,36 +54,6 @@
 						<fadetime>300</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 					</control>
-					<control type="image">
-						<posx>4</posx>
-						<posy>156</posy>
-						<width>343</width>
-						<height>68</height>
-						<texture>landscape/label_back_unfocus.png</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>Control.IsVisible(51) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
-					</control>
-					<control type="label">
-						<posx>180</posx>
-						<posy>178</posy>
-						<width>330</width>
-						<height>20</height>
-						<align>center</align>
-						<font>humanist_521_24</font>
-						<textcolor>ffffffff</textcolor>
-						<shadowcolor>ff000000</shadowcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<scroll>false</scroll>
-						<visible>Control.IsVisible(51) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
-					</control>
-					<control type="image">
-						<posx>310</posx>
-						<posy>150</posy>
-						<width>60</width>
-						<height>54</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>!IsEmpty(ListItem.Overlay)</visible>
-					</control>
 				</control>
 			</itemlayout>
 			<focusedlayout width="490" height="280">
@@ -124,84 +94,6 @@
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
-					</control>
-					<control type="image">
-						<posx>0</posx>
-						<posy>200</posy>
-						<width>444</width>
-						<height>83</height>
-						<texture>landscape/label_back_focus.png</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
-						<visible>Control.IsVisible(51) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
-					</control>
-					<control type="label">
-						<posx>226</posx>
-						<posy>230</posy>
-						<width>446</width>
-						<height>20</height>
-						<align>center</align>
-						<font>humanist_521_30</font>
-						<textcolor>Main_Green</textcolor>
-						<shadowcolor>Black</shadowcolor>
-						<label>$INFO[ListItem.Label]</label>
-						<scroll>false</scroll>
-						<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
-						<visible>Control.IsVisible(51) + [Container.Content(episodes) | Window.IsActive(videoplaylist)]</visible>
-					</control>
-					<control type="image">
-						<posx>400</posx>
-						<posy>200</posy>
-						<width>60</width>
-						<height>54</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
-						<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
-						<visible>!IsEmpty(ListItem.Overlay)</visible>
-					</control>
-					<control type="label">
-						<posx>510</posx>
-						<posy>0</posy>
-						<width>500</width>
-						<height>20</height>
-						<align>center</align>
-						<font>Liberation28</font>
-						<textcolor>Dark_Green</textcolor>
-						<label>"[B]$INFO[ListItem.Title][/B]"</label>
-						<scroll>false</scroll>
-						<animation type="Visible" reversible="false" condition="Control.HasFocus(8241)">
-							<effect type="slide" start="1100,0" end="0,0" time="500" delay="400" />
-						</animation>
-						<visible>Control.HasFocus(8241)</visible>
-					</control>
-					<control type="label">
-						<posx>500</posx>
-						<posy>36</posy>
-						<width>500</width>
-						<height>20</height>
-						<align>center</align>
-						<font>Liberation18</font>
-						<textcolor>Main_Grey</textcolor>
-						<label>[B]$INFO[ListItem.Date][/B]</label>
-						<scroll>false</scroll>
-						<animation type="Visible" reversible="false" condition="Control.HasFocus(8241)">
-							<effect type="slide" start="800,0" end="0,0" time="500" delay="400" />
-						</animation>
-						<visible>Control.HasFocus(8241)</visible>
-					</control>
-					<control type="textbox"><!-- Plot and TV -->
-						<posx>260</posx>
-						<posy>60</posy>
-						<width>500</width>
-						<height>190</height>
-						<align>justify</align>
-						<info>ListItem.Plot</info>
-						<font>Liberation18</font>
-						<textcolor>black</textcolor>
-						<animation type="Visible" reversible="false" condition="Control.HasFocus(8241))">
-							<effect type="slide" start="0,400" end="0,0" time="500" delay="700" />
-						</animation>
-						<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-						<visible>Control.HasFocus(8241)</visible>
 					</control>
 				</control>
 			</focusedlayout>

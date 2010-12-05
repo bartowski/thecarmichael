@@ -357,6 +357,7 @@
 					<fadetime>400</fadetime> 
 					<texture background="true" fallback="backgrounds/addons.jpg" diffuse="maintop/main_fanart_diffuse.png">$INFO[ListItem.Property(mainviewbackground)]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>![Control.HasFocus(500) | Control.HasFocus(600) | Control.HasFocus(700) | Control.HasFocus(800) | Control.HasFocus(900)]</visible>
 				</control>
 		</control>
 	</include>
@@ -1469,7 +1470,7 @@
 				<height>339</height>
 				<texture>maintop/trailer_back.png</texture>
 			</control>
-			<control type="videowindow" id="2">
+			<control type="videowindow">
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>747</width>
