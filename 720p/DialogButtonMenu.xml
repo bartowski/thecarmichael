@@ -18,7 +18,7 @@
 					<width>790</width>
 					<height>310</height>
 					<texture>files_panel1.png</texture>
-					<visible>Window.IsActive(Home)</visible>
+					<visible>Window.IsActive(Home) | Window.IsActive(visualisation) | Window.IsActive(fullscreenvideo)</visible>
 				</control>
 				<control type="label" id="3100">
 					<description>Label control</description>

@@ -30,14 +30,14 @@
 				</control>-->
 				<control type="label" id="401">
 					<description>Line 1 Label</description>
-					<width min="29" max="200">auto</width>
+					<width min="29" max="500">auto</width>
 					<height>18</height>
 					<font>Liberation18</font>
 					<textcolor>Main_Green</textcolor>
 				</control>
 				<control type="label" id="402">
 					<description>Line 2 Label</description>
-					<width min="29" max="200">auto</width>
+					<width min="29" max="500">auto</width>
 					<height>20</height>
 					<font>Liberation18</font>
 					<textcolor>White</textcolor>
