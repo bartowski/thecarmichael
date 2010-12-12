@@ -1,127 +1,238 @@
 <includes>
 	<include name="home_addons">
 		<control type="group">
-			<include>main_window_open_close</include>
-				<control type="list" id="18012">
-					<posx>756</posx>
-					<posy>500</posy>
-					<width>540</width>
-					<height>1000</height>
-					<onleft>9001</onleft>
-					<onright>9001</onright>
-					<onup>9000</onup>
-					<ondown>9000</ondown>
-					<viewtype label="535">list</viewtype>
-					<orientation>horizontal</orientation>
-					<pagecontrol>-</pagecontrol>
-					<scrolltime>0</scrolltime>
-					<include>recent_left_side</include>
-					<visible>Container(9000).HasFocus(10)</visible>
-					<itemlayout width="166" height="300">
-						<control type="group">
-							<posx>20</posx>
-							<posy>30</posy>
-								<control type="image">
-									<posx>-6</posx>
-									<posy>-4</posy>
-									<width>182</width>
-									<height>163</height>
-									<texture>home/home_music_shadow.png</texture>
-									<aspectratio scalediffuse="false">stretch</aspectratio>
-								</control>
-								<control type="image">
-									<posx>10</posx>
-									<posy>0</posy>
-									<width>153</width>
-									<height>153</height>
-									<texture>misc/back.png</texture>
-									<aspectratio scalediffuse="false">stretch</aspectratio>
-								</control>
-								<control type="image">
-									<posx>10</posx>
-									<posy>0</posy>
-									<width>153</width>
-									<height>153</height>
-									<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-									<aspectratio scalediffuse="false">stretch</aspectratio>
-								</control>
-								<control type="image">
-									<posx>10</posx>
-									<posy>0</posy>
-									<width>153</width>
-									<height>153</height>
-									<texture background="true">DefaultAlbumCover.png</texture>
-									<aspectratio scalediffuse="false">stretch</aspectratio>
-									<visible>IsEmpty(ListItem.ActualIcon)</visible>
-								</control>
-						</control>
-					</itemlayout>
-					<focusedlayout width="166" height="300">
-						<control type="group">
-							<posx>20</posx>
-							<posy>30</posy>
-							<animation type="Focus" reversible="false">
-								<effect type="zoom" center="auto" start="60" end="104" time="600" tween="back" easing="out" />
-							</animation>
-								<control type="image">
-									<posx>-6</posx>
-									<posy>-4</posy>
-									<width>182</width>
-									<height>163</height>
-									<texture>home/home_music_shadow.png</texture>
-									<aspectratio scalediffuse="false">stretch</aspectratio>
-								</control>
-								<control type="image">
-									<posx>10</posx>
-									<posy>0</posy>
-									<width>153</width>
-									<height>153</height>
-									<texture>misc/back.png</texture>
-									<aspectratio scalediffuse="false">stretch</aspectratio>
-								</control>
-								<control type="image">
-									<posx>10</posx>
-									<posy>0</posy>
-									<width>153</width>
-									<height>153</height>
-									<texture background="true">$INFO[ListItem.ActualIcon]</texture>
-									<aspectratio scalediffuse="false">stretch</aspectratio>
-								</control>
-								<control type="image">
-									<posx>10</posx>
-									<posy>0</posy>
-									<width>153</width>
-									<height>153</height>
-									<texture background="true">DefaultAlbumCover.png</texture>
-									<aspectratio scalediffuse="false">stretch</aspectratio>
-									<visible>IsEmpty(ListItem.ActualIcon)</visible>
-								</control>
-						</control>
-					</focusedlayout>
-					<content>
-						<item id="1">
-							<label>$INFO[Skin.String(Menu_Custom20_Label)]</label>
-							<icon>backgrounds/custom.jpg</icon>
-							<thumb>$INFO[Skin.String(Menu_Custom20_Folder)]</thumb>
-							<onclick>$INFO[Skin.String(Menu_Custom20_Path)]</onclick>
-						</item>
-						<item id="2">
-							<label>$INFO[Window.Property(RandomSong.2.Title)]</label>
-							<label2>$INFO[Window.Property(RandomSong.2.Album)]</label2>
-							<onclick>$INFO[Window.Property(RandomSong.2.Path),PlayMedia(,)]</onclick>
-							<icon>$INFO[Window.Property(RandomSong.2.Thumb)]</icon>
-							<thumb>$INFO[Window.Property(RandomSong.2.Fanart)]</thumb>
-						</item>
-						<item id="3">
-							<label>$INFO[Window.Property(RandomSong.3.Title)]</label>
-							<label2>$INFO[Window.Property(RandomSong.3.Album)]</label2>
-							<onclick>$INFO[Window.Property(RandomSong.3.Path),PlayMedia(,)]</onclick>
-							<icon>$INFO[Window.Property(RandomSong.3.Thumb)]</icon>
-							<thumb>$INFO[Window.Property(RandomSong.3.Fanart)]</thumb>
-						</item>
-					</content>
-				</control>
-			
+			<control type="list" id="18012">
+				<posx>760</posx>
+				<posy>430</posy>
+				<width>540</width>
+				<height>1000</height>
+				<onleft>9001</onleft>
+				<onright>28012</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<viewtype label="535">list</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>0</scrolltime>
+				<include>recent_left_side</include>
+				<visible>Container(9000).HasFocus(10)</visible>
+				<itemlayout width="250" height="300">
+					<control type="group">
+						<posx>20</posx>
+						<posy>30</posy>
+							<control type="image">
+								<posx>-12</posx>
+								<posy>-4</posy>
+								<width>270</width>
+								<height>236</height>
+								<texture>home/addons_back.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>227</width>
+								<height>227</height>
+								<texture>misc/back.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>227</width>
+								<height>227</height>
+								<texture background="true">$INFO[ListItem.icon]</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>227</width>
+								<height>227</height>
+								<texture background="true">DefaultAlbumCover.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<visible>IsEmpty(ListItem.ActualIcon)</visible>
+							</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="250" height="300">
+					<control type="group">
+						<posx>20</posx>
+						<posy>30</posy>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="60" end="104" time="600" tween="back" easing="out" />
+						</animation>
+							<control type="image">
+								<posx>-12</posx>
+								<posy>-4</posy>
+								<width>270</width>
+								<height>236</height>
+								<texture>home/addons_back.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>227</width>
+								<height>227</height>
+								<texture>misc/back.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>227</width>
+								<height>227</height>
+								<texture background="true">$INFO[ListItem.icon]</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>227</width>
+								<height>227</height>
+								<texture background="true">DefaultAlbumCover.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<visible>IsEmpty(ListItem.ActualIcon)</visible>
+							</control>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>$INFO[Skin.String(ProgramButtonName_1)]</label>
+						<icon>backgrounds/custom.jpg</icon>
+						<thumb>$INFO[Skin.String(ProgramButtonImage_1)]</thumb>
+						<onclick>$INFO[Skin.String(ProgramButtonPath_1)]</onclick>
+						<visible>Skin.HasSetting(ProgramButton_1)</visible>
+					</item>
+					<item id="2">
+						<label>$INFO[Skin.String(ProgramButtonName_2)]</label>
+						<icon>backgrounds/custom.jpg</icon>
+						<thumb>$INFO[Skin.String(ProgramButtonImage_2)]</thumb>
+						<onclick>$INFO[Skin.String(ProgramButtonPath_2)]</onclick>
+						<visible>Skin.HasSetting(ProgramButton_2)</visible>
+					</item>
+				</content>
+			</control>
+		</control>
+		
+		<control type="group">
+			<control type="list" id="28012">
+				<posx>-10</posx>
+				<posy>430</posy>
+				<width>540</width>
+				<height>1000</height>
+				<onleft>18012</onleft>
+				<onright>9001</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<align>right</align>
+				<viewtype label="535">list</viewtype>
+				<orientation>horizontal</orientation>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>0</scrolltime>
+				<include condition="!Skin.HasSetting(ProgramButton_3)">recent_right_side_addons</include>
+				<include condition="!Skin.HasSetting(ProgramButton_4)">recent_right_side_addons</include>
+				<include condition="Skin.HasSetting(ProgramButton_3) + Skin.HasSetting(ProgramButton_4)">recent_right_side</include>
+				<visible>Container(9000).HasFocus(10)</visible>
+				<itemlayout width="250" height="300">
+					<control type="group">
+						<posx>20</posx>
+						<posy>30</posy>
+							<control type="image">
+								<posx>-12</posx>
+								<posy>-4</posy>
+								<width>270</width>
+								<height>236</height>
+								<texture>home/addons_back.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>227</width>
+								<height>227</height>
+								<texture>misc/back.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>227</width>
+								<height>227</height>
+								<texture background="true">$INFO[ListItem.thumb]</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>227</width>
+								<height>227</height>
+								<texture background="true">DefaultAlbumCover.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<visible>IsEmpty(ListItem.ActualIcon)</visible>
+							</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="250" height="300">
+					<control type="group">
+						<posx>20</posx>
+						<posy>30</posy>
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" center="auto" start="60" end="104" time="600" tween="back" easing="out" />
+						</animation>
+							<control type="image">
+								<posx>-12</posx>
+								<posy>-4</posy>
+								<width>270</width>
+								<height>236</height>
+								<texture>home/addons_back.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>227</width>
+								<height>227</height>
+								<texture>misc/back.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>227</width>
+								<height>227</height>
+								<texture background="true">$INFO[ListItem.thumb]</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+							</control>
+							<control type="image">
+								<posx>10</posx>
+								<posy>0</posy>
+								<width>227</width>
+								<height>227</height>
+								<texture background="true">DefaultAlbumCover.png</texture>
+								<aspectratio scalediffuse="false">stretch</aspectratio>
+								<visible>IsEmpty(ListItem.ActualIcon)</visible>
+							</control>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>$INFO[Skin.String(ProgramButtonName_3)]</label>
+						<icon>backgrounds/custom.jpg</icon>
+						<thumb>$INFO[Skin.String(ProgramButtonImage_3)]</thumb>
+						<onclick>$INFO[Skin.String(ProgramButtonPath_3)]</onclick>
+						<visible>Skin.HasSetting(ProgramButton_3)</visible>
+					</item>
+					<item id="2">
+						<label>$INFO[Skin.String(ProgramButtonName_4)]</label>
+						<icon>backgrounds/custom.jpg</icon>
+						<thumb>$INFO[Skin.String(ProgramButtonImage_4)]</thumb>
+						<onclick>$INFO[Skin.String(ProgramButtonPath_4)]</onclick>
+						<visible>Skin.HasSetting(ProgramButton_4)</visible>
+					</item>
+				</content>
+			</control>
 		</control>
 	</include>
 	

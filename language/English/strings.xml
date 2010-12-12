@@ -96,7 +96,9 @@
 	<string id="31045">Use Banners for TV Section</string>
 	
 	<string id="31209">TV</string>
+	<string id="31212">Theater</string><!-- NEW 12/11 -->
 	<string id="31215">Show subtitle script button in OSD</string>
+	<string id="31217">Enable Home Theater Script</string><!-- NEW 12/11 -->
 	<string id="31221">Use Condition based weather fanart</string>
 	<string id="31249">Get Logo</string>
 	<string id="31257">Use random music backdrops - Same ones used on Home</string>
@@ -135,5 +137,10 @@
 <!-- New 12/2 -->
 	<string id="31700">XBMC has a built-in filemanager which lets you transfer/copy/move/delete/rename files and folders on your local hard drive, FTP-shares and Windows File-Shares (SMB/SAMBA/CIFS)</string>
 	<string id="31309">Memory Used:</string>
+	<string id="31701">Edit Image</string>
+	<string id="31702">Enable Home Custom Right Favorite</string>
+	<string id="31703">Enable Home Custom Left Favorite</string>
+	<string id="31704">Browse by</string>
+	<string id="31705">Launch Custom Favourite</string>
 	
 </strings>

@@ -179,7 +179,7 @@
 					<posy>0</posy>
 					<width>240</width>
 					<height>240</height>
-					<onleft>9000</onleft>
+					<onleft>28012</onleft>
 					<onright>18012</onright>
 					<onup>9000</onup>
 					<ondown></ondown>
@@ -187,7 +187,7 @@
 					<visible>Container(9000).HasFocus(10)</visible>
 					<control type="button" id="90150">
 						<include>ButtonHomeSubCommonValues</include>
-						<label>24001</label>
+						<label>24011</label>
 						<onclick>ActivateWindow(AddonBrowser)</onclick>
 					</control>
 					<control type="button" id="90151">
@@ -326,7 +326,7 @@
 	
 	<include>HomeRecentlyAddedInfo</include>
 	<include>Home_Random</include>
-	<!--<include>home_addons</include>-->
+	<include>home_addons</include>
 	
 	<control type="multiimage">
 		<posx>60</posx>
@@ -852,6 +852,32 @@
 							</control>
 			</control>
 			<control type="group">
+				<control type="label">
+					<posx>20</posx>
+					<posy>424</posy>
+					<width>500</width>
+					<height>20</height>
+					<align>left</align>
+					<font>DejaVuSans_Bold_Caps_20</font>
+					<textcolor>Black</textcolor>
+					<label>31705</label>
+					<include>recent_right_side</include>
+					<visible>Container(9000).HasFocus(10) + !Control.HasFocus(28012)</visible>
+				</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>424</posy>
+						<width>500</width>
+						<height>20</height>
+						<align>left</align>
+						<font>DejaVuSans_Bold_Caps_20</font>
+						<textcolor>Darkest_Green</textcolor>
+						<label fallback="-">"$INFO[Container(28012).ListItem.Label]"</label>
+						<include>recent_right_side</include>
+						<visible>Container(9000).HasFocus(10) + Control.HasFocus(28012)</visible>
+					</control>
+			</control>
+			<control type="group">
 				<include>recent_right_side</include>
 				<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(14)</visible>
 					<control type="label">
@@ -1216,6 +1242,30 @@
 						<visible>![substring(Window(Home).Property(NextAired.1.Today),true) | substring(Window(Home).Property(NextAired.2.Today),true) | substring(Window(Home).Property(NextAired.3.Today),true) | substring(Window(Home).Property(NextAired.4.Today),true)]</visible>
 					</control>
 		</control>
+		<control type="label">
+			<posx>790</posx>
+			<posy>430</posy>
+			<width>500</width>
+			<height>20</height>
+			<align>left</align>
+			<font>DejaVuSans_Bold_Caps_20</font>
+			<textcolor>Black</textcolor>
+			<label>$LOCALIZE[31705]</label>
+			<include>recent_left_side</include>
+			<visible>Container(9000).HasFocus(10) + !Control.HasFocus(18012)</visible>
+		</control>
+			<control type="label">
+				<posx>790</posx>
+				<posy>430</posy>
+				<width>500</width>
+				<height>20</height>
+				<align>left</align>
+				<font>DejaVuSans_Bold_Caps_20</font>
+				<textcolor>Darkest_Green</textcolor>
+				<label fallback="-">"$INFO[Container(18012).ListItem.Label]"</label>
+				<include>recent_left_side</include>
+				<visible>Container(9000).HasFocus(10) + Control.HasFocus(18012)</visible>
+			</control>
 		<control type="group">
 			<include>recent_left_side</include>
 			<visible>Container(9000).HasFocus(8) | Container(9000).HasFocus(14)</visible>

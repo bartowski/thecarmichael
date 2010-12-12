@@ -37,6 +37,11 @@
 		<animation effect="slide" start="-900,0" end="0,0" time="800">WindowOpen</animation>
 		<animation effect="slide" start="0,0" end="-900,0" time="400" delay="200">WindowClose</animation>
 	</include>
+	<include name="recent_right_side_addons">
+		<animation effect="slide" start="-900,0" end="237,0" time="800">Visible</animation>
+		<animation effect="slide" start="-900,0" end="237,0" time="800">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="-900,0" time="400" delay="200">WindowClose</animation>
+	</include>
 	<include name="recent_left_side">
 		<animation effect="slide" start="900,0" end="0,0" time="800">Visible</animation>
 		<animation effect="slide" start="900,0" end="0,0" time="800">WindowOpen</animation>
@@ -454,9 +459,45 @@
 				<align>center</align>
 				<font>Liberation28</font>
 				<textcolor>Main_Green</textcolor>
-				<label>[B]$INFO[ListItem.Label][/B]</label>
+				<label>[B]$LOCALIZE[31704] $LOCALIZE[135][/B]</label>
 				<scroll>false</scroll>
 				<visible>Container.Content(genres) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+			</control>
+			<control type="textbox">
+				<posx>760</posx>
+				<posy>100</posy>
+				<width>510</width>
+				<height>76</height>
+				<align>center</align>
+				<font>Liberation28</font>
+				<textcolor>Main_Green</textcolor>
+				<label>[B]$LOCALIZE[31704] $LOCALIZE[652][/B]</label>
+				<scroll>false</scroll>
+				<visible>Container.Content(years) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+			</control>
+			<control type="textbox">
+				<posx>760</posx>
+				<posy>100</posy>
+				<width>510</width>
+				<height>76</height>
+				<align>center</align>
+				<font>Liberation28</font>
+				<textcolor>Main_Green</textcolor>
+				<label>[B]$LOCALIZE[31704] $LOCALIZE[20348][/B]</label>
+				<scroll>false</scroll>
+				<visible>Container.Content(directors) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+			</control>
+			<control type="textbox">
+				<posx>760</posx>
+				<posy>100</posy>
+				<width>510</width>
+				<height>76</height>
+				<align>center</align>
+				<font>Liberation28</font>
+				<textcolor>Main_Green</textcolor>
+				<label>[B]$LOCALIZE[31704] $LOCALIZE[344][/B]</label>
+				<scroll>false</scroll>
+				<visible>Container.Content(actors) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
 				<posx>760</posx>
@@ -527,7 +568,7 @@
 				<font>DejaVuSans_Bold_Caps_20</font>
 				<textcolor>Light_Grey</textcolor>
 				<label>$INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[20360] - $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101]</label>
-				<visible>![StringCompare(Window(Home).Property(NextAired.1.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.2.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.3.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.4.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.5.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.6.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.7.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.8.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.9.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.10.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.11.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.12.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.13.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.14.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.15.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.16.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.17.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.18.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.19.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.20.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.21.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.22.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.23.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.24.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.25.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.26.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.27.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.28.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.29.ShowTitle),ListItem.Label) | StringCompare(Window(Home).Property(NextAired.30.ShowTitle),ListItem.Label)] + [Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(ListItem.Title)</visible>
+				<visible>![StringCompare(Window(Home).Property(NextAired.1.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.2.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.3.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.4.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.5.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.6.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.7.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.8.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.9.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.10.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.11.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.12.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.13.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.14.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.15.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.16.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.17.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.18.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.19.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.20.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.21.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.22.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.23.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.24.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.25.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.26.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.27.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.28.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.29.ShowTitle),ListItem.TVShowTitle) | StringCompare(Window(Home).Property(NextAired.30.ShowTitle),ListItem.TVShowTitle)] + [Container.Content(tvshows) | Container.Content(seasons)] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<include>Landscape_Next_Aired</include>
 			<control type="label">
@@ -1495,6 +1536,30 @@
 			<visible>Window.IsActive(videolibrary) + Container.Content(movies) + ![system.getbool(lookandfeel.enablerssfeeds) | substring(container.folderpath,plugin://)]</visible>
 		</control>
 		<control type="label">
+			<description>Genres</description>
+			<label>$LOCALIZE[135] - $INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
+			<include>Global_HeadingSectionVars</include>
+			<visible>Window.IsActive(videolibrary) + Container.Content(genres) + ![system.getbool(lookandfeel.enablerssfeeds) | substring(container.folderpath,plugin://)]</visible>
+		</control>
+		<control type="label">
+			<description>Years</description>
+			<label>$LOCALIZE[652] - $INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
+			<include>Global_HeadingSectionVars</include>
+			<visible>Window.IsActive(videolibrary) + Container.Content(years) + ![system.getbool(lookandfeel.enablerssfeeds) | substring(container.folderpath,plugin://)]</visible>
+		</control>
+		<control type="label">
+			<description>Years</description>
+			<label>$LOCALIZE[20348] - $INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
+			<include>Global_HeadingSectionVars</include>
+			<visible>Window.IsActive(videolibrary) + Container.Content(directors) + ![system.getbool(lookandfeel.enablerssfeeds) | substring(container.folderpath,plugin://)]</visible>
+		</control>
+		<control type="label">
+			<description>Years</description>
+			<label>$LOCALIZE[344] - $INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
+			<include>Global_HeadingSectionVars</include>
+			<visible>Window.IsActive(videolibrary) + Container.Content(actors) + ![system.getbool(lookandfeel.enablerssfeeds) | substring(container.folderpath,plugin://)]</visible>
+		</control>
+		<control type="label">
 			<description>TV Shows</description>
 			<label>$LOCALIZE[31004] - $INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
 			<include>Global_HeadingSectionVars</include>
@@ -1565,6 +1630,18 @@
 			<label>$LOCALIZE[157] $LOCALIZE[24001] - $INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
 			<include>Global_HeadingSectionVars</include>
 			<visible>substring(container.folderpath,plugin://) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
+		</control>
+		<control type="label">
+			<description>pictures</description>
+			<label>$LOCALIZE[10000]</label>
+			<include>Global_HeadingSectionVars</include>
+			<visible>Window.IsActive(Home) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
+		</control>
+		<control type="label">
+			<description>pictures</description>
+			<label>Rom Collection Browser - $INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
+			<include>Global_HeadingSectionVars</include>
+			<visible>Window.IsActive(script-Rom_Collection_Browser-main.xml) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
 		</control>
 		<control type="rss" id="1">
 			<posx>0</posx>
@@ -1642,11 +1719,22 @@
 		<texturefocus>MenuItemFO.png</texturefocus>
 		<texturenofocus>MenuItemNF.png</texturenofocus>
 	</include>
+	<include name="skin_settings_labels_addons">
+		<width>860</width>
+		<height>34</height>
+		<textoffsetx>6</textoffsetx>
+		<textoffsety>8</textoffsety>
+		<font>Liberation20</font>
+		<textcolor>Main_Green</textcolor>
+		<focusedcolor>Black</focusedcolor>
+		<texturefocus>MenuItemFO.png</texturefocus>
+		<texturenofocus>MenuItemNF.png</texturenofocus>
+	</include>
 	<include name="skin_settings_button">
 		<width>860</width>
 		<height>24</height>
 		<textoffsetx>30</textoffsetx>
-		<textoffsety>4</textoffsety>
+		<textoffsety>2</textoffsety>
 		<font>Liberation20</font>
 		<textcolor>White</textcolor>
 		<focusedcolor>Black</focusedcolor>

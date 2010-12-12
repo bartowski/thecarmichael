@@ -671,13 +671,15 @@
 						<onclick>XBMC.RunScript(script.logo-downloader,mode=solo,logo=True,clearart=True,showthumb=True,showname=$INFO[ListItem.TVShowTitle])</onclick>
 						<visible>Container.Content(tvshows)</visible>
 					</control>
-					<control type="button" id="15">
-						<description>Play Trailer Windowed</description>
+					<control type="button" id="18">
+						<description>Play Trailer</description>
 						<width>1</width>
 						<height>1</height>
-						<label>20410</label>
-						<onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
-						<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(WindowedTrailer)</visible>
+						<label>$LOCALIZE[31212]</label>
+						<onclick>Playlist.Clear</onclick>
+						<onclick>Dialog.Close(MovieInformation)</onclick>
+						<onclick>XBMC.RunScript(script.cinema.experience)</onclick>
+						<visible>Skin.HasSetting(hometheater) + Container.Content(movies)</visible>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -777,16 +779,16 @@
 					<control type="label">
 						<description>Play Trailer Windowed</description>
 						<include>ButtonInfoDialogsCommonValues</include>
-						<label>$INFO[Control.GetLabel(15)]</label>
+						<label>$INFO[Control.GetLabel(18)]</label>
 						<onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
-						<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(WindowedTrailer) + !Control.HasFocus(15)</visible>
+						<visible>Skin.HasSetting(hometheater) + Container.Content(movies) + !Control.HasFocus(18)</visible>
 					</control>
 					<control type="label">
 						<description>Play Trailer Windowed</description>
 						<include>ButtonInfoDialogsCommonValues_Focus</include>
-						<label>$INFO[Control.GetLabel(15)]</label>
+						<label>$INFO[Control.GetLabel(18)]</label>
 						<onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
-						<visible>!IsEmpty(ListItem.Trailer) + Skin.HasSetting(WindowedTrailer) + Control.HasFocus(15)</visible>
+						<visible>Skin.HasSetting(hometheater) + Container.Content(movies) + Control.HasFocus(18)</visible>
 					</control>
 				</control>
 			</control>
