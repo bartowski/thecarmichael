@@ -131,9 +131,7 @@
 				<orientation>horizontal</orientation>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>0</scrolltime>
-				<include condition="!Skin.HasSetting(ProgramButton_3)">recent_right_side_addons</include>
-				<include condition="!Skin.HasSetting(ProgramButton_4)">recent_right_side_addons</include>
-				<include condition="Skin.HasSetting(ProgramButton_3) + Skin.HasSetting(ProgramButton_4)">recent_right_side</include>
+				<include>recent_right_side</include>
 				<visible>Container(9000).HasFocus(10)</visible>
 				<itemlayout width="250" height="300">
 					<control type="group">
