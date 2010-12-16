@@ -1,10 +1,10 @@
 <window id="25">
-	<defaultcontrol>9999</defaultcontrol>
+	<defaultcontrol>9899</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
 	<views>50,51,52,53,54,55</views>
 	<controls>
 
-		<control type="button" id="9999">
+		<control type="button" id="9899">
 			<description>trigger</description>
 			<include condition="!Skin.HasSetting(tv_theme)">no_tv_theme</include>
 			<include condition="Skin.HasSetting(tv_theme)">yes_tv_theme</include>
@@ -47,6 +47,7 @@
 				<include>Viewtype_Grid</include><!-- 53 -->
 				<include>Viewtype_Episode4Grid</include><!-- 54 -->
 				<include>Viewtype_Banner</include><!-- 55 -->
+				<!--<include>CoverFlow-Movies</include> 57 -->
 		</control>
 		
 	<control type="group">

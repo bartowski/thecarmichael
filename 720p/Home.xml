@@ -628,12 +628,9 @@
 		<posy>-20</posy>
 		<width>1</width>
 		<height>1</height>
-		<label>-</label>
-		<font>-</font>
 		<texturenofocus>-</texturenofocus>
 		<texturefocus>-</texturefocus>
 		<onfocus>RunScript(script.recentlyadded,limit=8&amp;albums=True&amp;unplayed=True&amp;totals=True)</onfocus>
-		<onfocus>XBMC.RunScript(script.randomitems,limit=10&amp;unplayed=True)</onfocus>
 		<onfocus>SetFocus(9000)</onfocus>
 		<visible>!Skin.HasSetting(LibraryUpdated) | [Skin.HasSetting(LibraryUpdated) + [Window.IsVisible(DialogMusicScan.xml) | Window.IsVisible(DialogVideoScan.xml)]]]</visible>
 	</control>
@@ -643,12 +640,9 @@
 		<posy>-20</posy>
 		<width>1</width>
 		<height>1</height>
-		<label>-</label>
-		<font>-</font>
 		<texturenofocus>-</texturenofocus>
 		<texturefocus>-</texturefocus>
 		<onfocus>RunScript(script.recentlyadded,limit=8&amp;albums=True&amp;unplayed=True&amp;totals=True)</onfocus>
-		<onfocus>XBMC.RunScript(script.randomitems,limit=10&amp;unplayed=True)</onfocus>
 		<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
 		<onfocus>SetFocus(9000)</onfocus>
 		<visible>Skin.HasSetting(LibraryUpdated) + !Window.IsVisible(DialogMusicScan.xml) + !Window.IsVisible(DialogVideoScan.xml)</visible>

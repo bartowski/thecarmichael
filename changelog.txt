@@ -1,3 +1,11 @@
+Update 12-15
+  -Finally fixed the 2 keypresses to focus lists issue, also fixs scanning new content doesnt update Home
+  -Changed flags
+  -Season Fanart now shows on season level
+  -"Home Theatre" now works by default no setting to check, and overrides the play button is installed
+  -Fixed VideoOSD backdrop too short with subtitle button enabled
+  -Launcher code now updated for "Advanced Launcher"
+
 Update 12-2
   -Fixed banner watched flags
   -Finished File Manager

@@ -134,18 +134,18 @@
 					</control>
 					<control type="button" id="105">
 						<include>skin_settings_button</include>
-						<label> - $LOCALIZE[31216] </label>
+						<label> - $LOCALIZE[31121] </label>
 						<label2>[COLOR=selected]$INFO[Skin.String(SubtitleScript_Path)][/COLOR]</label2>
 						<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
 						<visible>Skin.HasSetting(SubsScript_Enable)</visible>
 					</control>
-					<control type="radiobutton" id="106">
+					<!--<control type="radiobutton" id="106">
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31217]</label>
 						<onclick>Skin.ToggleSetting(hometheater)</onclick>
 						<selected>Skin.HasSetting(hometheater)</selected>
 					</control>
-					<!--<control type="radiobutton" id="108">
+					<control type="radiobutton" id="108">
 						<include>skin_settings_labels</include>
 						<label>$LOCALIZE[31276]</label>
 						<onclick>Skin.ToggleSetting(big_trailer)</onclick>
@@ -1746,9 +1746,9 @@
 						<control type="radiobutton" id="510">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31282]</label>
-							<onclick>Skin.ToggleSetting(genrefanart)</onclick>
+							<onclick>Skin.ToggleSetting(seasonfanart)</onclick>
 							<onclick>Skin.Reset(extrafanart)</onclick> 
-							<selected>Skin.HasSetting(genrefanart)</selected>
+							<selected>Skin.HasSetting(seasonfanart)</selected>
 						</control>
 						<control type="radiobutton" id="511">
 							<include>skin_settings_labels</include>

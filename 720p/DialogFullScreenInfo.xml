@@ -55,26 +55,46 @@
 			</control>
 			<control type="label">
 				<posx>0</posx>
-				<posy>624</posy>
+				<posy>646</posy>
 				<width>319</width>
 				<height>25</height>
-				<label>$LOCALIZE[20373] $INFO[VideoPlayer.season]/$LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
-				<textcolor>Light_Grey</textcolor>
+				<label>[B]$LOCALIZE[20373] $INFO[VideoPlayer.season]/$LOCALIZE[20359] $INFO[VideoPlayer.episode][/B]</label>
+				<textcolor>White</textcolor>
 				<font>Liberation18</font>
 				<align>center</align>
 				<visible>VideoPlayer.Content(episodes)</visible>
 			</control>
-			<!--<control type="label">
+			<control type="label">
 				<posx>0</posx>
-				<posy>674</posy>
+				<posy>646</posy>
 				<width>319</width>
 				<height>25</height>
-				<label>$INFO[VideoPlayer.year]/$INFO[VideoPlayer.director]</label>
-				<textcolor>Light_Grey</textcolor>
+				<label>[B]$INFO[VideoPlayer.year]/$INFO[VideoPlayer.studio][/B]</label>
+				<textcolor>White</textcolor>
 				<font>Liberation16</font>
 				<align>center</align>
 				<visible>VideoPlayer.Content(movies)</visible>
-			</control>-->
+			</control>
+			<control type="label">
+				<posx>10</posx>
+				<posy>670</posy>
+				<width>966</width>
+				<height>25</height>
+				<label>Time: $INFO[System.Time]</label>
+				<textcolor>Light_Grey</textcolor>
+				<font>Liberation16</font>
+				<align>left</align>
+			</control>
+			<control type="label">
+				<posx>319</posx>
+				<posy>670</posy>
+				<width>966</width>
+				<height>25</height>
+				<label>Finish: $INFO[Player.FinishTime]</label>
+				<textcolor>Light_Grey</textcolor>
+				<font>Liberation16</font>
+				<align>right</align>
+			</control>
 			<control type="textbox">
 				<posx>4</posx>
 				<posy>240</posy>

@@ -4,7 +4,7 @@
 			<control type="list" id="8010">
 				<posx>780</posx>
 				<posy>460</posy>
-				<width>500</width>
+				<width>494</width>
 				<height>1000</height>
 				<onleft>9001</onleft>
 				<onright>Control.SetFocus(8000,0)</onright>
@@ -119,6 +119,41 @@
 						<icon>$INFO[Window.Property(RandomMovie.3.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(RandomMovie.3.Fanart)]</thumb>
 					</item>
+					<item id="4">
+						<label>$INFO[Window.Property(RandomMovie.4.Title)]</label>
+						<label2></label2>
+						<onclick>PlayMedia($INFO[Window.Property(RandomMovie.4.Path)])</onclick>
+						<icon>$INFO[Window.Property(RandomMovie.4.Thumb)]</icon>
+						<thumb>$INFO[Window.Property(RandomMovie.4.Fanart)]</thumb>
+					</item>
+					<item id="5">
+						<label>$INFO[Window.Property(RandomMovie.5.Title)]</label>
+						<label2></label2>
+						<onclick>PlayMedia($INFO[Window.Property(RandomMovie.5.Path)])</onclick>
+						<icon>$INFO[Window.Property(RandomMovie.5.Thumb)]</icon>
+						<thumb>$INFO[Window.Property(RandomMovie.5.Fanart)]</thumb>
+					</item>
+					<item id="6">
+						<label>$INFO[Window.Property(RandomMovie.6.Title)]</label>
+						<label2></label2>
+						<onclick>PlayMedia($INFO[Window.Property(RandomMovie.6.Path)])</onclick>
+						<icon>$INFO[Window.Property(RandomMovie.6.Thumb)]</icon>
+						<thumb>$INFO[Window.Property(RandomMovie.6.Fanart)]</thumb>
+					</item>
+					<item id="7">
+						<label>$INFO[Window.Property(RandomMovie.7.Title)]</label>
+						<label2></label2>
+						<onclick>PlayMedia($INFO[Window.Property(RandomMovie.7.Path)])</onclick>
+						<icon>$INFO[Window.Property(RandomMovie.7.Thumb)]</icon>
+						<thumb>$INFO[Window.Property(RandomMovie.7.Fanart)]</thumb>
+					</item>
+					<item id="8">
+						<label>$INFO[Window.Property(RandomMovie.8.Title)]</label>
+						<label2></label2>
+						<onclick>PlayMedia($INFO[Window.Property(RandomMovie.8.Path)])</onclick>
+						<icon>$INFO[Window.Property(RandomMovie.8.Thumb)]</icon>
+						<thumb>$INFO[Window.Property(RandomMovie.8.Fanart)]</thumb>
+					</item>
 				</content>
 			</control>
 			
@@ -128,7 +163,7 @@
 			<control type="panel" id="8011">
 				<posx>800</posx>
 				<posy>454</posy>
-				<width>500</width>
+				<width>440</width>
 				<height>260</height>
 				<onleft>9001</onleft>
 				<onright>Control.SetFocus(8001,0)</onright>
@@ -138,6 +173,7 @@
 				<focusposition>0</focusposition>
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>0</scrolltime>
+				<orientation>horizontal</orientation>
 				<include>recent_left_side</include>
 				<visible>Container(9000).HasFocus(5)</visible>
 				<itemlayout height="126" width="220">
@@ -258,6 +294,42 @@
 						<thumb>$INFO[Window.Property(RandomEpisode.4.Fanart)]</thumb>
 						<icon>$INFO[Window.Property(RandomEpisode.4.Thumb)]</icon>
 					</item>
+					<item id="5">
+						<label>$INFO[Window.Property(RandomEpisode.5.EpisodeTitle)]</label>
+						<label2>$INFO[Window.Property(RandomEpisode.5.ShowTitle)]</label2>
+						<property name="Plot">$INFO[Window.Property(RandomEpisode.5.Plot)]</property>
+						<property name="Number">$INFO[Window.Property(RandomEpisode.5.EpisodeNo)]</property>
+						<onclick>PlayMedia($INFO[Window.Property(RandomEpisode.5.Path)])</onclick>
+						<thumb>$INFO[Window.Property(RandomEpisode.5.Fanart)]</thumb>
+						<icon>$INFO[Window.Property(RandomEpisode.5.Thumb)]</icon>
+					</item>
+					<item id="6">
+						<label>$INFO[Window.Property(RandomEpisode.6.EpisodeTitle)]</label>
+						<label2>$INFO[Window.Property(RandomEpisode.6.ShowTitle)]</label2>
+						<property name="Plot">$INFO[Window.Property(RandomEpisode.6.Plot)]</property>
+						<property name="Number">$INFO[Window.Property(RandomEpisode.6.EpisodeNo)]</property>
+						<onclick>PlayMedia($INFO[Window.Property(RandomEpisode.6.Path)])</onclick>
+						<thumb>$INFO[Window.Property(RandomEpisode.6.Fanart)]</thumb>
+						<icon>$INFO[Window.Property(RandomEpisode.6.Thumb)]</icon>
+					</item>
+					<item id="7">
+						<label>$INFO[Window.Property(RandomEpisode.7.EpisodeTitle)]</label>
+						<label2>$INFO[Window.Property(RandomEpisode.7.ShowTitle)]</label2>
+						<property name="Plot">$INFO[Window.Property(RandomEpisode.7.Plot)]</property>
+						<property name="Number">$INFO[Window.Property(RandomEpisode.7.EpisodeNo)]</property>
+						<onclick>PlayMedia($INFO[Window.Property(RandomEpisode.7.Path)])</onclick>
+						<thumb>$INFO[Window.Property(RandomEpisode.7.Fanart)]</thumb>
+						<icon>$INFO[Window.Property(RandomEpisode.7.Thumb)]</icon>
+					</item>
+					<item id="8">
+						<label>$INFO[Window.Property(RandomEpisode.8.EpisodeTitle)]</label>
+						<label2>$INFO[Window.Property(RandomEpisode.8.ShowTitle)]</label2>
+						<property name="Plot">$INFO[Window.Property(RandomEpisode.8.Plot)]</property>
+						<property name="Number">$INFO[Window.Property(RandomEpisode.8.EpisodeNo)]</property>
+						<onclick>PlayMedia($INFO[Window.Property(RandomEpisode.8.Path)])</onclick>
+						<thumb>$INFO[Window.Property(RandomEpisode.8.Fanart)]</thumb>
+						<icon>$INFO[Window.Property(RandomEpisode.8.Thumb)]</icon>
+					</item>
 				</content>
 			</control>
 				
@@ -360,26 +432,61 @@
 					</focusedlayout>
 					<content>
 						<item id="1">
-							<label>$INFO[Window.Property(RandomSong.1.Title)]</label>
-							<label2>$INFO[Window.Property(RandomSong.1.Album)]</label2>
-							<onclick>$INFO[Window.Property(RandomSong.1.Path),PlayMedia(,)]</onclick>
-							<icon>$INFO[Window.Property(RandomSong.1.Thumb)]</icon>
-							<thumb>$INFO[Window.Property(RandomSong.1.Fanart)]</thumb>
-						</item>
-						<item id="2">
-							<label>$INFO[Window.Property(RandomSong.2.Title)]</label>
-							<label2>$INFO[Window.Property(RandomSong.2.Album)]</label2>
-							<onclick>$INFO[Window.Property(RandomSong.2.Path),PlayMedia(,)]</onclick>
-							<icon>$INFO[Window.Property(RandomSong.2.Thumb)]</icon>
-							<thumb>$INFO[Window.Property(RandomSong.2.Fanart)]</thumb>
-						</item>
-						<item id="3">
-							<label>$INFO[Window.Property(RandomSong.3.Title)]</label>
-							<label2>$INFO[Window.Property(RandomSong.3.Album)]</label2>
-							<onclick>$INFO[Window.Property(RandomSong.3.Path),PlayMedia(,)]</onclick>
-							<icon>$INFO[Window.Property(RandomSong.3.Thumb)]</icon>
-							<thumb>$INFO[Window.Property(RandomSong.3.Fanart)]</thumb>
-						</item>
+						<label>$INFO[Window.Property(RandomSong.1.Title)]</label>
+						<label2>$INFO[Window.Property(RandomSong.1.Album)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.1.Path),PlayMedia(,)]</onclick>
+						<icon>$INFO[Window.Property(RandomSong.1.Thumb)]</icon>
+						<thumb>$INFO[Window.Property(RandomSong.1.Fanart)]</thumb>
+					</item>
+					<item id="2">
+						<label>$INFO[Window.Property(RandomSong.2.Title)]</label>
+						<label2>$INFO[Window.Property(RandomSong.2.Album)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.2.Path),PlayMedia(,)]</onclick>
+						<icon>$INFO[Window.Property(RandomSong.2.Thumb)]</icon>
+						<thumb>$INFO[Window.Property(RandomSong.2.Fanart)]</thumb>
+					</item>
+					<item id="3">
+						<label>$INFO[Window.Property(RandomSong.3.Title)]</label>
+						<label2>$INFO[Window.Property(RandomSong.3.Album)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.3.Path),PlayMedia(,)]</onclick>
+						<icon>$INFO[Window.Property(RandomSong.3.Thumb)]</icon>
+						<thumb>$INFO[Window.Property(RandomSong.3.Fanart)]</thumb>
+					</item>
+					<item id="4">
+						<label>$INFO[Window.Property(RandomSong.4.Title)]</label>
+						<label2>$INFO[Window.Property(RandomSong.4.Album)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.4.Path),PlayMedia(,)]</onclick>
+						<icon>$INFO[Window.Property(RandomSong.4.Thumb)]</icon>
+						<thumb>$INFO[Window.Property(RandomSong.4.Fanart)]</thumb>
+					</item>
+					<item id="5">
+						<label>$INFO[Window.Property(RandomSong.5.Title)]</label>
+						<label2>$INFO[Window.Property(RandomSong.5.Album)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.5.Path),PlayMedia(,)]</onclick>
+						<icon>$INFO[Window.Property(RandomSong.5.Thumb)]</icon>
+						<thumb>$INFO[Window.Property(RandomSong.5.Fanart)]</thumb>
+					</item>
+					<item id="6">
+						<label>$INFO[Window.Property(RandomSong.6.Title)]</label>
+						<label2>$INFO[Window.Property(RandomSong.6.Album)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.6.Path),PlayMedia(,)]</onclick>
+						<icon>$INFO[Window.Property(RandomSong.6.Thumb)]</icon>
+						<thumb>$INFO[Window.Property(RandomSong.6.Fanart)]</thumb>
+					</item>
+					<item id="7">
+						<label>$INFO[Window.Property(RandomSong.7.Title)]</label>
+						<label2>$INFO[Window.Property(RandomSong.7.Album)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.7.Path),PlayMedia(,)]</onclick>
+						<icon>$INFO[Window.Property(RandomSong.7.Thumb)]</icon>
+						<thumb>$INFO[Window.Property(RandomSong.7.Fanart)]</thumb>
+					</item>
+					<item id="8">
+						<label>$INFO[Window.Property(RandomSong.8.Title)]</label>
+						<label2>$INFO[Window.Property(RandomSong.8.Album)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.8.Path),PlayMedia(,)]</onclick>
+						<icon>$INFO[Window.Property(RandomSong.8.Thumb)]</icon>
+						<thumb>$INFO[Window.Property(RandomSong.8.Fanart)]</thumb>
+					</item>
 					</content>
 				</control>
 				
