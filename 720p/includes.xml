@@ -300,24 +300,20 @@
 				</control>
 				<control type="image">
 					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<height>720</height>
-					<texture background="true">$INFO[ListItem.Path]$INFO[ListItem.Label,,/fanart.jpg]</texture>
+					<posy>74</posy>
+					<width>747</width>
+					<height>420</height>
+					<texture background="true" diffuse="maintop/main_fanart_diffuse.png">$INFO[ListItem.Path]$INFO[ListItem.Label,,/fanart.jpg]</texture>
 					<aspectratio>stretch</aspectratio>
-					<include>Animation_MyVideoNav_Fanart</include>
-					<include>global_kenburns_fanart</include>
 					<visible>Skin.HasSetting(seasonfanart) + Container.Content(Seasons) + !IsEmpty(ListItem.Path) + ![substring(ListItem.Path,plugin://) | substring(ListItem.Path,special://) | substring(Container.FolderPath,plugin://) | substring(Container.FolderPath,special://) | substring(Container.FolderPath,addons://)]</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
-					<posy>0</posy>
-					<width>1280</width>
-					<height>720</height>
-					<texture background="true">$INFO[ListItem.Path,,fanart.jpg]</texture>
+					<posy>74</posy>
+					<width>747</width>
+					<height>420</height>
+					<texture background="true" diffuse="maintop/main_fanart_diffuse.png">$INFO[ListItem.Path,,fanart.jpg]</texture>
 					<aspectratio>stretch</aspectratio>
-					<include>Animation_MyVideoNav_Fanart</include>
-					<include>global_kenburns_fanart</include>
 					<visible>Skin.HasSetting(seasonfanart) + Container.Content(episodes) + !IsEmpty(ListItem.Path) + ![substring(ListItem.Path,plugin://) | substring(ListItem.Path,special://) | substring(Container.FolderPath,plugin://) | substring(Container.FolderPath,special://) | substring(Container.FolderPath,addons://)]</visible>
 				</control>
 				<control type="multiimage">
