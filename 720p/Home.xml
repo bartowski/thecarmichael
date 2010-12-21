@@ -152,6 +152,11 @@
 						<label>24001</label>
 						<onclick>ActivateWindow(AddonBrowser)</onclick>
 					</control>
+					<control type="button" id="90147">
+						<include>ButtonHomeSubCommonValues</include>
+						<label>13005</label>
+						<onclick>ActivateWindow(shutdownmenu)</onclick>
+					</control>
 					<control type="button" id="90142">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>7</label>
@@ -631,6 +636,7 @@
 		<texturenofocus>-</texturenofocus>
 		<texturefocus>-</texturefocus>
 		<onfocus>RunScript(script.recentlyadded,limit=8&amp;albums=True&amp;unplayed=True&amp;totals=True)</onfocus>
+		<onfocus>XBMC.RunScript(script.randomitems,limit=10&amp;unplayed=True)</onfocus>
 		<onfocus>SetFocus(9000)</onfocus>
 		<visible>!Skin.HasSetting(LibraryUpdated) | [Skin.HasSetting(LibraryUpdated) + [Window.IsVisible(DialogMusicScan.xml) | Window.IsVisible(DialogVideoScan.xml)]]]</visible>
 	</control>
@@ -643,6 +649,7 @@
 		<texturenofocus>-</texturenofocus>
 		<texturefocus>-</texturefocus>
 		<onfocus>RunScript(script.recentlyadded,limit=8&amp;albums=True&amp;unplayed=True&amp;totals=True)</onfocus>
+		<onfocus>XBMC.RunScript(script.randomitems,limit=10&amp;unplayed=True)</onfocus>
 		<onfocus>Skin.Reset(LibraryUpdated)</onfocus>
 		<onfocus>SetFocus(9000)</onfocus>
 		<visible>Skin.HasSetting(LibraryUpdated) + !Window.IsVisible(DialogMusicScan.xml) + !Window.IsVisible(DialogVideoScan.xml)</visible>

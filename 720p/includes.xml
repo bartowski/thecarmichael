@@ -250,7 +250,7 @@
 					<width>747</width>
 					<height>420</height>
 					<fadetime>400</fadetime> 
-					<texture background="true" fallback="backgrounds/movies.jpg" diffuse="maintop/main_fanart_diffuse.png">$INFO[Fanart.Image]</texture>
+					<texture background="true" diffuse="maintop/main_fanart_diffuse.png">$INFO[Fanart.Image]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<visible>Container.Content(seasons) | Container.Content(episodes) | Window.IsActive(videoplaylist)</visible>
 				</control>
@@ -260,9 +260,19 @@
 					<width>747</width>
 					<height>420</height>
 					<fadetime>400</fadetime> 
-					<texture background="true" fallback="backgrounds/movies.jpg" diffuse="maintop/main_fanart_diffuse.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
+					<texture background="true" diffuse="maintop/main_fanart_diffuse.png">$INFO[ListItem.Property(Fanart_Image)]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
+				</control>
+				<control type="image">
+					<posx>0</posx>
+					<posy>74</posy>
+					<width>747</width>
+					<height>420</height>
+					<fadetime>400</fadetime> 
+					<texture background="true" diffuse="maintop/main_fanart_diffuse.png">backgrounds/movies.jpg</texture>
+					<aspectratio scalediffuse="false">stretch</aspectratio>
+					<visible>IsEmpty(ListItem.Property(Fanart_Image)) + IsEmpty(Fanart.Image)</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -525,7 +535,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>Liberation18</font>
@@ -537,7 +547,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<info>Container(50).ShowPlot</info>
 				<font>Liberation18</font>
@@ -549,7 +559,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<info>Container(51).ShowPlot</info>
 				<font>Liberation18</font>
@@ -561,7 +571,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<info>Container(52).ShowPlot</info>
 				<font>Liberation18</font>
@@ -573,7 +583,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<info>Container(54).ShowPlot</info>
 				<font>Liberation18</font>
@@ -801,7 +811,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<label>$INFO[ListItem.Property(Artist_Description)]</label>
 				<font>Liberation18</font>
@@ -813,7 +823,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<label>$INFO[ListItem.Property(Album_Description)]</label>
 				<font>Liberation18</font>
@@ -965,7 +975,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<label>$LOCALIZE[31016]</label>
 				<font>Liberation18</font>
@@ -1001,7 +1011,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<label>$LOCALIZE[31700]</label>
 				<font>Liberation18</font>
@@ -1145,7 +1155,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<label>$LOCALIZE[41407]</label>
 				<font>Liberation18</font>
@@ -1157,7 +1167,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<label>$LOCALIZE[41401]</label>
 				<font>Liberation18</font>
@@ -1169,7 +1179,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<label>$LOCALIZE[41402]</label>
 				<font>Liberation18</font>
@@ -1181,7 +1191,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<label>$LOCALIZE[41403]</label>
 				<font>Liberation18</font>
@@ -1193,7 +1203,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<label>$LOCALIZE[41404]</label>
 				<font>Liberation18</font>
@@ -1205,7 +1215,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<label>$LOCALIZE[41405]</label>
 				<font>Liberation18</font>
@@ -1217,7 +1227,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<label>$LOCALIZE[41406]</label>
 				<font>Liberation18</font>
@@ -1229,7 +1239,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<label>$LOCALIZE[41400]</label>
 				<font>Liberation18</font>
@@ -1271,7 +1281,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<info>ListItem.Property(Addon.Description)</info>
 				<font>Liberation18</font>
@@ -1282,7 +1292,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>Liberation18</font>
@@ -1440,7 +1450,7 @@
 				<posx>760</posx>
 				<posy>180</posy>
 				<width>500</width>
-				<height>190</height>
+				<height>194</height>
 				<align>justify</align>
 				<info>ListItem.Property(plot)</info>
 				<font>Liberation18</font>
@@ -1651,7 +1661,7 @@
 			<description>pictures</description>
 			<label>$LOCALIZE[157] $LOCALIZE[24001] - $INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
 			<include>Global_HeadingSectionVars</include>
-			<visible>substring(container.folderpath,plugin://) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
+			<visible>!Window.IsActive(programs) + substring(container.folderpath,plugin://) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
 		</control>
 		<control type="label">
 			<description>pictures</description>

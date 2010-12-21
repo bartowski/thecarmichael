@@ -27,7 +27,6 @@
 		<control type="group">
 			<posx>0</posx>
 			<posy>0</posy>
-			<include>main_window_open_close</include>			
 			<control type="grouplist" id="3">
 				<description>button area</description>
 				<posx>30</posx>
@@ -39,6 +38,7 @@
 				<onright>5</onright>
 				<onup>3</onup>
 				<ondown>3</ondown>
+				<include>submenu_open_close</include>
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
@@ -52,6 +52,7 @@
 				<onright>60</onright>
 				<onup>5</onup>
 				<ondown>5</ondown>
+				<include>main_window_open_close</include>	
 			</control>
 		</control>
 		

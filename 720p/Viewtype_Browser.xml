@@ -116,7 +116,7 @@
 						<texture>landscape/focus_shadow.png</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<animation type="Focus" reversible="false">
-							<effect type="fade" start="0" end="100" time="400" delay="100" />
+							<effect type="fade" start="0" end="100" time="400" delay="300" />
 						</animation>
 						<animation effect="slide" start="0,0" end="-200,0" time="500" delay="100" condition="Control.HasFocus(8241)">Conditional</animation>
 					</control>

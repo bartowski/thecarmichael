@@ -47,7 +47,6 @@
 				<include>Viewtype_Grid</include><!-- 53 -->
 				<include>Viewtype_Episode4Grid</include><!-- 54 -->
 				<include>Viewtype_Banner</include><!-- 55 -->
-				<!--<include>CoverFlow-Movies</include> 57 -->
 		</control>
 		
 	<control type="group">

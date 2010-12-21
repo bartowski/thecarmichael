@@ -17,7 +17,7 @@
 	<string id="31013">Creator:</string>
 	<string id="31014">Settings - Skin</string>
 	<string id="31015">Context Menu</string>
-	<string id="31016">Browse Your files and Folders as they are setup on your computer. Also add/remove and manage your souces.</string>
+	<string id="31016">Browse Your files and Folders as they are setup on your computer. Also add/remove and manage your sources.</string>
 	<string id="31017">Library Stats</string>
 	<string id="31018">3 Day Forcast</string>
 	<string id="31019">Use TV Themes in Library</string>
@@ -96,7 +96,7 @@
 	<string id="31045">Use Banners for TV Section</string>
 	
 	<string id="31209">TV</string>
-	<string id="31212">Theater</string><!-- NEW 12/11 -->
+	<string id="31212">Cinema</string><!-- NEW 12/11 -->
 	<string id="31215">Show subtitle script button in OSD</string>
 	<string id="31217">Enable Home Theater Script</string><!-- NEW 12/11 -->
 	<string id="31221">Use Condition based weather fanart</string>
