@@ -211,6 +211,7 @@
 			<textcolor>White</textcolor>
 			<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 			<include>main_window_rightside_open_close</include>
+			<animation effect="slide" start="0,0" end="800,0" time="200" condition="Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog) | Window.IsActive(LockSettings) | Window.IsActive(custom_DialogFavourites.xml)">Conditional</animation>
 			<visible>Window.IsActive(Settings)</visible>
 		</control>
 		
