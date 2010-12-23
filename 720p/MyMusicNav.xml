@@ -1,7 +1,7 @@
 <window id="502">
 <defaultcontrol>50</defaultcontrol>
 <allowoverlay>yes</allowoverlay>
-<views>50,51,53</views>
+<views>50,51,53,57</views>
 <controls>
 
 	<control type="group">
@@ -24,12 +24,8 @@
 			<include>Viewtype_Files</include><!-- 50 -->
 			<include>Viewtype_MusicWrap</include><!-- 51 -->
 			<include>Viewtype_Music_Grid</include><!-- 53 -->
+			<include>Viewtype_Showcase</include><!-- 57 -->
 	</control>
-	<!--<control type="group">
-		<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
-		<visible>![Window.IsVisible(FileBrowser) | Window.IsVisible(contentsettings) | Window.IsVisible(mediasource) | Window.IsActive(addonsettings) | Window.IsActive(smartplaylisteditor)]</visible>
-			<include>Viewtype_Showcase</include>
-	</control>-->
 	
 	<control type="group">
 		<animation effect="slide" start="0,-100" end="0,0" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>

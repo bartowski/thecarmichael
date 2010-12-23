@@ -24,7 +24,7 @@
 			<animation effect="slide" start="0,0" end="-50,0" time="400" condition="Control.HasFocus(63)">Conditional</animation>
 			<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(musicinformation)">Conditional</animation>
-			<visible>Container.Content(artists) | Container.Content(albums) | !Container.Content(genres)</visible>
+			<visible>[Container.Content(artists) | Container.Content(albums)] + !Container.Content(genres)</visible>
 			<itemlayout width="142" height="148">
 				<control type="group">
 					<posx>30</posx>
