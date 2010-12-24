@@ -16,19 +16,18 @@
   <!-- Cover Dimensions -->
   <include name="Showcase_List_Content">
     <viewtype label="Coverflow">list</viewtype>
-    <include condition="Window.IsActive(videoplaylist) | Window.IsActive(videofiles) | Window.IsActive(videolibrary) | Window.IsActive(programs)">MovieShowcaseGroupVars</include>
-    <include condition="Window.IsActive(musicplaylist) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) | Window.IsActive(pictures) | Window.IsActive(scripts)">MusicShowcaseGroupVars</include>
+    <include condition="Window.IsActive(videoplaylist) | Window.IsActive(videofiles) | Window.IsActive(videolibrary)">MovieShowcaseGroupVars</include>
+    <include condition="Window.IsActive(musicplaylist) | Window.IsActive(musicfiles) | Window.IsActive(musiclibrary) ">MusicShowcaseGroupVars</include>
     <onleft>57</onleft>
     <onright>57</onright>
     <onup>9000</onup>
-    <ondown>68</ondown>
+    <ondown>XBMC.PlayMedia($INFO[ListItem.Trailer],1,noresume)</ondown>
     <pagecontrol>68</pagecontrol>
     <orientation>horizontal</orientation>
     <scrolltime>250</scrolltime>
-    <include>Animation_HideShowcase</include>
     <focusposition>3</focusposition>
     <preloaditems>2</preloaditems>
-	<visible>Container.Content(movies) | Container.Content(albums) | Container.Content(artists)</visible>
+	<visible>Container.Content(movies) | ![[Container.Content(tvshows) | Container.Content(seasons)] + [Skin.HasSetting(landscape_thumbs) | Skin.HasSetting(landscape_jpg)]] | Container.Content(albums) | Container.Content(artists)</visible>
    </include>
   <include name="ShowcaseFixedList">
     <control type="wraplist" id="57">

@@ -132,9 +132,10 @@
 		<include>Breadcrumbs</include>
 		
 		<control type="group">
+			<visible>[Control.IsVisible(52) | Control.IsVisible(57)] + Container.Content(movies)</visible>
 			<animation effect="slide"  start="-300,0" end="0,0" time="400" delay="2000" condition="![Container(52).OnNext | Container(52).OnPrevious]">Conditional</animation>
 				<control type="image">
-					<visible>Control.IsVisible(52) + Container.Content(movies) + !IsEmpty(ListItem.Trailer)</visible>
+					<visible>!IsEmpty(ListItem.Trailer)</visible>
 					<posx>0</posx>
 					<posy>360</posy>
 					<width>219</width>
@@ -143,7 +144,7 @@
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 				</control>
 				<control type="label"><!--Trailer Start-->
-					<visible>Control.IsVisible(52) + Container.Content(movies) + !IsEmpty(ListItem.Trailer) + !Player.HasVideo</visible>
+					<visible>!IsEmpty(ListItem.Trailer) + !Player.HasVideo</visible>
 					<posx>0</posx>
 					<posy>364</posy>
 					<width>210</width>
@@ -155,7 +156,7 @@
 					<label>$LOCALIZE[30002]</label>
 				</control>	
 				<control type="label"><!--Trailer Stop-->
-					<visible>Control.IsVisible(52) + Container.Content(movies) + Player.HasVideo</visible>
+					<visible>Player.HasVideo</visible>
 					<posx>0</posx>
 					<posy>364</posy>
 					<width>210</width>
