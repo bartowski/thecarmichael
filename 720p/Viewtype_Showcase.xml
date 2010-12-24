@@ -419,6 +419,7 @@
             <effect type="slide" start="0" end="-795" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(musicinformation) | Window.IsActive(addoninformation)">Conditional</animation>
             <control type="image">
               <include>MusicShowcaseThumb</include>
               <info>Container(57).ListItem(-5).Thumb</info>
@@ -434,6 +435,7 @@
             <effect type="slide" start="0" end="-645" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(musicinformation) | Window.IsActive(addoninformation)">Conditional</animation>
             <control type="image">
               <include>MusicShowcaseThumb</include>
               <info>Container(57).ListItem(-4).Thumb</info>
@@ -449,6 +451,7 @@
             <effect type="slide" start="0" end="-495" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(musicinformation) | Window.IsActive(addoninformation)">Conditional</animation>
             <control type="image">
               <include>MusicShowcaseThumb</include>
               <info>Container(57).ListItem(-3).Thumb</info>
@@ -464,6 +467,7 @@
             <effect type="slide" start="0" end="-345" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(musicinformation) | Window.IsActive(addoninformation)">Conditional</animation>
             <control type="image">
               <include>MusicShowcaseThumb</include>
               <info>Container(57).ListItem(-2).Thumb</info>
@@ -479,6 +483,7 @@
             <effect type="slide" start="0" end="-195" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(musicinformation) | Window.IsActive(addoninformation)">Conditional</animation>
             <control type="image">
               <include>MusicShowcaseThumb</include>
               <info>Container(57).ListItem(-1).Thumb</info>
@@ -494,6 +499,7 @@
             <effect type="slide" start="0" end="795" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(musicinformation) | Window.IsActive(addoninformation)">Conditional</animation>
             <control type="image">
               <include>MusicShowcaseThumb</include>
               <info>Container(57).ListItem(5).Thumb</info>
@@ -509,6 +515,7 @@
             <effect type="slide" start="0" end="645" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(musicinformation) | Window.IsActive(addoninformation)">Conditional</animation>
             <control type="image">
               <include>MusicShowcaseThumb</include>
               <info>Container(57).ListItem(4).Thumb</info>
@@ -524,6 +531,7 @@
             <effect type="slide" start="0" end="495" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(musicinformation) | Window.IsActive(addoninformation)">Conditional</animation>
             <control type="image">
               <include>MusicShowcaseThumb</include>
               <info>Container(57).ListItem(3).Thumb</info>
@@ -539,6 +547,7 @@
             <effect type="slide" start="0" end="345" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(musicinformation) | Window.IsActive(addoninformation)">Conditional</animation>
             <control type="image">
               <include>MusicShowcaseThumb</include>
               <info>Container(57).ListItem(2).Thumb</info>
@@ -554,6 +563,7 @@
             <effect type="slide" start="0" end="195" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(musicinformation) | Window.IsActive(addoninformation)">Conditional</animation>
             <control type="image">
               <include>MusicShowcaseThumb</include>
               <info>Container(57).ListItem(1).Thumb</info>
@@ -564,6 +574,7 @@
           <visible>!IsEmpty(Container(57).ListItemNoWrap(0).label)</visible>
           <posx>505</posx>
           <control type="group">
+			<animation effect="slide" start="0,0" end="-300,0" time="400" condition="Window.IsActive(musicinformation) | Window.IsActive(addoninformation)">Conditional</animation>
             <control type="image">
               <include>MusicShowcaseThumbMain</include>
               <info>Container(57).ListItem(0).Thumb</info>
@@ -1151,6 +1162,7 @@
             <effect type="slide" start="0" end="-685" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
             <control type="image">
               <include>MovieShowcaseThumb</include>
               <info>Container(57).ListItem(-6).Thumb</info>
@@ -1166,6 +1178,7 @@
             <effect type="slide" start="0" end="-577" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
             <control type="image">
               <include>MovieShowcaseThumb</include>
               <info>Container(57).ListItem(-5).Thumb</info>
@@ -1186,6 +1199,7 @@
             <effect type="slide" start="0" end="-469" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
             <control type="image">
               <include>MovieShowcaseThumb</include>
               <info>Container(57).ListItem(-4).Thumb</info>
@@ -1208,6 +1222,7 @@
             <effect type="slide" start="0" end="-362" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
             <control type="image">
               <include>MovieShowcaseThumb</include>
               <info>Container(57).ListItem(-3).Thumb</info>
@@ -1228,6 +1243,7 @@
             <effect type="slide" start="0" end="-256" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
             <control type="image">
               <include>MovieShowcaseThumb</include>
               <info>Container(57).ListItem(-2).Thumb</info>
@@ -1249,6 +1265,7 @@
             <effect type="slide" start="0" end="-151" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
             <control type="image">
               <include>MovieShowcaseThumb</include>
               <info>Container(57).ListItem(-1).Thumb</info>
@@ -1272,6 +1289,7 @@
             <effect type="slide" start="0" end="685" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
             <control type="image">
               <include>MovieShowcaseThumb</include>
               <info>Container(57).ListItem(6).Thumb</info>
@@ -1292,6 +1310,7 @@
             <effect type="slide" start="0" end="577" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
             <control type="image">
               <include>MovieShowcaseThumb</include>
               <info>Container(57).ListItem(5).Thumb</info>
@@ -1312,6 +1331,7 @@
             <effect type="slide" start="0" end="469" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
             <control type="image">
               <include>MovieShowcaseThumb</include>
               <info>Container(57).ListItem(4).Thumb</info>
@@ -1332,6 +1352,7 @@
             <effect type="slide" start="0" end="362" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
             <control type="image">
               <include>MovieShowcaseThumb</include>
               <info>Container(57).ListItem(3).Thumb</info>
@@ -1352,6 +1373,7 @@
             <effect type="slide" start="0" end="256" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
             <control type="image">
               <include>MovieShowcaseThumb</include>
               <info>Container(57).ListItem(2).Thumb</info>
@@ -1373,6 +1395,7 @@
             <effect type="slide" start="0" end="151" time="800" tween="cubic" easing="inout"/>
           </animation>
           <control type="group">
+			<animation effect="fade" start="100" end="0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
             <control type="image">
               <include>MovieShowcaseThumb</include>
               <info>Container(57).ListItem(1).Thumb</info>
@@ -1387,6 +1410,7 @@
         <control type="group">
           <posx>505</posx>
           <control type="group">
+			<animation effect="slide" start="0,0" end="-320,0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
             <control type="image">
               <include>MovieShowcaseThumbMain</include>
               <info>Container(57).ListItem(0).Thumb</info>
