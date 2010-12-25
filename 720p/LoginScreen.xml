@@ -25,7 +25,7 @@
 				<posy>0</posy>
 				<width>1280</width>
 				<height>720</height>
-				<texture border="20">black-back.png</texture>
+				<texture border="20">Black-back.png</texture>
 			</control>
 			<control type="image">
 				<posx>0</posx>

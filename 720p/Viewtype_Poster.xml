@@ -23,7 +23,7 @@
 			<include>main_window_open_close</include>
 			<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 			<visible>!Container.Content(episodes)</visible>
-			<visible>![[Container.Content(tvshows) | Container.Content(seasons)] + [Skin.HasSetting(landscape_thumbs) | Skin.HasSetting(landscape_jpg)]]</visible>
+			<visible>[!Container.Content(tvshows) + [Skin.HasSetting(landscape_thumbs) | Skin.HasSetting(TVBanners)]] + ![Container.Content(actors) | Container.Content(directors)]</visible>
 			<itemlayout width="178" height="230">
 				<control type="group">
 					<posx>12</posx>
@@ -55,17 +55,29 @@
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<fadetime>300</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!Container.Content(Genres)</visible>
+						<visible>![Container.Content(Genres) | Container.Content(years)]</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>161</width>
 						<height>242</height>
-						<texture background="true" fallback="special://skin/extras/moviegenres/default.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
-						<fadetime>300</fadetime>
+						<!--<texture background="true" fallback="special://skin/extras/moviegenres/default.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>-->
+						<texture>misc/back.png</texture>
+						<colordiffuse>Black</colordiffuse>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>Container.Content(Genres)</visible>
+						<visible>Container.Content(Genres) | Container.Content(years)</visible>
+					</control>
+					<control type="textbox">
+						<posx>0</posx>
+						<posy>110</posy>
+						<width>161</width>
+						<height>242</height>
+						<align>center</align>
+						<label fallback="-">$INFO[ListItem.Label]</label>
+						<font>Liberation24</font>
+						<textcolor>White</textcolor>
+						<visible>Container.Content(Genres) | Container.Content(years)</visible>
 					</control>
 					<control type="image">
 						<posx>130</posx>
@@ -129,16 +141,30 @@
 						<height>273</height>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>!Container.Content(Genres)</visible>
+						<visible>![Container.Content(Genres) | Container.Content(years)]</visible>
 					</control>
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>181</width>
 						<height>273</height>
-						<texture background="true" fallback="special://skin/extras/moviegenres/default.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>
+						<!--<texture background="true" fallback="special://skin/extras/moviegenres/default.png">special://skin/extras/moviegenres/$INFO[ListItem.Label].jpg</texture>-->
+						<texture>misc/back.png</texture>
+						<colordiffuse>Black</colordiffuse>
+						<fadetime>300</fadetime>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
-						<visible>Container.Content(Genres)</visible>
+						<visible>Container.Content(Genres) | Container.Content(years)</visible>
+					</control>
+					<control type="textbox">
+						<posx>0</posx>
+						<posy>120</posy>
+						<width>181</width>
+						<height>242</height>
+						<align>center</align>
+						<label fallback="-">[B]$INFO[ListItem.Label][/B]</label>
+						<font>Liberation24</font>
+						<textcolor>Main_Green</textcolor>
+						<visible>Container.Content(Genres) | Container.Content(years)</visible>
 					</control>
 					<control type="image">
 						<posx>146</posx>

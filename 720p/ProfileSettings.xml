@@ -50,8 +50,8 @@
 			<label>$INFO[Window.Property(heading)]</label>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<textcolor>White</textcolor>
+			<shadowcolor>Black</shadowcolor>
 		</control>
 		<control type="image" id="2">
 			<description>profile image</description>
@@ -82,7 +82,7 @@
 			<width>460</width>
 			<align>left</align>
 			<font>font16caps</font>
-			<textcolor>white</textcolor>
+			<textcolor>White</textcolor>
 		</control>
 		<control type="label">
 			<description>profile directory label</description>
@@ -101,7 +101,7 @@
 			<width>460</width>
 			<align>left</align>
 			<font>font13</font>
-			<textcolor>white</textcolor>
+			<textcolor>White</textcolor>
 		</control>
 		<control type="grouplist" id="5">
 			<description>control area</description>
@@ -123,7 +123,7 @@
 			<height>40</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
-			<focusedcolor>white</focusedcolor>
+			<focusedcolor>White</focusedcolor>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 		</control>
@@ -134,7 +134,7 @@
 			<height>40</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
-			<focusedcolor>white</focusedcolor>
+			<focusedcolor>White</focusedcolor>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 		</control>
@@ -145,7 +145,7 @@
 			<height>40</height>
 			<font>font13</font>
 			<textcolor>grey2</textcolor>
-			<focusedcolor>white</focusedcolor>
+			<focusedcolor>White</focusedcolor>
 			<texturefocus>MenuItemFO.png</texturefocus>
 			<texturenofocus>MenuItemNF.png</texturenofocus>
 			<aligny>center</aligny>

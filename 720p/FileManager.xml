@@ -29,7 +29,7 @@
 				<height>90</height>
 				<aspectratio>keep</aspectratio>
 				<info>Container(20).ListItem.Icon</info>
-				<bordertexture border="3">black-back2.png</bordertexture>
+				<bordertexture border="3">Black-back2.png</bordertexture>
 				<bordersize>5</bordersize>
 			</control>
 			<control type="label">
@@ -167,7 +167,7 @@
 				<height>90</height>
 				<aspectratio>keep</aspectratio>
 				<info>Container(21).ListItem.Icon</info>
-				<bordertexture border="3">black-back2.png</bordertexture>
+				<bordertexture border="3">Black-back2.png</bordertexture>
 				<bordersize>5</bordersize>
 			</control>
 			<control type="label">

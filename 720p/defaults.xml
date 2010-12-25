@@ -16,7 +16,7 @@
 		<posx>80</posx>
 		<posy>60</posy>
 		<font>font13</font>
-		<textcolor>white</textcolor>
+		<textcolor>White</textcolor>
 	</default>
 	<!--<default type="button">
 		<posx>300</posx>
@@ -41,7 +41,7 @@
 		<texturenofocus>scroll-up.png</texturenofocus>
 		<alttexturefocus>scroll-down-focus.png</alttexturefocus>
 		<alttexturenofocus>scroll-down.png</alttexturenofocus>
-		<textcolor>white</textcolor>
+		<textcolor>White</textcolor>
 		<label>-</label>
 		<font>font13</font>
 		<disabledcolor>grey3</disabledcolor>
@@ -56,9 +56,9 @@
 		<spinheight>16</spinheight>
 		<spinposx>410</spinposx>
 		<spinposy>305</spinposy>
-		<spincolor>white</spincolor>
+		<spincolor>White</spincolor>
 		<spinfont>font13</spinfont>
-		<textcolor>white</textcolor>
+		<textcolor>White</textcolor>
 		<textureup>scroll-up.png</textureup>
 		<texturedown>scroll-down.png</texturedown>
 		<textureupfocus>scroll-up-focus.png</textureupfocus>
@@ -86,7 +86,7 @@
 		<height>22</height>
 		<font>font13</font>
 		<reverse>yes</reverse>
-		<textcolor>white</textcolor>
+		<textcolor>White</textcolor>
 		<disabledcolor>grey3</disabledcolor>
 		<subtype>text</subtype>
 		<textoffsetx>-5</textoffsetx>
@@ -108,7 +108,7 @@
 		<textureupfocus>scroll-up-focus-2.png</textureupfocus>
 		<texturedownfocus>scroll-down-focus-2.png</texturedownfocus>
 		<font>font13</font>
-		<textcolor>white</textcolor>
+		<textcolor>White</textcolor>
 		<disabledcolor>grey3</disabledcolor>
 		<textoffsetx>7</textoffsetx>
 		<aligny>center</aligny>
@@ -126,7 +126,7 @@
 		<textureradionofocus>radiobutton-nofocus.png</textureradionofocus>
 		<label>215</label>
 		<font>font13</font>
-		<textcolor>white</textcolor>
+		<textcolor>White</textcolor>
 		<disabledcolor>grey3</disabledcolor>
 		<textoffsetx>7</textoffsetx>
 	</default>
@@ -145,7 +145,7 @@
 		<textureright>scroll-right.png</textureright>
 		<texturerightfocus>scroll-right-focus.png</texturerightfocus>
 		<font>font13</font>
-		<textcolor>white</textcolor>
+		<textcolor>White</textcolor>
 		<disabledcolor>grey3</disabledcolor>
 		<aligny>center</aligny>
 	</default>
@@ -165,7 +165,7 @@
 		<textureslidernib>osd_slider_nibNF.png</textureslidernib>
 		<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
 		<font>font12</font>
-		<textcolor>white</textcolor>
+		<textcolor>White</textcolor>
 		<disabledcolor>grey3</disabledcolor>
 	</default>
 	<default type="mover">
@@ -188,7 +188,7 @@
 		<texturefocus>button-focus.png</texturefocus>
 		<texturenofocus>button-nofocus.png</texturenofocus>
 		<font>font13</font>
-		<textcolor>white</textcolor>
+		<textcolor>White</textcolor>
 		<disabledcolor>grey3</disabledcolor>
 		<textoffsetx>7</textoffsetx>
 		<aligny>center</aligny>

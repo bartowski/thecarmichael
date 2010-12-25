@@ -165,7 +165,7 @@
 						<textoffsetx>40</textoffsetx>
 						<textoffsety>4</textoffsety>
 						<textcolor>grey2</textcolor>
-						<focusedcolor>white</focusedcolor>
+						<focusedcolor>White</focusedcolor>
 						<align>left</align>
 						<aligny>top</aligny>
 						<label>$LOCALIZE[31504] - [COLOR=selected]$INFO[Skin.String(Home_Custom_Back_Weather_Folder1)][/COLOR]</label>
@@ -1828,7 +1828,7 @@
 							<textoffsetx>40</textoffsetx>
 							<label>$LOCALIZE[31257]</label>
 							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
+							<focusedcolor>White</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(vis_music_backdrops)</onclick>
@@ -1842,7 +1842,7 @@
 							<textoffsetx>40</textoffsetx>
 							<label>$LOCALIZE[31258]</label>
 							<textcolor>grey2</textcolor>
-							<focusedcolor>white</focusedcolor>
+							<focusedcolor>White</focusedcolor>
 							<texturefocus>confluence/MenuItemFO1.png</texturefocus>
 							<texturenofocus>confluence/MenuItemNF.png</texturenofocus>
 							<onclick>Skin.ToggleSetting(vis_photos_backdrops)</onclick>
@@ -2008,7 +2008,7 @@
 							<control type="radiobutton" id="707">
 								<description>custom home 6</description>
 								<include>skin_settings_labels</include>
-								<focusedcolor>white</focusedcolor>
+								<focusedcolor>White</focusedcolor>
 								<label>$LOCALIZE[31003] 1</label>
 								<onfocus>Skin.SetString(MoviesCustom,6)</onfocus>
 								<onclick>Skin.ToggleSetting(Menu_Custom6)</onclick>

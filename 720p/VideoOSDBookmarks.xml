@@ -51,8 +51,8 @@
 			<label>[UPPERCASE]$LOCALIZE[298][/UPPERCASE] - ($INFO[Container(11).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(11).CurrentPage]/$INFO[Container(11).NumPages])</label>
 			<align>center</align>
 			<aligny>center</aligny>
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<textcolor>White</textcolor>
+			<shadowcolor>Black</shadowcolor>
 		</control>
 		<control type="panel" id="11">
 			<posx>40</posx>

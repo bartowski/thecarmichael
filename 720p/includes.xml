@@ -781,7 +781,7 @@
 				<textcolor>Main_Green</textcolor>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 				<scroll>false</scroll>
-				<visible>!Container.Content(songs) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+				<visible>![Container.Content(songs) | Container.Content(genres)] + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
 				<posx>760</posx>
@@ -806,6 +806,18 @@
 				<label>[B]$LOCALIZE[31010][/B]</label>
 				<scroll>false</scroll>
 				<visible>SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+			</control>
+			<control type="textbox">
+				<posx>760</posx>
+				<posy>100</posy>
+				<width>510</width>
+				<height>76</height>
+				<align>center</align>
+				<font>Liberation28</font>
+				<textcolor>Main_Green</textcolor>
+				<label>[B]$LOCALIZE[31704] $LOCALIZE[135][/B]</label>
+				<scroll>false</scroll>
+				<visible>Container.Content(genres) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<control type="textbox">
 				<posx>760</posx>

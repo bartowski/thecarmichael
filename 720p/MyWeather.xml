@@ -43,8 +43,8 @@
 					<label>31300</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="label">
 					<description>weather location label</description>
@@ -53,7 +53,7 @@
 					<width>460</width>
 					<height>30</height>
 					<font>font13_title</font>
-					<textcolor>white</textcolor>
+					<textcolor>White</textcolor>
 					<scroll>false</scroll>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -81,8 +81,8 @@
 					<align>right</align>
 					<aligny>top</aligny>
 					<label>$INFO[Window.Property(Current.Temperature)]</label>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="label">
 					<description>current temp Value Units</description>
@@ -94,8 +94,8 @@
 					<align>left</align>
 					<aligny>top</aligny>
 					<label>$INFO[System.TemperatureUnits]</label>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="image">
 					<description>current weather icon</description>
@@ -117,8 +117,8 @@
 					<font>font13</font>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="image">
 					<posx>20</posx>
@@ -138,7 +138,7 @@
 					<aligny>center</aligny>
 					<label>$LOCALIZE[402] :</label>
 					<textcolor>grey2</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="label">
 					<description>current dew label</description>
@@ -151,7 +151,7 @@
 					<aligny>center</aligny>
 					<label>$LOCALIZE[405] :</label>
 					<textcolor>grey2</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="label">
 					<description>current humidity label</description>
@@ -164,7 +164,7 @@
 					<aligny>center</aligny>
 					<label>$LOCALIZE[406] :</label>
 					<textcolor>grey2</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="label">
 					<description>current UV Index label</description>
@@ -177,7 +177,7 @@
 					<aligny>center</aligny>
 					<label>$LOCALIZE[403] :</label>
 					<textcolor>grey2</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="label">
 					<description>current Wind label</description>
@@ -190,7 +190,7 @@
 					<aligny>center</aligny>
 					<label>$LOCALIZE[404] :</label>
 					<textcolor>grey2</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="label">
 					<description>current feels like Value</description>
@@ -202,8 +202,8 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[Window.Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="label">
 					<description>current dew Value</description>
@@ -215,8 +215,8 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<label>$INFO[Window.Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="label">
 					<description>current humidity Value</description>
@@ -228,8 +228,8 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>Window.Property(Current.Humidity)</info>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="label">
 					<description>current UV Index Value</description>
@@ -241,8 +241,8 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>Window.Property(Current.UVIndex)</info>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="label">
 					<description>current Wind Value</description>
@@ -254,8 +254,8 @@
 					<align>left</align>
 					<aligny>center</aligny>
 					<info>Window.Property(Current.Wind)</info>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 			</control>
 			<control type="group">
@@ -286,8 +286,8 @@
 					<label>10508</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="group">
 					<description>day 0</description>
@@ -303,8 +303,8 @@
 						<info>Window.Property(Day0.Title)</info>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 					</control>
 					<control type="image">
 						<description>day icon</description>
@@ -325,7 +325,7 @@
 						<aligny>center</aligny>
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>Weather.IsFetched</visible>
 					</control>
 					<control type="label">
@@ -337,8 +337,8 @@
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>!IsEmpty(Window.Property(Day0.HighTemp))</visible>
 					</control>
 					<control type="label">
@@ -351,7 +351,7 @@
 						<aligny>center</aligny>
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>Weather.IsFetched</visible>
 					</control>
 					<control type="label">
@@ -363,8 +363,8 @@
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>!IsEmpty(Window.Property(Day0.LowTemp))</visible>
 					</control>
 					<control type="label">
@@ -377,8 +377,8 @@
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 					</control>
 					<control type="image">
 						<posx>20</posx>
@@ -402,8 +402,8 @@
 						<info>Window.Property(Day1.Title)</info>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 					</control>
 					<control type="image">
 						<description>day icon</description>
@@ -424,7 +424,7 @@
 						<aligny>center</aligny>
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>Weather.IsFetched</visible>
 					</control>
 					<control type="label">
@@ -436,8 +436,8 @@
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>!IsEmpty(Window.Property(Day1.HighTemp))</visible>
 					</control>
 					<control type="label">
@@ -450,7 +450,7 @@
 						<aligny>center</aligny>
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>Weather.IsFetched</visible>
 					</control>
 					<control type="label">
@@ -462,8 +462,8 @@
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>!IsEmpty(Window.Property(Day1.LowTemp))</visible>
 					</control>
 					<control type="label">
@@ -476,8 +476,8 @@
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 					</control>
 					<control type="image">
 						<posx>20</posx>
@@ -501,8 +501,8 @@
 						<info>Window.Property(Day2.Title)</info>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 					</control>
 					<control type="image">
 						<description>day icon</description>
@@ -523,7 +523,7 @@
 						<aligny>center</aligny>
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>Weather.IsFetched</visible>
 					</control>
 					<control type="label">
@@ -535,8 +535,8 @@
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>!IsEmpty(Window.Property(Day2.HighTemp))</visible>
 					</control>
 					<control type="label">
@@ -549,7 +549,7 @@
 						<aligny>center</aligny>
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>Weather.IsFetched</visible>
 					</control>
 					<control type="label">
@@ -561,8 +561,8 @@
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>!IsEmpty(Window.Property(Day2.LowTemp))</visible>
 					</control>
 					<control type="label">
@@ -575,8 +575,8 @@
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<shadowcolor>black</shadowcolor>
-						<textcolor>white</textcolor>
+						<shadowcolor>Black</shadowcolor>
+						<textcolor>White</textcolor>
 					</control>
 					<control type="image">
 						<posx>20</posx>
@@ -600,8 +600,8 @@
 						<info>Window.Property(Day3.Title)</info>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 					</control>
 					<control type="image">
 						<description>day icon</description>
@@ -622,7 +622,7 @@
 						<aligny>center</aligny>
 						<label>$LOCALIZE[419] :</label>
 						<textcolor>grey2</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>Weather.IsFetched</visible>
 					</control>
 					<control type="label">
@@ -634,8 +634,8 @@
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>!IsEmpty(Window.Property(Day3.HighTemp))</visible>
 					</control>
 					<control type="label">
@@ -648,7 +648,7 @@
 						<aligny>center</aligny>
 						<label>$LOCALIZE[418] :</label>
 						<textcolor>grey2</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>Weather.IsFetched</visible>
 					</control>
 					<control type="label">
@@ -660,8 +660,8 @@
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 						<visible>!IsEmpty(Window.Property(Day3.LowTemp))</visible>
 					</control>
 					<control type="label">
@@ -674,8 +674,8 @@
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
-						<textcolor>white</textcolor>
-						<shadowcolor>black</shadowcolor>
+						<textcolor>White</textcolor>
+						<shadowcolor>Black</shadowcolor>
 					</control>
 				</control>
 			</control>
@@ -803,8 +803,8 @@
 					<width>270</width>
 					<font>font13caps</font>
 					<label>31027</label>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<align>left</align>
 					<aligny>center</aligny>
 				</control>

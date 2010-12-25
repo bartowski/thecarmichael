@@ -57,7 +57,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>Main_Green</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<shadowcolor>Black</shadowcolor>
 				</control>
 				<control type="label" id="412">
 					<description>Path label</description>

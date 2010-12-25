@@ -139,7 +139,7 @@
 				<width>410</width>
 				<height>30</height>
 				<font>font24_title</font>
-				<textcolor>white</textcolor>
+				<textcolor>White</textcolor>
 				<scroll>true</scroll>
 				<align>left</align>
 				<aligny>center</aligny>
@@ -265,7 +265,7 @@
 				<width>410</width>
 				<height>30</height>
 				<font>font24_title</font>
-				<textcolor>white</textcolor>
+				<textcolor>White</textcolor>
 				<scroll>true</scroll>
 				<align>right</align>
 				<aligny>center</aligny>

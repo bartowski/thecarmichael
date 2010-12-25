@@ -197,8 +197,8 @@
 					<width>650</width>
 					<height>35</height>
 					<font>font12</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
+					<textcolor>White</textcolor>
+					<shadowcolor>Black</shadowcolor>
 					<align>center</align>
 					<aligny>center</aligny>
 					<label>$LOCALIZE[31329] [B]$INFO[System.Alarmpos][/B]</label>

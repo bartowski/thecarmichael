@@ -101,7 +101,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>Black</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<shadowcolor>Black</shadowcolor>
 			</control>-->
 			<control type="label">
 				<description>Scraper List Header</description>

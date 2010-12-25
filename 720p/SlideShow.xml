@@ -10,7 +10,7 @@
 				<posy>0</posy>
 				<width>120</width>
 				<height>35</height>
-				<texture>black-back.png</texture>
+				<texture>Black-back.png</texture>
 				<bordertexture border="3">NoCover_1.png</bordertexture>
 				<bordersize>5</bordersize>
 			</control>
@@ -23,7 +23,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 				<font>font10</font>
-				<textcolor>white</textcolor>
+				<textcolor>White</textcolor>
 				<label>31043</label>
 			</control>
 		</control>

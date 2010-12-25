@@ -52,8 +52,8 @@
 				<label>31048</label>
 				<align>center</align>
 				<aligny>center</aligny>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<textcolor>White</textcolor>
+				<shadowcolor>Black</shadowcolor>
 			</control>
 			<control type="label" id="4">
 				<description>No Settings Label</description>
@@ -121,7 +121,7 @@
 						<width>720</width>
 						<height>40</height>
 						<font>font13</font>
-						<textcolor>white</textcolor>
+						<textcolor>White</textcolor>
 						<selectedcolor>selected</selectedcolor>
 						<align>left</align>
 						<aligny>center</aligny>

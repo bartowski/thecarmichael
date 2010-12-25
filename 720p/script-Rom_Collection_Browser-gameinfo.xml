@@ -8,7 +8,7 @@
 	</coordinates>
 	<controls>
 		<control type="image">
-		    <description>black background</description>
+		    <description>Black background</description>
 		    <posx>0</posx>
 		    <posy>0</posy>
 		    <width>720</width>
@@ -25,7 +25,7 @@
 		    <texture>$INFO[ListItem.Property(gameinfoviewbackground)]</texture>
 		</control>
 		<control type="image">
-			<description>black background overlay</description>
+			<description>Black background overlay</description>
 			<posx>20</posx>
 			<posy>15</posy>
 			<width>680</width>

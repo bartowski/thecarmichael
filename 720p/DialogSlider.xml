@@ -37,7 +37,7 @@
 					<align>right</align>
 					<aligny>center</aligny>
 					<font>Liberation18</font>
-					<textcolor>white</textcolor>
+					<textcolor>White</textcolor>
 				</control>
 				<control type="slider" id="11">
 					<description>Slider</description>

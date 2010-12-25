@@ -58,7 +58,7 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>Black</textcolor>
-								<selectedcolor>white</selectedcolor>
+								<selectedcolor>White</selectedcolor>
 								<info>ListItem.Label2</info>
 							</control>
 						</itemlayout>
@@ -84,7 +84,7 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>Black</textcolor>
-								<selectedcolor>white</selectedcolor>
+								<selectedcolor>White</selectedcolor>
 								<info>ListItem.Label2</info>
 							</control>
 						</focusedlayout>
@@ -165,7 +165,7 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>Black</textcolor>
-								<selectedcolor>white</selectedcolor>
+								<selectedcolor>White</selectedcolor>
 								<info>ListItem.Label2</info>
 							</control>
 						</itemlayout>
@@ -191,7 +191,7 @@
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>Black</textcolor>
-								<selectedcolor>white</selectedcolor>
+								<selectedcolor>White</selectedcolor>
 								<info>ListItem.Label2</info>
 							</control>
 						</focusedlayout>

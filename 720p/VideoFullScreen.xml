@@ -8,7 +8,7 @@
 			<posy>30</posy>
 			<width>1280</width>
 			<height>130</height>
-			<texture>black-back.png</texture>
+			<texture>Black-back.png</texture>
 		</control>
 		<control type="label" id="10">
 			<description>row 1 label</description>
