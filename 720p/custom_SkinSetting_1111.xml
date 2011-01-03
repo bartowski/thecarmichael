@@ -1711,8 +1711,7 @@
 						<control type="radiobutton" id="505">
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31024]</label>
-							<onclick>Skin.Reset(landscape_thumbs)</onclick> 
-                            <onclick>Skin.Reset(TVBanners)</onclick> 
+							<onclick>Skin.Reset(TVBanners)</onclick> 
 							<onclick>Skin.ToggleSetting(banner_jpg)</onclick>
 							<selected>Skin.HasSetting(banner_jpg)</selected>
 						</control>

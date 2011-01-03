@@ -1013,6 +1013,60 @@
 						<aspectratio scalediffuse="false">scale</aspectratio>
 					</control>
 			</control>-->
+			<control type="group">$INFO[Container(8011).ListItem.System.BuildVersion]
+				<include>recent_right_side</include>
+				<visible>Container(9000).HasFocus(9)</visible>
+					<control type="label">
+						<posx>20</posx>
+						<posy>430</posy>
+						<width>500</width>
+						<height>20</height>
+						<align>left</align>
+						<font>DejaVuSans_Bold_Caps_20</font>
+						<textcolor>Black</textcolor>
+						<label>System Stats</label>
+					</control>
+					<control type="label">
+						<posx>40</posx>
+						<posy>460</posy>
+						<width>500</width>
+						<height>20</height>
+						<align>left</align>
+						<font>Liberation20</font>
+						<textcolor>Black</textcolor>
+						<label fallback="-">[COLOR=Darkest_Green][B]XBMC:[/B][/COLOR] $INFO[System.BuildVersion]</label>
+					</control>
+					<control type="label">
+						<posx>40</posx>
+						<posy>480</posy>
+						<width>500</width>
+						<height>20</height>
+						<align>left</align>
+						<font>Liberation20</font>
+						<textcolor>Black</textcolor>
+						<label>[COLOR=Darkest_Green][B]$LOCALIZE[13271][/B][/COLOR] $INFO[System.CPUUsage]</label>
+					</control>
+					<control type="label">
+						<posx>40</posx>
+						<posy>500</posy>
+						<width>500</width>
+						<height>20</height>
+						<align>left</align>
+						<font>Liberation20</font>
+						<textcolor>Black</textcolor>
+						<label>[COLOR=Darkest_Green][B]$LOCALIZE[31309][/B][/COLOR] $INFO[system.memory(used.percent)]</label>
+					</control>
+					<control type="label">
+						<posx>40</posx>
+						<posy>520</posy>
+						<width>500</width>
+						<height>20</height>
+						<align>left</align>
+						<font>Liberation20</font>
+						<textcolor>Black</textcolor>
+						<label>[COLOR=Darkest_Green][B]$LOCALIZE[169]:[/B][/COLOR] $INFO[System.ScreenWidth]x$INFO[System.ScreenHeight]</label>
+					</control>
+			</control>
 	</control>
 	
 <!--  Right Side Info  -->
@@ -1489,6 +1543,40 @@
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
 		</control>-->
+		<control type="group">
+			<include>recent_left_side</include>
+			<visible>Container(9000).HasFocus(9)</visible>
+				<control type="label">
+					<posx>784</posx>
+					<posy>430</posy>
+					<width>500</width>
+					<height>20</height>
+					<align>left</align>
+					<font>DejaVuSans_Bold_Caps_20</font>
+					<textcolor>Black</textcolor>
+					<label>"The Carmichael"</label>
+				</control>
+				<control type="label">
+					<posx>804</posx>
+					<posy>460</posy>
+					<width>500</width>
+					<height>20</height>
+					<align>left</align>
+					<font>Liberation20</font>
+					<textcolor>Black</textcolor>
+					<label>[COLOR=Darkest_Green][B]$LOCALIZE[24051][/B][/COLOR] 1.0.0</label>
+				</control>
+				<control type="label">
+					<posx>804</posx>
+					<posy>480</posy>
+					<width>500</width>
+					<height>20</height>
+					<align>left</align>
+					<font>Liberation20</font>
+					<textcolor>Black</textcolor>
+					<label>[COLOR=Darkest_Green][B]$LOCALIZE[31707]:[/B][/COLOR] 1/2/11</label>
+				</control>
+		</control>
 	</control>
 	
 	

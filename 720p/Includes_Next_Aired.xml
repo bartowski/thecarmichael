@@ -5,7 +5,7 @@
 
 	<include name="Landscape_Next_Aired">
 		<control type="group">
-		<visible>[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(ListItem.Title)</visible>
+		<visible>Container.Content(tvshows) + !IsEmpty(ListItem.Title)</visible>
 			<control type="label">
 				<posx>760</posx>
 				<posy>382</posy>
