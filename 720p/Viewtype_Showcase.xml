@@ -28,7 +28,7 @@
     <focusposition>3</focusposition>
     <preloaditems>2</preloaditems>
 	<visible>!Container.Content(episodes)</visible>
-	<visible>[Window.IsActive(videolibrary) + [!Container.Content(tvshows) + [Skin.HasSetting(landscape_thumbs) | Skin.HasSetting(TVBanners)]] | [Container.Content(movies) + ![Container.Content(actors) | Container.Content(directors) | Container.Content(years) | Container.Content(genres)]]] | [Container.Content(albums) | Container.Content(artists)]</visible>
+	<visible>[Window.IsActive(videolibrary) + [Container.Content(tvshows) + ![Skin.HasSetting(landscape_thumbs) | Skin.HasSetting(TVBanners)]] | [Container.Content(movies) + ![Container.Content(actors) | Container.Content(directors) | Container.Content(years) | Container.Content(genres)]]] | [Container.Content(albums) | Container.Content(artists)]</visible>
    </include>
   <include name="ShowcaseFixedList">
     <control type="wraplist" id="57">

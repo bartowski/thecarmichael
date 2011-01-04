@@ -23,7 +23,7 @@
 			<include>main_window_open_close</include>
 			<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
 			<visible>!Container.Content(episodes)</visible>
-			<visible>[!Container.Content(tvshows) + [Skin.HasSetting(landscape_thumbs) | Skin.HasSetting(TVBanners)]] | [Container.Content(movies) + ![Container.Content(actors) | Container.Content(directors)]]</visible>
+			<visible>[Container.Content(tvshows) + ![Skin.HasSetting(landscape_thumbs) | Skin.HasSetting(TVBanners)]] | [Container.Content(movies) + ![Container.Content(actors) | Container.Content(directors)]] | [Container.Content(seasons) + !Skin.HasSetting(landscape_thumbs)]</visible>
 			<itemlayout width="178" height="230">
 				<control type="group">
 					<posx>12</posx>
