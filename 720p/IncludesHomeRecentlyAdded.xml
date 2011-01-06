@@ -15,7 +15,7 @@
 				<pagecontrol>-</pagecontrol>
 				<scrolltime>0</scrolltime>
 				<include>recent_right_side</include>
-				<visible>Container(9000).HasFocus(3) | Container(9000).HasFocus(4)</visible>
+				<visible>[Container(9000).HasFocus(3) | Container(9000).HasFocus(4)] + ![ControlGroup(5558).HasFocus | ControlGroup(5559).HasFocus | ControlGroup(5560).HasFocus | ControlGroup(5561).HasFocus | ControlGroup(5562).HasFocus | ControlGroup(5563).HasFocus | ControlGroup(5564).HasFocus | ControlGroup(5565).HasFocus]</visible>
 				<itemlayout width="164" height="300">
 					<control type="group">
 						<posx>0</posx>
@@ -102,64 +102,502 @@
 					<item id="1">
 						<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
 						<label2></label2>
-						<onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Path)])</onclick>
+						<onclick>SetFocus(5558)</onclick>
 						<icon>$INFO[Window.Property(LatestMovie.1.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(LatestMovie.1.Fanart)]</thumb>
 					</item>
 					<item id="2">
 						<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
 						<label2></label2>
-						<onclick>PlayMedia($INFO[Window.Property(LatestMovie.2.Path)])</onclick>
+						<onclick>SetFocus(5559)</onclick>
 						<icon>$INFO[Window.Property(LatestMovie.2.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(LatestMovie.2.Fanart)]</thumb>
 					</item>
 					<item id="3">
 						<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
 						<label2></label2>
-						<onclick>PlayMedia($INFO[Window.Property(LatestMovie.3.Path)])</onclick>
+						<onclick>SetFocus(5560)</onclick>
 						<icon>$INFO[Window.Property(LatestMovie.3.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(LatestMovie.3.Fanart)]</thumb>
 					</item>
 					<item id="4">
 						<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
 						<label2></label2>
-						<onclick>PlayMedia($INFO[Window.Property(LatestMovie.4.Path)])</onclick>
+						<onclick>SetFocus(5561)</onclick>
 						<icon>$INFO[Window.Property(LatestMovie.4.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(LatestMovie.4.Fanart)]</thumb>
 					</item>
 					<item id="5">
 						<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
 						<label2></label2>
-						<onclick>PlayMedia($INFO[Window.Property(LatestMovie.5.Path)])</onclick>
+						<onclick>SetFocus(5562)</onclick>
 						<icon>$INFO[Window.Property(LatestMovie.5.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(LatestMovie.5.Fanart)]</thumb>
 					</item>
 					<item id="6">
 						<label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
 						<label2></label2>
-						<onclick>PlayMedia($INFO[Window.Property(LatestMovie.6.Path)])</onclick>
+						<onclick>SetFocus(5563)</onclick>
 						<icon>$INFO[Window.Property(LatestMovie.6.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(LatestMovie.6.Fanart)]</thumb>
 					</item>
 					<item id="7">
 						<label>$INFO[Window.Property(LatestMovie.7.Title)]</label>
 						<label2></label2>
-						<onclick>PlayMedia($INFO[Window.Property(LatestMovie.7.Path)])</onclick>
+						<onclick>SetFocus(5564)</onclick>
 						<icon>$INFO[Window.Property(LatestMovie.7.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(LatestMovie.7.Fanart)]</thumb>
 					</item>
 					<item id="8">
 						<label>$INFO[Window.Property(LatestMovie.8.Title)]</label>
 						<label2></label2>
-						<onclick>PlayMedia($INFO[Window.Property(LatestMovie.8.Path)])</onclick>
+						<onclick>SetFocus(5565)</onclick>
 						<icon>$INFO[Window.Property(LatestMovie.8.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(LatestMovie.8.Fanart)]</thumb>
 					</item>
 				</content>
 			</control>
 			
-			
-			
+			<control type="group">
+				<posx>180</posx>
+				<posy>80</posy>
+					<control type="image">
+						<posx>4</posx>
+						<posy>440</posy>
+						<width>290</width>
+						<height>100</height>
+						<texture>files_panel1.png</texture>
+						<include>main_window_open_close</include>
+						<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+						<visible>ControlGroup(5558).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-172</posx>
+						<posy>386</posy>
+						<width>170</width>
+						<height>224</height>
+						<texture>home/home_poster_shadow.png</texture>
+						<texture>home/recent_movies_unfocused.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5558).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-160</posx>
+						<posy>390</posy>
+						<width>146</width>
+						<height>219</height>
+						<texture background="true">$INFO[Window.Property(LatestMovie.1.Thumb)]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5558).HasFocus</visible>
+					</control>
+					<control type="grouplist" id="5558">
+						<posx>20</posx>
+						<posy>454</posy>
+						<onleft>8000</onleft>
+						<onright>8000</onright>
+							<control type="button" id="1001">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Movie</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Path)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5558).HasFocus</visible>
+							</control>
+							<control type="button" id="1002">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Trailer</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.1.Trailer)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5558).HasFocus + !IsEmpty(Window.Property(LatestMovie.1.Trailer))</visible>
+							</control>
+					</control>
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<posy>80</posy>
+					<control type="image">
+						<posx>4</posx>
+						<posy>440</posy>
+						<width>290</width>
+						<height>100</height>
+						<texture>files_panel1.png</texture>
+						<include>main_window_open_close</include>
+						<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+						<visible>ControlGroup(5559).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-172</posx>
+						<posy>386</posy>
+						<width>170</width>
+						<height>224</height>
+						<texture>home/home_poster_shadow.png</texture>
+						<texture>home/recent_movies_unfocused.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5559).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-160</posx>
+						<posy>390</posy>
+						<width>146</width>
+						<height>219</height>
+						<texture background="true">$INFO[Window.Property(LatestMovie.2.Thumb)]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5559).HasFocus</visible>
+					</control>
+					<control type="grouplist" id="5559">
+						<posx>20</posx>
+						<posy>454</posy>
+						<onleft>8000</onleft>
+						<onright>8000</onright>
+							<control type="button" id="1003">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Movie</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.2.Path)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5559).HasFocus</visible>
+							</control>
+							<control type="button" id="1004">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Trailer</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.2.Trailer)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5559).HasFocus + !IsEmpty(Window.Property(LatestMovie.2.Trailer))</visible>
+							</control>
+					</control>
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<posy>80</posy>
+					<control type="image">
+						<posx>4</posx>
+						<posy>440</posy>
+						<width>290</width>
+						<height>100</height>
+						<texture>files_panel1.png</texture>
+						<include>main_window_open_close</include>
+						<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+						<visible>ControlGroup(5560).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-172</posx>
+						<posy>386</posy>
+						<width>170</width>
+						<height>224</height>
+						<texture>home/home_poster_shadow.png</texture>
+						<texture>home/recent_movies_unfocused.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5560).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-160</posx>
+						<posy>390</posy>
+						<width>146</width>
+						<height>219</height>
+						<texture background="true">$INFO[Window.Property(LatestMovie.3.Thumb)]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5560).HasFocus</visible>
+					</control>
+					<control type="grouplist" id="5560">
+						<posx>20</posx>
+						<posy>454</posy>
+						<onleft>8000</onleft>
+						<onright>8000</onright>
+							<control type="button" id="1005">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Movie</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.3.Path)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5560).HasFocus</visible>
+							</control>
+							<control type="button" id="1006">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Trailer</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.3.Trailer)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5560).HasFocus + !IsEmpty(Window.Property(LatestMovie.3.Trailer))</visible>
+							</control>
+					</control>
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<posy>80</posy>
+					<control type="image">
+						<posx>4</posx>
+						<posy>440</posy>
+						<width>290</width>
+						<height>100</height>
+						<texture>files_panel1.png</texture>
+						<include>main_window_open_close</include>
+						<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+						<visible>ControlGroup(5561).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-172</posx>
+						<posy>386</posy>
+						<width>170</width>
+						<height>224</height>
+						<texture>home/home_poster_shadow.png</texture>
+						<texture>home/recent_movies_unfocused.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5561).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-160</posx>
+						<posy>390</posy>
+						<width>146</width>
+						<height>219</height>
+						<texture background="true">$INFO[Window.Property(LatestMovie.4.Thumb)]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5561).HasFocus</visible>
+					</control>
+					<control type="grouplist" id="5561">
+						<posx>20</posx>
+						<posy>454</posy>
+						<onleft>8000</onleft>
+						<onright>8000</onright>
+							<control type="button" id="1007">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Movie</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.4.Path)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5561).HasFocus</visible>
+							</control>
+							<control type="button" id="1008">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Trailer</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.4.Trailer)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5561).HasFocus + !IsEmpty(Window.Property(LatestMovie.4.Trailer))</visible>
+							</control>
+					</control>
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<posy>80</posy>
+					<control type="image">
+						<posx>4</posx>
+						<posy>440</posy>
+						<width>290</width>
+						<height>100</height>
+						<texture>files_panel1.png</texture>
+						<include>main_window_open_close</include>
+						<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+						<visible>ControlGroup(5562).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-172</posx>
+						<posy>386</posy>
+						<width>170</width>
+						<height>224</height>
+						<texture>home/home_poster_shadow.png</texture>
+						<texture>home/recent_movies_unfocused.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5562).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-160</posx>
+						<posy>390</posy>
+						<width>146</width>
+						<height>219</height>
+						<texture background="true">$INFO[Window.Property(LatestMovie.5.Thumb)]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5562).HasFocus</visible>
+					</control>
+					<control type="grouplist" id="5562">
+						<posx>20</posx>
+						<posy>454</posy>
+						<onleft>8000</onleft>
+						<onright>8000</onright>
+							<control type="button" id="1009">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Movie</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.5.Path)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5562).HasFocus</visible>
+							</control>
+							<control type="button" id="1010">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Trailer</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.5.Trailer)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5562).HasFocus + !IsEmpty(Window.Property(LatestMovie.5.Trailer))</visible>
+							</control>
+					</control>
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<posy>80</posy>
+					<control type="image">
+						<posx>4</posx>
+						<posy>440</posy>
+						<width>290</width>
+						<height>100</height>
+						<texture>files_panel1.png</texture>
+						<include>main_window_open_close</include>
+						<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+						<visible>ControlGroup(5563).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-172</posx>
+						<posy>386</posy>
+						<width>170</width>
+						<height>224</height>
+						<texture>home/home_poster_shadow.png</texture>
+						<texture>home/recent_movies_unfocused.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5563).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-160</posx>
+						<posy>390</posy>
+						<width>146</width>
+						<height>219</height>
+						<texture background="true">$INFO[Window.Property(LatestMovie.6.Thumb)]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5563).HasFocus</visible>
+					</control>
+					<control type="grouplist" id="5563">
+						<posx>20</posx>
+						<posy>454</posy>
+						<onleft>8000</onleft>
+						<onright>8000</onright>
+							<control type="button" id="1011">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Movie</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.6.Path)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5563).HasFocus</visible>
+							</control>
+							<control type="button" id="1012">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Trailer</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.6.Trailer)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5563).HasFocus + !IsEmpty(Window.Property(LatestMovie.6.Trailer))</visible>
+							</control>
+					</control>
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<posy>80</posy>
+					<control type="image">
+						<posx>4</posx>
+						<posy>440</posy>
+						<width>290</width>
+						<height>100</height>
+						<texture>files_panel1.png</texture>
+						<include>main_window_open_close</include>
+						<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+						<visible>ControlGroup(5564).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-172</posx>
+						<posy>386</posy>
+						<width>170</width>
+						<height>224</height>
+						<texture>home/home_poster_shadow.png</texture>
+						<texture>home/recent_movies_unfocused.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5564).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-160</posx>
+						<posy>390</posy>
+						<width>146</width>
+						<height>219</height>
+						<texture background="true">$INFO[Window.Property(LatestMovie.7.Thumb)]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5564).HasFocus</visible>
+					</control>
+					<control type="grouplist" id="5564">
+						<posx>20</posx>
+						<posy>454</posy>
+						<onleft>8000</onleft>
+						<onright>8000</onright>
+							<control type="button" id="1013">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Movie</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.7.Path)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5564).HasFocus</visible>
+							</control>
+							<control type="button" id="1014">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Trailer</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.7.Trailer)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5564).HasFocus + !IsEmpty(Window.Property(LatestMovie.7.Trailer))</visible>
+							</control>
+					</control>
+			</control>
+			<control type="group">
+				<posx>180</posx>
+				<posy>80</posy>
+					<control type="image">
+						<posx>4</posx>
+						<posy>440</posy>
+						<width>290</width>
+						<height>100</height>
+						<texture>files_panel1.png</texture>
+						<include>main_window_open_close</include>
+						<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+						<visible>ControlGroup(5565).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-172</posx>
+						<posy>386</posy>
+						<width>170</width>
+						<height>224</height>
+						<texture>home/home_poster_shadow.png</texture>
+						<texture>home/recent_movies_unfocused.png</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5565).HasFocus</visible>
+					</control>
+					<control type="image">
+						<posx>-160</posx>
+						<posy>390</posy>
+						<width>146</width>
+						<height>219</height>
+						<texture background="true">$INFO[Window.Property(LatestMovie.8.Thumb)]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation effect="slide" start="-200,0" end="0,0" time="400" delay="100">Visible</animation>
+						<visible>ControlGroup(5565).HasFocus</visible>
+					</control>
+					<control type="grouplist" id="5565">
+						<posx>20</posx>
+						<posy>454</posy>
+						<onleft>8000</onleft>
+						<onright>8000</onright>
+							<control type="button" id="1015">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Movie</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.8.Path)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5565).HasFocus</visible>
+							</control>
+							<control type="button" id="1016">
+								<include>skin_settings_trailer_home</include>
+								<label>Play Trailer</label>
+								<onclick>PlayMedia($INFO[Window.Property(LatestMovie.8.Trailer)])</onclick> 
+								<animation effect="fade" start="0" end="100" time="400" delay="0">Visible</animation>
+								<visible allowhiddenfocus="true">ControlGroup(5565).HasFocus + !IsEmpty(Window.Property(LatestMovie.8.Trailer))</visible>
+							</control>
+					</control>
+			</control>
 			
 			<control type="panel" id="8001">
 				<posx>20</posx>

@@ -19,6 +19,7 @@
 	<include file="Viewtype_Banner.xml" />
 	<include file="Viewtype_Landscape_Programs.xml" />
 	<include file="Viewtype_Showcase.xml" />
+	<include file="Viewtype_Land_Grid.xml" />
 	
 	<include name="no_tv_theme">
 		<onfocus>SetFocus(50)</onfocus>
@@ -69,7 +70,7 @@
 			<height>720</height>
 			<texture>maintop/background2.png</texture>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<visible>![Control.IsVisible(53) | Control.IsVisible(54)]</visible>
+			<visible>![Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(56)]</visible>
 		</control>
 		<control type="image">
 			<posx>0</posx>
@@ -78,7 +79,7 @@
 			<height>720</height>
 			<texture>maintop/background_nobottom.png</texture>
 			<aspectratio scalediffuse="false">stretch</aspectratio>
-			<visible>Control.IsVisible(53) | Control.IsVisible(54)</visible>
+			<visible>Control.IsVisible(53) | Control.IsVisible(54) | Control.IsVisible(56)</visible>
 		</control>
 	</include>
 	<include name="top_section">
@@ -543,6 +544,29 @@
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<visible>Container.Content(tvshows) | Container.Content(movies) | Window.IsActive(videoplaylist) | stringcompare(container.folderpath,videodb://5/) | substring(container.folderpath,plugin://) | substring(container.folderpath,special://skin/playlists)</visible>
 			</control>
+			<control type="label">
+				<posx>760</posx>
+				<posy>190</posy>
+				<width>500</width>
+				<height>30</height>
+				<align>center</align>
+				<label>[B]$INFO[ListItem.Episode]. $INFO[ListItem.Title][/B]</label>
+				<font>Liberation24</font>
+				<textcolor>Main_Green</textcolor>
+				<visible>Container.Content(episodes) + !Control.IsVisible(54) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+			</control>
+			<control type="textbox">
+				<posx>760</posx>
+				<posy>220</posy>
+				<width>500</width>
+				<height>170</height>
+				<align>justify</align>
+				<info>ListItem.Plot</info>
+				<font>Liberation18</font>
+				<textcolor>White</textcolor>
+				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
+				<visible>Container.Content(episodes) + !Control.IsVisible(54)</visible>
+			</control>
 			<control type="textbox">
 				<posx>760</posx>
 				<posy>180</posy>
@@ -553,7 +577,7 @@
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<visible>Control.IsVisible(50) + [Container.Content(seasons) | Container.Content(episodes)]</visible>
+				<visible>Control.IsVisible(50) + Container.Content(seasons)</visible>
 			</control>
 			<control type="textbox">
 				<posx>760</posx>
@@ -565,7 +589,7 @@
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<visible>Control.IsVisible(51) + !Container.Content(tvshows)</visible>
+				<visible>Control.IsVisible(51) + Container.Content(seasons)</visible>
 			</control>
 			<control type="textbox">
 				<posx>760</posx>
@@ -589,7 +613,7 @@
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<visible>Control.IsVisible(54)</visible>
+				<visible>Control.IsVisible(54) + Container.Content(episodes)</visible>
 			</control>
 			<control type="label">
 				<posx>760</posx>
@@ -614,7 +638,7 @@
 				<visible>Container.Content(seasons) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<include>Landscape_Next_Aired</include>
-			<control type="label">
+			<!--<control type="label">
 				<posx>760</posx>
 				<posy>382</posy>
 				<width>500</width>
@@ -624,7 +648,7 @@
 				<textcolor>Light_Grey</textcolor>
 				<label>$LOCALIZE[20373] $INFO[ListItem.Season] - $INFO[Container.NumItems] Episodes</label>
 				<visible>Container.Content(episodes) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
-			</control>
+			</control>-->
 		</control>
 		<control type="grouplist">
 			<posx>760</posx>
@@ -1639,6 +1663,12 @@
 			<visible>Window.IsActive(videofiles) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
 		</control>
 		<control type="label">
+			<description>video files</description>
+			<label>$LOCALIZE[157] $LOCALIZE[559] - $INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
+			<include>Global_HeadingSectionVars</include>
+			<visible>Window.IsActive(videoplaylist) + !system.getbool(lookandfeel.enablerssfeeds)</visible>
+		</control>
+		<control type="label">
 			<description>music files</description>
 			<label>$LOCALIZE[2] $LOCALIZE[744] - $INFO[Container.NumItems,, $LOCALIZE[40281]]</label>
 			<include>Global_HeadingSectionVars</include>
@@ -1765,6 +1795,17 @@
 	</include>
 	<include name="skin_settings_labels">
 		<width>860</width>
+		<height>34</height>
+		<textoffsetx>6</textoffsetx>
+		<textoffsety>8</textoffsety>
+		<font>Liberation20</font>
+		<textcolor>White</textcolor>
+		<focusedcolor>Black</focusedcolor>
+		<texturefocus>MenuItemFO.png</texturefocus>
+		<texturenofocus>MenuItemNF.png</texturenofocus>
+	</include>
+	<include name="skin_settings_trailer_home">
+		<width>260</width>
 		<height>34</height>
 		<textoffsetx>6</textoffsetx>
 		<textoffsety>8</textoffsety>

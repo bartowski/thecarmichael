@@ -1,7 +1,7 @@
 <window id="25">
 	<defaultcontrol>9899</defaultcontrol>
 	<allowoverlay>yes</allowoverlay>
-	<views>50,51,52,53,54,55,57</views>
+	<views>50,51,52,53,54,55,56,57</views>
 	<controls>
 
 		<control type="button" id="9899">
@@ -47,6 +47,7 @@
 				<include>Viewtype_Grid</include><!-- 53 -->
 				<include>Viewtype_Episode4Grid</include><!-- 54 -->
 				<include>Viewtype_Banner</include><!-- 55 -->
+				<include>Viewtype_Land_Grid</include><!-- 56 -->
 				<include>Viewtype_Showcase</include><!-- 57 -->
 		</control>
 		
