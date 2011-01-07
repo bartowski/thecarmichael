@@ -543,7 +543,19 @@
 						</content>
 					</control>
 				</control>
-		<control type="image">
+		<control type="label">
+			<posx>500</posx>
+			<posy>420</posy>
+			<width>720</width>
+			<height>20</height>
+			<align>center</align>
+			<font>Liberation28_real</font>
+			<textcolor>Black</textcolor>
+			<scroll>false</scroll>
+			<label>$INFO[Container(50).Listitem.Label]</label>
+			<visible>Control.IsVisible(50)</visible>
+		</control>
+		<!--<control type="image">
 			<posx>470</posx>
 			<posy>410</posy>
 			<width>790</width>
@@ -552,7 +564,7 @@
 			<include>main_window_open_close</include>
 			<visible>Control.IsVisible(50)</visible>
 		</control>
-		<!--<control type="image">
+		<control type="image">
 			<posx>110</posx>
 			<posy>420</posy>
 			<width>360</width>
@@ -564,149 +576,131 @@
 			<aspectratio align="right" aligny="bottom">keep</aspectratio>
 			<visible>Control.IsVisible(50)</visible>
 		</control>-->
-		<control type="fixedlist" id="50">
-			<posx>230</posx>
-			<posy>432</posy>
-			<width>1500</width>
-			<height>260</height>
+		<control type="wraplist" id="50">
+			<posx>460</posx>
+			<posy>440</posy>
+			<width>780</width>
+			<height>400</height>
 			<pagecontrol>60</pagecontrol>
 			<scrolltime>200</scrolltime>
-			<orientation>vertical</orientation>
+			<orientation>horizontal</orientation>
 			<viewtype label="Files">list</viewtype>
-			<onleft>9000</onleft>
-			<onright>9000</onright>
-			<onup>50</onup>
-			<ondown>50</ondown>
-			<focusposition>6</focusposition>
-			<movement>6</movement>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<focusposition>1</focusposition>
 			<include>main_window_open_close</include>
-			<itemlayout width="630" height="22">
+			<itemlayout width="240" height="22">
 				<control type="group">
 					<posx>20</posx>
-					<posy>0</posy>
+					<posy>30</posy>
 						<control type="image">
-							<posx>240</posx>
-							<posy>-6</posy>
-							<width>740</width>
-							<height>24</height>
-							<texture>MenuItemNF.png</texture>
-							<!--<animation type="Focus" reversible="false">
-								<effect type="fade" start="0" end="70" time="800" />
-							</animation>-->
-						</control>
-						<control type="label">
-							<posx>250</posx>
-							<posy>-6</posy>
-							<width>530</width>
-							<height>20</height>
-							<font>Liberation22</font>
-							<textcolor>White</textcolor>
-							<scroll>false</scroll>
-							<label>$INFO[ListItem.label]</label>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>230</width>
+							<height>230</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<bordertexture border="10">ThumbShadow.png</bordertexture>
+							<bordersize>8</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
 				</control>
 			</itemlayout>
-			<focusedlayout width="900" height="22">
+			<focusedlayout width="290" height="22">
 				<control type="group">
-					<posx>20</posx>
+					<posx>26</posx>
 					<posy>0</posy>
 						<control type="image">
-							<posx>242</posx>
-							<posy>-6</posy>
-							<width>740</width>
-							<height>26</height>
-							<texture>MenuItemFO.png</texture>
-							<!--<animation type="Focus" reversible="false">
-								<effect type="fade" start="0" end="70" time="800" />
-							</animation>-->
-						</control>
-						<control type="label">
-							<posx>250</posx>
-							<posy>-6</posy>
-							<width>530</width>
-							<height>20</height>
-							<font>Liberation22</font>
-							<textcolor>Black</textcolor>
-							<scroll>false</scroll>
-							<label>$INFO[ListItem.label]</label>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>260</width>
+							<height>260</height>
+							<texture>$INFO[ListItem.Icon]</texture>
+							<bordertexture border="10">ThumbShadow.png</bordertexture>
+							<bordersize>8</bordersize>
+							<aspectratio scalediffuse="false">scale</aspectratio>
+							<animation type="Focus" reversible="false">
+								<effect type="zoom" center="auto" start="60" end="100" time="500" tween="back" easing="out" />
+							</animation>
 						</control>
 				</control>
 			</focusedlayout>
 		</control>
-				<control type="grouplist" id="9000">
-					<posx>400</posx>
-					<posy>680</posy>
-					<width>1030</width>
-					<height>40</height>
-					<itemgap>2</itemgap>
-					<align>center</align>
-					<orientation>horizontal</orientation>
-					<onleft>9000</onleft>
-					<onright>9000</onright>
-					<onup>50</onup>
-					<ondown>50</ondown>
-					<control type="button" id="18">
-						<description>Home Theatre</description>
-						<width>1</width>
-						<height>1</height>
-						<label>$LOCALIZE[31212]</label>
-						<onclick>Playlist.Clear</onclick>
-						<onclick>Dialog.Close(MovieInformation)</onclick>
-						<onclick>XBMC.RunScript(script.cinema.experience)</onclick>
-						<visible>system.hasaddon(script.cinema.experience) + Container.Content(movies)</visible>
-					</control>
-					<control type="togglebutton" id="8">
-						<description>Play/browse to Show</description>
-						<width>1</width>
-						<height>1</height>
-						<label>208</label>
-						<altlabel>1024</altlabel>
-						<usealttexture>Container.Content(TVShows)</usealttexture>
-					</control>
-					<control type="button" id="5">
-						<description>Cast/Review</description>
-						<width>1</width>
-						<height>1</height>
-						<label>206</label>
-					</control>
-					<control type="button" id="6">
-						<description>Refresh</description>
-						<width>1</width>
-						<height>1</height>
-						<label>184</label>
-						<visible>!Skin.HasSetting(LockViews)</visible>
-					</control>
-					<control type="button" id="10">
-						<description>Get Thumb</description>
-						<width>1</width>
-						<height>1</height>
-						<label>13405</label>
-						<visible>!Skin.HasSetting(LockViews)</visible>
-					</control>
-					<control type="button" id="12">
-						<description>Get Fanart</description>
-						<width>1</width>
-						<height>1</height>
-						<label>20413</label>
-						<visible>![Container.Content(episodes) | Skin.HasSetting(LockViews)]</visible>
-					</control>
-					<control type="button" id="11">
-						<description>Play Trailer</description>
-						<width>1</width>
-						<height>1</height>
-						<label>20410</label>
-						<visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(WindowedTrailer)</visible>
-					</control>
-					<control type="button" id="14">
-						<description>Play Trailer</description>
-						<width>1</width>
-						<height>1</height>
-						<label>$LOCALIZE[31249]</label>
-						<onclick>XBMC.RunScript(script.logo-downloader,mode=solo,logo=True,clearart=True,showthumb=True,showname=$INFO[ListItem.TVShowTitle])</onclick>
-						<visible>Container.Content(tvshows)</visible>
-					</control>
+			<control type="grouplist" id="9000">
+				<posx>400</posx>
+				<posy>680</posy>
+				<width>1030</width>
+				<height>40</height>
+				<itemgap>2</itemgap>
+				<align>center</align>
+				<orientation>horizontal</orientation>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<control type="button" id="18">
+					<description>Home Theatre</description>
+					<width>1</width>
+					<height>1</height>
+					<label>$LOCALIZE[31212]</label>
+					<onclick>Playlist.Clear</onclick>
+					<onclick>Dialog.Close(MovieInformation)</onclick>
+					<onclick>XBMC.RunScript(script.cinema.experience)</onclick>
+					<visible>system.hasaddon(script.cinema.experience) + Container.Content(movies)</visible>
 				</control>
-				<control type="grouplist">
+				<control type="togglebutton" id="8">
+					<description>Play/browse to Show</description>
+					<width>1</width>
+					<height>1</height>
+					<label>208</label>
+					<altlabel>1024</altlabel>
+					<usealttexture>Container.Content(TVShows)</usealttexture>
+				</control>
+				<control type="button" id="5">
+					<description>Cast/Review</description>
+					<width>1</width>
+					<height>1</height>
+					<label>206</label>
+				</control>
+				<control type="button" id="6">
+					<description>Refresh</description>
+					<width>1</width>
+					<height>1</height>
+					<label>184</label>
+					<visible>!Skin.HasSetting(LockViews)</visible>
+				</control>
+				<control type="button" id="10">
+					<description>Get Thumb</description>
+					<width>1</width>
+					<height>1</height>
+					<label>13405</label>
+					<visible>!Skin.HasSetting(LockViews)</visible>
+				</control>
+				<control type="button" id="12">
+					<description>Get Fanart</description>
+					<width>1</width>
+					<height>1</height>
+					<label>20413</label>
+					<visible>![Container.Content(episodes) | Skin.HasSetting(LockViews)]</visible>
+				</control>
+				<control type="button" id="11">
+					<description>Play Trailer</description>
+					<width>1</width>
+					<height>1</height>
+					<label>20410</label>
+					<visible>!IsEmpty(ListItem.Trailer) + !Skin.HasSetting(WindowedTrailer)</visible>
+				</control>
+				<control type="button" id="14">
+					<description>Play Trailer</description>
+					<width>1</width>
+					<height>1</height>
+					<label>$LOCALIZE[31249]</label>
+					<onclick>XBMC.RunScript(script.logo-downloader,mode=solo,logo=True,clearart=True,showthumb=True,showname=$INFO[ListItem.TVShowTitle])</onclick>
+					<visible>Container.Content(tvshows)</visible>
+				</control>
+			</control>
+			<control type="grouplist">
 					<posx>400</posx>
 					<posy>686</posy>
 					<width>1030</width>
@@ -815,7 +809,7 @@
 						<visible>Control.HasFocus(14) + Container.Content(tvshows)</visible>
 					</control>
 				</control>
-			</control>
+		</control>
 		</control>
 	</controls>
 </window>

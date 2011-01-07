@@ -45,9 +45,6 @@
 							<width>740</width>
 							<height>24</height>
 							<texture>MenuItemNF.png</texture>
-							<!--<animation type="Focus" reversible="false">
-								<effect type="fade" start="0" end="70" time="800" />
-							</animation>-->
 						</control>
 						<control type="label">
 							<posx>250</posx>
@@ -133,9 +130,6 @@
 							<width>740</width>
 							<height>26</height>
 							<texture>MenuItemFO.png</texture>
-							<!--<animation type="Focus" reversible="false">
-								<effect type="fade" start="0" end="70" time="800" />
-							</animation>-->
 						</control>
 						<control type="label">
 							<posx>250</posx>
@@ -219,56 +213,56 @@
 			</focusedlayout>
 		</control>
 	
-	<control type="group">
-		<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
-		<animation effect="slide" start="0,0" end="-40,0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
-		<include>recent_right_side</include>
-		<visible>Control.IsVisible(50)</visible>
-			<control type="image">
-				<posx>60</posx>
-				<posy>420</posy>
-				<width>420</width>
-				<height>280</height>
-				<texture background="true">$INFO[ListItem.Icon]</texture>
-				<bordertexture border="10">ThumbShadow.png</bordertexture>
-				<bordersize>8</bordersize>
-				<fadetime>300</fadetime>
-				<aspectratio align="right" aligny="bottom">keep</aspectratio>
-			</control>
-			<control type="image">
-				<posx>430</posx>
-				<posy>654</posy>
-				<width>40</width>
-				<height>36</height>
-				<texture>$INFO[ListItem.Overlay]</texture>
-				<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
-			</control>
-			<control type="image">
-				<posx>430</posx>
-				<posy>654</posy>
-				<width>40</width>
-				<height>36</height>
-				<texture>$INFO[ListItem.Overlay]</texture>
-				<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
-			</control>
-	</control>
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,40" time="400" delay="200" condition="ControlGroup(9000).HasFocus">Conditional</animation>
+			<animation effect="slide" start="0,0" end="-40,0" time="400" condition="Window.IsActive(movieinformation)">Conditional</animation>
+			<include>recent_right_side</include>
+			<visible>Control.IsVisible(50)</visible>
+				<control type="image">
+					<posx>60</posx>
+					<posy>420</posy>
+					<width>420</width>
+					<height>280</height>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<bordertexture border="10">ThumbShadow.png</bordertexture>
+					<bordersize>8</bordersize>
+					<fadetime>300</fadetime>
+					<aspectratio align="right" aligny="bottom">keep</aspectratio>
+				</control>
+				<control type="image">
+					<posx>430</posx>
+					<posy>654</posy>
+					<width>40</width>
+					<height>36</height>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+				</control>
+				<control type="image">
+					<posx>430</posx>
+					<posy>654</posy>
+					<width>40</width>
+					<height>36</height>
+					<texture>$INFO[ListItem.Overlay]</texture>
+					<visible>Skin.HasSetting(movieoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+				</control>
+		</control>
 
-	
-	<control type="scrollbar" id="60">
-		<posx>1250</posx>
-		<posy>420</posy>
-		<width>19</width>
-		<height>285</height>
-		<visible allowhiddenfocus="true">Control.IsVisible(50) + Control.HasFocus(60)</visible>
-		<texturesliderbackground border="0,14,0,14">osd/vertical_slider_back.png</texturesliderbackground>
-		<textureslidernibfocus>osd/vertical_slider_nib.png</textureslidernibfocus>
-		<onleft>50</onleft>
-		<onright>50</onright>
-		<showonepage>true</showonepage>
-		<orientation>vertical</orientation>
-		<include>Animation_CommonFade</include>
-		<animation effect="slide" start="200,0" end="0,0" time="400" tween="cubic" easing="inout" condition="true">Conditional</animation>
-	</control>
+		
+		<control type="scrollbar" id="60">
+			<posx>1250</posx>
+			<posy>420</posy>
+			<width>19</width>
+			<height>285</height>
+			<visible allowhiddenfocus="true">Control.IsVisible(50) + Control.HasFocus(60)</visible>
+			<texturesliderbackground border="0,14,0,14">osd/vertical_slider_back.png</texturesliderbackground>
+			<textureslidernibfocus>osd/vertical_slider_nib.png</textureslidernibfocus>
+			<onleft>50</onleft>
+			<onright>50</onright>
+			<showonepage>true</showonepage>
+			<orientation>vertical</orientation>
+			<include>Animation_CommonFade</include>
+			<animation effect="slide" start="200,0" end="0,0" time="400" tween="cubic" easing="inout" condition="true">Conditional</animation>
+		</control>
 	
 	</include>
 </includes>
