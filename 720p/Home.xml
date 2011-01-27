@@ -824,7 +824,7 @@
 					<align>left</align>
 					<font>Liberation18</font>
 					<textcolor>Black</textcolor>
-					<label fallback="-">$LOCALIZE[558] - $INFO[Container(8002).ListItem.Label2]</label>
+					<label fallback="-">$LOCALIZE[557] - $INFO[Container(8002).ListItem.Label2]</label>
 					<include>recent_right_side</include>
 					<visible>Container(9000).HasFocus(1) + Control.HasFocus(8002)</visible>
 				</control>
@@ -1142,7 +1142,7 @@
 			<align>left</align>
 			<font>DejaVuSans_Bold_Caps_20</font>
 			<textcolor>Black</textcolor>
-			<label>$LOCALIZE[590] $LOCALIZE[134]</label>
+			<label>$LOCALIZE[590] $LOCALIZE[132]</label>
 			<include>recent_left_side</include>
 			<visible>Container(9000).HasFocus(1) + !Control.HasFocus(8012)</visible>
 		</control>
@@ -1166,7 +1166,7 @@
 				<align>left</align>
 				<font>Liberation18</font>
 				<textcolor>Black</textcolor>
-				<label fallback="-">$LOCALIZE[558] - $INFO[Container(8012).ListItem.Label2]</label>
+				<label fallback="-">$LOCALIZE[557] - $INFO[Container(8012).ListItem.Label2]</label>
 				<include>recent_left_side</include>
 				<visible>Container(9000).HasFocus(1) + Control.HasFocus(8012)</visible>
 			</control>

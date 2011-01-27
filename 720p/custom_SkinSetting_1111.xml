@@ -19,7 +19,7 @@
 			<posx>276</posx>
 			<posy>410</posy>
 			<width>910</width>
-			<height>310</height>
+			<height>320</height>
 			<texture>files_panel1.png</texture>
 			<include>main_window_open_close</include>
 			<visible>!Window.IsVisible(FileBrowser)</visible>
@@ -180,7 +180,7 @@
 					<posx>300</posx>
 					<posy>430</posy>
 					<width>860</width>
-					<height>260</height>
+					<height>268</height>
 					<itemgap>-1</itemgap>
 					<pagecontrol>60</pagecontrol>
 					<onleft>9000</onleft>
@@ -1383,7 +1383,7 @@
 						<posx>300</posx>
 						<posy>430</posy>
 						<width>860</width>
-						<height>260</height>
+						<height>268</height>
 						<itemgap>-1</itemgap>
 						<pagecontrol>61</pagecontrol>
 						<onleft>9000</onleft>
@@ -1669,7 +1669,7 @@
 						<posx>300</posx>
 						<posy>430</posy>
 						<width>860</width>
-						<height>260</height>
+						<height>268</height>
 						<itemgap>-1</itemgap>
 						<pagecontrol>61</pagecontrol>
 						<onleft>9000</onleft>
@@ -1753,6 +1753,7 @@
 							<include>skin_settings_labels</include>
 							<label>$LOCALIZE[31266]</label>
 							<onclick>Skin.ToggleSetting(extrafanart)</onclick>
+							<onclick>Skin.Reset(seasonfanart)</onclick> 
 							<selected>Skin.HasSetting(extrafanart)</selected>
 						</control>
 						<control type="label" id="512">
@@ -1794,7 +1795,7 @@
 						<posx>300</posx>
 						<posy>430</posy>
 						<width>860</width>
-						<height>260</height>
+						<height>268</height>
 						<itemgap>-1</itemgap>
 						<pagecontrol>61</pagecontrol>
 						<onleft>9000</onleft>
@@ -1856,7 +1857,7 @@
 						<posx>300</posx>
 						<posy>430</posy>
 						<width>860</width>
-						<height>260</height>
+						<height>268</height>
 						<itemgap>-1</itemgap>
 						<pagecontrol>61</pagecontrol>
 						<onleft>9000</onleft>

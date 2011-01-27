@@ -295,7 +295,7 @@
 					<fadetime>1000</fadetime>
 					<imagepath background="true" diffuse="maintop/main_fanart_diffuse.png">$INFO[ListItem.Path]/extrafanart</imagepath>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Skin.HasSetting(extrafanart) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + ![substring(ListItem.Path,plugin://) | substring(ListItem.Path,special://) | substring(Container.FolderPath,plugin://) | substring(Container.FolderPath,special://) | substring(Container.FolderPath,addons://)]</visible>
+					<visible>Skin.HasSetting(extrafanart) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + ![substring(ListItem.Path,plugin://) | substring(Container.FolderPath,plugin://) | substring(Container.FolderPath,addons://)]</visible>
 				</control>
 				<control type="multiimage">
 					<posx>0</posx>
@@ -307,7 +307,7 @@
 					<fadetime>1000</fadetime>
 					<imagepath background="true" diffuse="maintop/main_fanart_diffuse.png">$INFO[ListItem.Path]../extrafanart</imagepath>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<visible>Skin.HasSetting(extrafanart) + Container.Content(episodes) + ![substring(ListItem.Path,plugin://) | substring(ListItem.Path,special://) | substring(Container.FolderPath,plugin://) | substring(Container.FolderPath,special://) | substring(Container.FolderPath,addons://)]</visible>
+					<visible>Skin.HasSetting(extrafanart) + Container.Content(episodes) + ![substring(ListItem.Path,plugin://) | substring(ListItem.Path,special://) | substring(Container.FolderPath,plugin://) | substring(Container.FolderPath,addons://)]</visible>
 				</control>
 				<control type="image">
 					<posx>0</posx>
@@ -542,7 +542,7 @@
 				<font>Liberation18</font>
 				<textcolor>White</textcolor>
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
-				<visible>Container.Content(tvshows) | Container.Content(movies) | Window.IsActive(videoplaylist) | stringcompare(container.folderpath,videodb://5/) | substring(container.folderpath,plugin://) | substring(container.folderpath,special://skin/playlists)</visible>
+				<visible>Container.Content(tvshows) | Container.Content(movies) | Window.IsActive(videoplaylist) | stringcompare(container.folderpath,videodb://5/) | substring(container.folderpath,plugin://)</visible>
 			</control>
 			<control type="label">
 				<posx>760</posx>
@@ -1468,7 +1468,7 @@
 	<include name="MainPanel_Info_Rom_Browser">
 		<control type="group">
 		<include>main_window_rightside_open_close</include>
-		<animation effect="slide" start="0,0" end="800,0" time="200" condition="Window.IsActive(contextmenu) | Window.IsActive(shutdownmenu) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="800,0" time="200" condition="Window.IsActive(script-Rom_Collection_Browser-contextmenu.xml) | Window.IsActive(shutdownmenu) | Window.IsActive(selectdialog) | Window.IsActive(progressdialog) | Window.IsActive(okdialog) | Window.IsActive(yesnodialog)">Conditional</animation>
 			<control type="textbox">
 				<posx>760</posx>
 				<posy>100</posy>

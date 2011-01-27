@@ -194,8 +194,8 @@
 					<control type="grouplist" id="6558">
 						<posx>20</posx>
 						<posy>454</posy>
-						<onleft>8000</onleft>
-						<onright>8000</onright>
+						<onleft>8010</onleft>
+						<onright>8010</onright>
 							<control type="button" id="2001">
 								<include>skin_settings_trailer_home</include>
 								<label>Play Movie</label>
@@ -249,8 +249,8 @@
 					<control type="grouplist" id="6559">
 						<posx>20</posx>
 						<posy>454</posy>
-						<onleft>8000</onleft>
-						<onright>8000</onright>
+						<onleft>8010</onleft>
+						<onright>8010</onright>
 							<control type="button" id="2003">
 								<include>skin_settings_trailer_home</include>
 								<label>Play Movie</label>
@@ -304,8 +304,8 @@
 					<control type="grouplist" id="6560">
 						<posx>20</posx>
 						<posy>454</posy>
-						<onleft>8000</onleft>
-						<onright>8000</onright>
+						<onleft>8010</onleft>
+						<onright>8010</onright>
 							<control type="button" id="2005">
 								<include>skin_settings_trailer_home</include>
 								<label>Play Movie</label>
@@ -359,8 +359,8 @@
 					<control type="grouplist" id="6561">
 						<posx>20</posx>
 						<posy>454</posy>
-						<onleft>8000</onleft>
-						<onright>8000</onright>
+						<onleft>8010</onleft>
+						<onright>8010</onright>
 							<control type="button" id="2007">
 								<include>skin_settings_trailer_home</include>
 								<label>Play Movie</label>
@@ -414,8 +414,8 @@
 					<control type="grouplist" id="6562">
 						<posx>20</posx>
 						<posy>454</posy>
-						<onleft>8000</onleft>
-						<onright>8000</onright>
+						<onleft>8010</onleft>
+						<onright>8010</onright>
 							<control type="button" id="2009">
 								<include>skin_settings_trailer_home</include>
 								<label>Play Movie</label>
@@ -469,8 +469,8 @@
 					<control type="grouplist" id="6563">
 						<posx>20</posx>
 						<posy>454</posy>
-						<onleft>8000</onleft>
-						<onright>8000</onright>
+						<onleft>8010</onleft>
+						<onright>8010</onright>
 							<control type="button" id="2011">
 								<include>skin_settings_trailer_home</include>
 								<label>Play Movie</label>
@@ -524,8 +524,8 @@
 					<control type="grouplist" id="6564">
 						<posx>20</posx>
 						<posy>454</posy>
-						<onleft>8000</onleft>
-						<onright>8000</onright>
+						<onleft>8010</onleft>
+						<onright>8010</onright>
 							<control type="button" id="2013">
 								<include>skin_settings_trailer_home</include>
 								<label>Play Movie</label>
@@ -579,8 +579,8 @@
 					<control type="grouplist" id="6565">
 						<posx>20</posx>
 						<posy>454</posy>
-						<onleft>8000</onleft>
-						<onright>8000</onright>
+						<onleft>8010</onleft>
+						<onright>8010</onright>
 							<control type="button" id="2015">
 								<include>skin_settings_trailer_home</include>
 								<label>Play Movie</label>
@@ -872,58 +872,58 @@
 					</focusedlayout>
 					<content>
 						<item id="1">
-						<label>$INFO[Window.Property(RandomSong.1.Title)]</label>
-						<label2>$INFO[Window.Property(RandomSong.1.Album)]</label2>
-						<onclick>$INFO[Window.Property(RandomSong.1.Path),PlayMedia(,)]</onclick>
+						<label>$INFO[Window.Property(RandomSong.1.Album)]</label>
+						<label2>$INFO[Window.Property(RandomSong.1.Artist)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.1.Path)]</onclick>
 						<icon>$INFO[Window.Property(RandomSong.1.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(RandomSong.1.Fanart)]</thumb>
 					</item>
 					<item id="2">
-						<label>$INFO[Window.Property(RandomSong.2.Title)]</label>
-						<label2>$INFO[Window.Property(RandomSong.2.Album)]</label2>
-						<onclick>$INFO[Window.Property(RandomSong.2.Path),PlayMedia(,)]</onclick>
+						<label>$INFO[Window.Property(RandomSong.2.Album)]</label>
+						<label2>$INFO[Window.Property(RandomSong.2.Artist)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.2.Path)]</onclick>
 						<icon>$INFO[Window.Property(RandomSong.2.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(RandomSong.2.Fanart)]</thumb>
 					</item>
 					<item id="3">
-						<label>$INFO[Window.Property(RandomSong.3.Title)]</label>
-						<label2>$INFO[Window.Property(RandomSong.3.Album)]</label2>
-						<onclick>$INFO[Window.Property(RandomSong.3.Path),PlayMedia(,)]</onclick>
+						<label>$INFO[Window.Property(RandomSong.3.Album)]</label>
+						<label2>$INFO[Window.Property(RandomSong.3.Artist)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.3.Path)]</onclick>
 						<icon>$INFO[Window.Property(RandomSong.3.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(RandomSong.3.Fanart)]</thumb>
 					</item>
 					<item id="4">
-						<label>$INFO[Window.Property(RandomSong.4.Title)]</label>
-						<label2>$INFO[Window.Property(RandomSong.4.Album)]</label2>
-						<onclick>$INFO[Window.Property(RandomSong.4.Path),PlayMedia(,)]</onclick>
+						<label>$INFO[Window.Property(RandomSong.4.Album)]</label>
+						<label2>$INFO[Window.Property(RandomSong.4.Artist)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.4.Path)]</onclick>
 						<icon>$INFO[Window.Property(RandomSong.4.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(RandomSong.4.Fanart)]</thumb>
 					</item>
 					<item id="5">
-						<label>$INFO[Window.Property(RandomSong.5.Title)]</label>
-						<label2>$INFO[Window.Property(RandomSong.5.Album)]</label2>
-						<onclick>$INFO[Window.Property(RandomSong.5.Path),PlayMedia(,)]</onclick>
+						<label>$INFO[Window.Property(RandomSong.5.Album)]</label>
+						<label2>$INFO[Window.Property(RandomSong.5.Artist)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.5.Path)]</onclick>
 						<icon>$INFO[Window.Property(RandomSong.5.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(RandomSong.5.Fanart)]</thumb>
 					</item>
 					<item id="6">
-						<label>$INFO[Window.Property(RandomSong.6.Title)]</label>
-						<label2>$INFO[Window.Property(RandomSong.6.Album)]</label2>
-						<onclick>$INFO[Window.Property(RandomSong.6.Path),PlayMedia(,)]</onclick>
+						<label>$INFO[Window.Property(RandomSong.6.Album)]</label>
+						<label2>$INFO[Window.Property(RandomSong.6.Artist)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.6.Path)]</onclick>
 						<icon>$INFO[Window.Property(RandomSong.6.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(RandomSong.6.Fanart)]</thumb>
 					</item>
 					<item id="7">
-						<label>$INFO[Window.Property(RandomSong.7.Title)]</label>
-						<label2>$INFO[Window.Property(RandomSong.7.Album)]</label2>
-						<onclick>$INFO[Window.Property(RandomSong.7.Path),PlayMedia(,)]</onclick>
+						<label>$INFO[Window.Property(RandomSong.7.Album)]</label>
+						<label2>$INFO[Window.Property(RandomSong.7.Artist)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.7.Path)]</onclick>
 						<icon>$INFO[Window.Property(RandomSong.7.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(RandomSong.7.Fanart)]</thumb>
 					</item>
 					<item id="8">
-						<label>$INFO[Window.Property(RandomSong.8.Title)]</label>
-						<label2>$INFO[Window.Property(RandomSong.8.Album)]</label2>
-						<onclick>$INFO[Window.Property(RandomSong.8.Path),PlayMedia(,)]</onclick>
+						<label>$INFO[Window.Property(RandomSong.8.Album)]</label>
+						<label2>$INFO[Window.Property(RandomSong.8.Artist)]</label2>
+						<onclick>$INFO[Window.Property(RandomSong.8.Path)]</onclick>
 						<icon>$INFO[Window.Property(RandomSong.8.Thumb)]</icon>
 						<thumb>$INFO[Window.Property(RandomSong.8.Fanart)]</thumb>
 					</item>
