@@ -1,5 +1,6 @@
 <window id="103">
 	<defaultcontrol always="true">65</defaultcontrol>
+	<zorder>3</zorder>
 	<include>dialogeffect</include>
 	<coordinates>
 		<system>2</system>

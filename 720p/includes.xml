@@ -544,7 +544,7 @@
 				<autoscroll time="3000" delay="5000" repeat="5000">Skin.HasSetting(autoscroll)</autoscroll>
 				<visible>Container.Content(tvshows) | Container.Content(movies) | Window.IsActive(videoplaylist) | stringcompare(container.folderpath,videodb://5/) | substring(container.folderpath,plugin://)</visible>
 			</control>
-			<control type="label">
+			<!--<control type="label">
 				<posx>760</posx>
 				<posy>190</posy>
 				<width>500</width>
@@ -554,12 +554,12 @@
 				<font>Liberation24</font>
 				<textcolor>Main_Green</textcolor>
 				<visible>Container.Content(episodes) + !Control.IsVisible(54) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
-			</control>
+			</control>-->
 			<control type="textbox">
 				<posx>760</posx>
-				<posy>220</posy>
+				<posy>180</posy>
 				<width>500</width>
-				<height>170</height>
+				<height>194</height>
 				<align>justify</align>
 				<info>ListItem.Plot</info>
 				<font>Liberation18</font>
@@ -636,6 +636,17 @@
 				<textcolor>Light_Grey</textcolor>
 				<label>$INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[20360] - $INFO[ListItem.Property(UnWatchedEpisodes)] $LOCALIZE[16101]</label>
 				<visible>Container.Content(seasons) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+			</control>
+			<control type="label">
+				<posx>760</posx>
+				<posy>382</posy>
+				<width>500</width>
+				<height>20</height>
+				<align>center</align>
+				<font>DejaVuSans_Bold_Caps_20</font>
+				<textcolor>Light_Grey</textcolor>
+				<label>[B]$INFO[ListItem.Episode]. $INFO[ListItem.Title][/B]</label>
+				<visible>Container.Content(episodes) + !Control.IsVisible(54) + !SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 			</control>
 			<include>Landscape_Next_Aired</include>
 			<!--<control type="label">
