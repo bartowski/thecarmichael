@@ -94,6 +94,14 @@
 							<label>[B]$LOCALIZE[31010][/B]</label>
 							<visible>Container.Content(episodes) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
 						</control>
+						<control type="image">
+							<posx>210</posx>
+							<posy>100</posy>
+							<width>44</width>
+							<height>40</height>
+							<texture>$INFO[ListItem.Overlay]</texture>
+							<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
+						</control>
 				</control>
 			</itemlayout>
 			<focusedlayout width="254" height="150">
@@ -175,6 +183,14 @@
 							<scroll>false</scroll>
 							<label>[B]$LOCALIZE[31010][/B]</label>
 							<visible>Container.Content(episodes) + SubString(ListItem.Icon,DefaultFolderBack.png,Left)</visible>
+						</control>
+						<control type="image">
+							<posx>210</posx>
+							<posy>100</posy>
+							<width>44</width>
+							<height>40</height>
+							<texture>$INFO[ListItem.Overlay]</texture>
+							<visible>Skin.HasSetting(tvoverlays) + !IsEmpty(ListItem.Overlay)</visible>
 						</control>
 				</control>
 			</focusedlayout>
