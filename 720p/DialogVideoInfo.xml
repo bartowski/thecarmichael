@@ -647,7 +647,7 @@
 					<onclick>Playlist.Clear</onclick>
 					<onclick>Dialog.Close(MovieInformation)</onclick>
 					<onclick>XBMC.RunScript(script.cinema.experience)</onclick>
-					<visible>system.hasaddon(script.cinema.experience) + Container.Content(movies)</visible>
+					<visible>system.hasaddon(script.cinema.experience) + !Skin.HasSetting(cinemascript_home) + Container.Content(movies)</visible>
 				</control>
 				<control type="togglebutton" id="8">
 					<description>Play/browse to Show</description>
@@ -699,6 +699,14 @@
 					<onclick>XBMC.RunScript(script.logo-downloader,mode=solo,logo=True,clearart=True,showthumb=True,showname=$INFO[ListItem.TVShowTitle])</onclick>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
+				<control type="button" id="17">
+					<description>tvtunes download</description>
+					<width>1</width>
+					<height>1</height>
+					<label>$LOCALIZE[31709]</label>
+					<onclick>XBMC.RunScript(script.TvTunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
+					<visible>Container.Content(tvshows) + !Skin.HasSetting(LockViews)</visible>
+				</control>
 			</control>
 			<control type="grouplist">
 					<posx>400</posx>
@@ -715,14 +723,14 @@
 						<include>ButtonInfoDialogsCommonValues</include>
 						<label>$INFO[Control.GetLabel(18)]</label>
 						<onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
-						<visible>system.hasaddon(script.cinema.experience) + Container.Content(movies) + !Control.HasFocus(18)</visible>
+						<visible>system.hasaddon(script.cinema.experience) + !Skin.HasSetting(cinemascript_home) + Container.Content(movies) + !Control.HasFocus(18)</visible>
 					</control>
 					<control type="label">
 						<description>Home Theatre</description>
 						<include>ButtonInfoDialogsCommonValues_Focus</include>
 						<label>$INFO[Control.GetLabel(18)]</label>
 						<onclick>PlayMedia($INFO[ListItem.Trailer],1)</onclick>
-						<visible>system.hasaddon(script.cinema.experience) + Container.Content(movies) + Control.HasFocus(18)</visible>
+						<visible>system.hasaddon(script.cinema.experience) + !Skin.HasSetting(cinemascript_home) + Container.Content(movies) + Control.HasFocus(18)</visible>
 					</control>
 					<control type="label">
 						<description>Play/browse to Show</description>
@@ -807,6 +815,18 @@
 						<include>ButtonInfoDialogsCommonValues_Focus</include>
 						<label>$INFO[Control.GetLabel(14)]</label>
 						<visible>Control.HasFocus(14) + Container.Content(tvshows)</visible>
+					</control>
+					<control type="label">
+						<description>Get tvtune</description>
+						<include>ButtonInfoDialogsCommonValues</include>
+						<label>$INFO[Control.GetLabel(17)]</label>
+						<visible>!Control.HasFocus(17) + Container.Content(tvshows)</visible>
+					</control>
+					<control type="label">
+						<description>Get tvtune</description>
+						<include>ButtonInfoDialogsCommonValues_Focus</include>
+						<label>$INFO[Control.GetLabel(17)]</label>
+						<visible>Control.HasFocus(17) + Container.Content(tvshows)</visible>
 					</control>
 				</control>
 		</control>

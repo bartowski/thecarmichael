@@ -259,32 +259,38 @@
 					<control type="button" id="90162">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>135</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_genres</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_genres</include>
 					</control>
 					<control type="button" id="90163">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>652</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_years</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_years</include>
 					</control>
 					<control type="button" id="90164">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>344</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_actors</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_actors</include>
 					</control>
 					<control type="button" id="90165">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>20348</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_directors</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_directors</include>
 					</control>
 					<control type="button" id="90166">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>31007</label>
-						<onclick>ActivateWindow(VideoLibrary,RecentlyAddedMovies,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_recentlyaddedmovies</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_recentlyaddedmovies</include>
 					</control>
 					<control type="button" id="90176">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>31027</label>
-						<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/randommovie.xsp,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_random_regular</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">movie_random_cinema</include>
 					</control>
 				</control>
 <!-- HDMovies --><control type="grouplist" id="9018">
@@ -301,27 +307,32 @@
 					<control type="button" id="90162">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>135</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieGenres,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_genres</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_genres</include>
 					</control>
 					<control type="button" id="90163">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>652</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieYears,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_years</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_years</include>
 					</control>
 					<control type="button" id="90164">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>344</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieActors,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_actors</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_actors</include>
 					</control>
 					<control type="button" id="90165">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>20348</label>
-						<onclick>ActivateWindow(VideoLibrary,MovieDirectors,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_directors</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">cinema_directors</include>
 					</control>
 					<control type="button" id="90176">
 						<include>ButtonHomeSubCommonValues</include>
 						<label>31706</label>
-						<onclick>XBMC.ActivateWindow(10025,special://skin/playlists/randomHDmovie.xsp,return)</onclick>
+						<include condition="!Skin.HasSetting(cinemascript_home)">movie_HDrandom_regular</include>
+						<include condition="Skin.HasSetting(cinemascript_home)">movie_HDrandom_cinema</include>
 					</control>
 				</control>
 <!-- TV -->	    <control type="grouplist" id="9017">
@@ -533,7 +544,8 @@
 					<label>$LOCALIZE[20342]</label>
 					<icon>backgrounds/movies.jpg</icon>
 					<thumb>$INFO[Skin.String(CustomMoviesFolder)]</thumb>			
-					<onclick>XBMC.ActivateWindow(MyVideoLibrary,movietitles,return)</onclick>
+					<include condition="!Skin.HasSetting(cinemascript_home)">Movie_Regular</include>
+					<include condition="Skin.HasSetting(cinemascript_home)">Movie_Regular_cinema</include>
 					<visible>!Skin.HasSetting(HomeMenuNoMoviesButton)</visible>
 				</item>
 				<item id="4">
